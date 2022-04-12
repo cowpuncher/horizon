@@ -1,0 +1,854 @@
+@media screen and (max-width: 1700px) {
+    .sliderWithTimerBullet {
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 1600px) {
+    .navigation {
+        margin-right: 45px;
+    }
+    .navigation li:not(:first-child) {
+        margin-left: 15px;
+    }
+    .mapSidebar {
+        width: 430px;
+        padding: 55px 25px;
+    }
+    .promotionSmall {
+        padding: 30px 45px 30px 45px;
+    }
+    .promotionCard {
+        padding: 30px;
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .header {
+        overflow-x: hidden;
+    }
+    .topPanel {
+        padding-bottom: 0;   
+    }
+    .topPanel .wrapper {
+        -webkit-flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+    }
+    .navigation {
+        margin-top: 20px;
+        padding: 20px 0;
+        position: relative;
+        -webkit-box-ordinal-group: 2;
+        -webkit-order: 1;
+           -moz-box-ordinal-group: 2;
+            -ms-flex-order: 1;
+                order: 1;
+        width: 100%;
+        margin: 20px 0 0;
+    }
+    .navigation::after {
+        content: '';
+        display: block;
+        width: 1005%;
+        height: 1px;
+        background: rgba(0, 0, 0, 0.12);
+        position: absolute;
+        top: 0;
+        left: -30px;
+    }
+    .navigation li:not(:first-child) {
+        margin-left: 40px;
+    }
+    .promotionBigContent {
+        -webkit-box-align: start;
+        -webkit-align-items: flex-start;
+           -moz-box-align: start;
+            -ms-flex-align: start;
+                align-items: flex-start;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+           -moz-box-orient: vertical;
+           -moz-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+    }
+    .promotionBig {
+        background-position: 70% 0;
+    }
+    .bigCount {
+        font-size: 70px;
+    }
+    .mapSidebar .btn {
+        margin-top: auto;
+    }
+    .footerMenuTop li:not(:last-of-type) {
+        margin-right: 15px;
+    }
+}
+@media screen and (max-width: 1200px) {
+    h1 {
+        font-size: 40px;
+    }
+    .topAbout {
+        margin-right: 20px;
+        font-size: 13px;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: row;
+           -moz-box-orient: horizontal;
+           -moz-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+           -moz-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+    }
+    .citySelect {
+        margin-right: 35px;
+        font-size: 15px;
+    }
+    a.phone {
+        margin: 0 7px 0 0;
+    }
+    .changeCity {
+        top: 175%;
+        right: 0;
+    }
+    .mainBanner {
+        height: 635px;
+    }
+    .mainOffer {
+        max-width: 675px;
+    }
+    .mainOfferContainer {
+        padding-bottom: 50px;
+    }
+    .mainOffer .btn {
+        margin-top: 30px;
+    }
+    .materialsBig h3,
+    .materialsAbout h3,
+    .promotionSmall h3,
+    .sectionOfferTitle,
+    .offerTitleWithRoulette .title,
+    .phaseItem h3 {
+        font-size: 22px;
+        line-height: 34px;
+    }
+    .phaseItem .link  {
+        padding: 40px 15px 35px 15px;
+        min-height: 275px;
+    }
+    .phaseItem .desc {
+        margin: 0;
+    }
+    .offerTitleWithRoulette {
+        padding: 30px 0 30px 17px;
+    }
+    .offerTitleWithRoulette .title {
+        margin-bottom: 25px;
+    }
+    .roulette {
+        font-size: 18px;
+        width: 47.5%;
+    }
+    .rhomb {
+        width: 55px;
+        height: 55px;
+        margin-right: 10px;
+    }
+    .offerPosition .position {
+        font-size: 13px;
+    }
+    .rouletteSliderItem {
+        min-height: 60px;
+    }
+    .popular {
+        padding: 40px 0;
+    }
+    .popular .sectionTitle {
+        margin-bottom: 30px;
+    }
+    .popularItemBottom {
+        -webkit-flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+    }
+    .popularItemBottom .price {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+    .popularItemBottom .place img {
+        width: 25px;
+    }
+    .popularItemBottom .place:not(:last-child) {
+        margin-right: 13px;
+    }
+    .swiper-fraction {
+        top: 30px;
+        left: 20px;
+    }
+    .promotionBigCount,
+    .sectionMap .title,
+    .sliderItemContent h1 {
+        font-size: 30px;
+    }
+    .sliderItemContent h1 {
+        margin-bottom: 32px;
+    }
+    .sectionMap .title {
+        top: 53px;
+        left: 38px;
+        max-width: 100%;
+    }
+    .sliderWithFraction .sliderItemContent {
+        padding: 97px 85px 20px 20px;
+    }
+    .sliderItemContent p {
+        margin-bottom: 20px;
+    }
+    .sliderWithFraction .swiper-slide {
+        height: 408px;
+    }
+    .sliderWithTimerBullet {
+        margin: 0 0 10px 15px;
+    }
+    .sectionMap .title .span a {
+        padding-left: 40px;
+    }
+    .sectionMap .title .span a img {
+        width: 35px;
+    }
+    .sectionMap .title .span a:hover span::after {
+        bottom: -10px;
+    }
+    .map {
+        height: 675px!important;
+        overflow: hidden;
+    }
+    .mapSidebar {
+        width: 355px;
+        padding: 65px 35px;
+    }
+    .ymaps-2-1-79-map {
+        width: 100%!important;
+    }
+    .sectionOffer {
+        padding-top: 0;
+        padding-bottom: 27px;
+    }
+    .offerBanner {
+        margin: 0 -20px 50px;
+        height: 450px;
+    }
+    .offerBanner .img {
+        height: 100%;
+    }
+    .offerBannerTitle {
+        top: 35px;
+        left: 35px;
+    }
+    .offerBannerTitle h1 {
+        margin-bottom: 32px;
+    }
+    .offerBannerTitle p {
+        margin-bottom: 50px;
+    }
+    .offerBanner img {
+        height: 100%;
+        -o-object-fit: cover;
+           object-fit: cover;
+    }
+    .sectionOfferTitle {
+        max-width: 100%;
+        margin-bottom: 35px;
+    }
+    .offerDescription {
+        padding-top: 0;
+    }
+    .sectionOfferWithRoulette {
+        padding: 0;
+    }
+    .sectionPromotion {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+           -moz-box-orient: vertical;
+           -moz-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        width: 100%;
+    }
+    .promotionBig {
+        max-width: 100%;
+        padding: 50px 0 130px 60px;
+        min-height: 625px;
+    }
+    .promotionBig h1 {
+        font-size: 50px;
+        margin-bottom: 155px;
+    }
+    .promotionBigContent {
+        -webkit-box-pack: start;
+        -webkit-justify-content: flex-start;
+           -moz-box-pack: start;
+            -ms-flex-pack: start;
+                justify-content: flex-start;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: row;
+           -moz-box-orient: horizontal;
+           -moz-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -webkit-box-align: end;
+        -webkit-align-items: flex-end;
+           -moz-box-align: end;
+            -ms-flex-align: end;
+                align-items: flex-end;
+    }
+    .promotionBigCount {
+        margin-right: 120px;
+    }
+    .promotionCard {
+        padding: 55px 130px 50px 50px;
+        width: 50%;
+        border: 0;
+    }
+    .promotionCard:first-child {
+        border-right: 1px solid var(--color-7);
+    }
+    .promotionCards {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: flex;
+    }
+    .promotionCards, .promotionSmall {
+        width: 100%;
+        max-width: 100%;
+    }
+    .promotionSmall {
+        min-height: 350px;
+        height: 100%;
+        background: url(../img/prom3.jpg) no-repeat 0 0 / cover;
+    }
+    .positionContent {
+        margin-top: auto;
+        -webkit-box-align: start;
+        -webkit-align-items: flex-start;
+           -moz-box-align: start;
+            -ms-flex-align: start;
+                align-items: flex-start;
+    }
+    .promotionSmall {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: flex;
+    }
+    .promotionSmall .btn {
+        margin-top: 18px;
+    }
+    .promotionSmall h3 {
+        max-width: 595px;
+    }
+    .reviewSlider .title {
+        margin: 40px 0; 
+    }
+    .footerContacts::before,
+    .reviewSlider .title br {
+        display: none;
+    }
+    .sliderReview .sliderItemContent {
+        padding: 25px 75px 25px 20px;
+    }
+    .sliderReview .sliderItemContent .date {
+        margin-bottom: 47px;
+    }
+    .sliderReview .sliderItemContent .quote {
+        font-size: 17px;
+        padding-left: 55px;
+    }
+    .sliderReview .sliderItemContent .quote::before {
+        font-size: 100px;
+        top: -30px;
+    }
+    .swiper-button-prev, .swiper-button-next {
+        width: 40px;
+        height: 40px;
+    }
+    .sectionTitle {
+        margin-bottom: 25px;
+    }
+    .materialsTop {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+           -moz-box-orient: vertical;
+           -moz-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+    }
+    .materialsBig {
+        width: 100%;
+        max-height: 460px;
+        margin-bottom: 18px;
+    }
+    .materialSmall {
+        width: 100%;
+        -webkit-box-pack: justify;
+        -webkit-justify-content: space-between;
+           -moz-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: flex;
+    }
+    .materialsItem {
+        height: 270px;
+        width: 49%;
+    }
+    .materialsList .materialsItem {
+        width: 49%;
+    }
+    .materialSection {
+        padding: 57px 0 13px;
+    }
+    .socialCards {
+        -webkit-flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+    }
+    .socialCard:not(:last-of-type) {
+        margin-right: 0;
+    }
+    .socialCard {
+        margin: 0px 10px 20px !important;
+    }
+    .footer {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+           -moz-box-orient: vertical;
+           -moz-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+    }
+    .footerSection {
+        padding-bottom: 100px;
+    }
+    .footerSidebarSoc {
+        position: absolute;
+        bottom: -75px;
+        margin: 0;
+    }
+    .footerNav {
+        padding-top: 18px;
+    }
+    .footerContacts {
+        padding-top: 0;
+    }
+    .copyright {
+        bottom: -76px;
+        right: 0;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+           -moz-box-orient: vertical;
+           -moz-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: start;
+        -webkit-align-items: flex-start;
+           -moz-box-align: start;
+            -ms-flex-align: start;
+                align-items: flex-start;
+    }
+    .copyright img {
+        margin-left: 0;
+        width: 220px;
+        margin-top: 10px;
+    }
+    .materialsBig h3 {
+        max-width: 500px;
+        margin: 0 auto 95px;
+    }
+}
+
+@media screen and (max-width: 993px) {
+    #rouletteBtn:after {
+        display: none;
+    }
+    .sectionOfferWithRoulette .offer,
+    .offerTitleWithRoulette.offerTitle {
+        width: 100%;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+           -moz-box-orient: vertical;
+           -moz-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+           -moz-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;    
+    }
+    .offerTitleWithRoulette .title {
+        text-align: center;
+    }
+    .offerPerson {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+           -moz-box-orient: vertical;
+           -moz-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+    }   
+    .rhomb {
+        margin: 0 0 15px;
+    }
+    .roulette {
+        padding-bottom: 15px;
+        font-size: 14px;
+        width: 100%;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+       -moz-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: reverse;
+        -webkit-flex-direction: column-reverse;
+           -moz-box-orient: vertical;
+           -moz-box-direction: reverse;
+            -ms-flex-direction: column-reverse;
+                flex-direction: column-reverse;
+    }
+    .rouletteSliderItem {
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+           -moz-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+    }
+    #rouletteBtn {
+        position: static;
+        margin-top: 15px;
+        max-width: 345px;
+        width: 100%;
+        -webkit-transform: translate(0, 0);
+           -moz-transform: translate(0, 0);
+            -ms-transform: translate(0, 0);
+             -o-transform: translate(0, 0);
+                transform: translate(0, 0);
+    }
+    .rouletteSlider {
+        position: relative;
+        border-left: 0;
+        width: 100%;
+    }
+    .sliderWithFraction .swiper-slide {
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .topPanel .btnLight,
+    a.phone,
+    .dateWork,
+    .navigation,
+    .filterList,
+    .sectionMap .title br,
+    .sliderReview .sliderItemContent .quote::before {
+        display: none;
+    }
+    .mobileElement {
+        display: block;
+    }
+    .burger {
+        border: 0;
+        outline: none;
+    }
+    .burger span {
+        width: 14px;
+        height: 2px;
+        display: block;
+        background: #67748B;
+        -webkit-border-radius: 10px;
+           -moz-border-radius: 10px;
+                border-radius: 10px;
+    }
+    .burger span:not(:last-child) {
+        margin-bottom: 3px;
+    }
+    .sectionMap .title,
+    .mainOfferContainer {
+        position: static;
+    }
+    .materialsList,
+    .materialSmall,
+    .offer,
+    .sectionMap,
+    .phase,
+    .promotionBigContent,
+    .promotionCards {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+           -moz-box-orient: vertical;
+           -moz-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+    }
+    .mainOffer .btn,
+    .materialsList .materialsItem,
+    .materialsItem,
+    .promotionCard,
+    .sectionMap .wrapper,
+    .popular .btn,
+    .phaseItem {
+        width: 100%;
+        max-width: 100%;
+    }
+    .promotionCard,
+    .phaseItem .link {
+        border: 0;
+        min-height: auto;
+        position: relative;
+    }
+    .phaseItem .link .arrow {
+        position: absolute;
+        bottom: 15px;
+        right: 25px;
+    }
+    .promotionCard:nth-child(2n+2),
+    .phaseItem:nth-child(3n+2) .link {
+        border-top: 1px solid #C8D8E4;
+        border-bottom: 1px solid #C8D8E4;
+    }
+    .mainOffer .btn,
+    .mapSidebarItem {
+        text-align: center;
+    }    
+    .sliderReview .sliderItemContent,
+    .sliderItemImg,
+    .sliderWithFraction .sliderItemContent,
+    .popularItem {
+        width: 100%;
+    }
+    .offerBannerTitle h1,
+    .bigCount,
+    .promotionBigCount span {
+        font-size: 45px;
+    }
+    .mainOffer h1 {
+        font-size: 24px;
+    }
+    .footerContacts h4,
+    .socialSection h3,
+    .promotionCard h3,
+    h1.sectionTitle,
+    .reviewSlider .title,
+    .sliderReview .sliderItemContent h3 {
+        font-size: 20px;
+    }
+    .footerContacts .phone,
+    .materialsAbout h3,
+    .sliderReview .sliderItemContent .date,
+    .promotionSmall h3,
+    .promotionBig h1,
+    .popularItemBottom .price,
+    .promotionBigCount {
+        font-size: 17px;
+    }
+    .offerBannerTitle p,
+    .address,
+    .footerContacts .links,
+    .materialsAbout p,
+    .sliderReview .sliderItemContent .quote,
+    .promotionCard p,
+    .mapSidebarItem {
+        font-size: 15px;
+    }
+    .materialsBig h3 {
+        font-size: 13px;
+    }
+    .materialsBig h3 {
+        margin: 0 auto 20px;
+    }
+    .sectionMap .wrapper {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: flex;
+    }
+    .offer {
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+           -moz-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+    }
+    .promotionBigContent {
+        -webkit-box-align: start;
+        -webkit-align-items: flex-start;
+           -moz-box-align: start;
+            -ms-flex-align: start;
+                align-items: flex-start;
+    }
+    .sectionMap .wrapper,
+    .sliderWithFraction .swiper-slide,
+    .sliderReview .swiper-slide {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: reverse;
+        -webkit-flex-direction: column-reverse;
+           -moz-box-orient: vertical;
+           -moz-box-direction: reverse;
+            -ms-flex-direction: column-reverse;
+                flex-direction: column-reverse;
+    }
+    .sliderWithFraction .sliderItemContent {
+        padding: 30px 20px 65px 20px;
+    }
+    .mapSidebar .btn {
+        margin-top: 25px;
+        width: 100%;
+        max-width: 100%;
+        text-align: center;
+    }
+    .mainOffer h1 {
+        margin-left: 0;
+    }
+    .reviewSlider .title,
+    .sectionOffer {
+        text-align: center;
+    }
+    .mapSidebar {
+        width: 355px;
+        padding: 30px 16px;
+    }
+    .sectionMap .title {
+        top: 0;
+        left: 0;
+        max-width: 100%;
+        padding: 16px;
+        font-size: 24px;
+        width: 310px;
+    }
+    .offerPerson {
+        margin-bottom: 25px;
+    }
+    .promotionBigCount {
+        margin-right: 0;
+    }
+    .promotionBig {
+        max-width: 100%;
+        padding: 20px;
+        min-height: 230px;
+    }
+    .promotionCard {
+        padding: 20px;
+    }
+    .promotionCard .img {
+        margin-top: 20px;
+    }
+    .sliderReview .sliderItemContent,
+    .promotionSmall {
+        padding: 15px;
+    }
+    .promotionSmall h3 {
+        line-height: 24px;
+    }
+    .sliderReview .sliderItemContent .quote {
+        padding-left: 0;
+    }
+    .swiperButtons {
+        bottom: 15px;
+        right: 10px;
+    }
+    .footerNav {
+        overflow: hidden;
+    }
+    .footerSection {
+        padding-bottom: 150px;
+    }
+    .copyright {
+        right: auto;
+        bottom: auto;
+        top: 135%;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: row;
+           -moz-box-orient: horizontal;
+           -moz-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+           -moz-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+    }
+    .copyright img {
+        margin: 0 0 0 10px;
+    }
+    .topPanel .logo {
+        margin-right: 0;
+        width: 150px;
+    }
+    .topPanel .logo img {
+        width: 100%;
+    }
+    .topPanel {
+        padding-bottom: 15px;
+        position: static;
+    }
+    .citySelect,
+    .topAbout {
+        margin: 0;
+    }
+    .mainOfferContainer {
+        padding: 0;
+    }
+    .topAbout {
+        margin-left: auto;
+        margin-right: 30px;
+    }
+    .mainBanner img {
+        height: 250px;
+    }
+    .offerBannerTitle {
+        top: 15px;
+        left: 0;
+    }
+    .mainBanner {
+        height: auto;
+    }
+    .mainOffer {
+        padding-top: 15px;
+    }
+}
