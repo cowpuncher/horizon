@@ -452,11 +452,11 @@ select:-webkit-autofill:focus {
 }
 
 .topPanel .logo {
-    margin-right: auto;
+    margin-right: 55px;
 }
 
 .navigation {
-    margin-right: 150px;
+    margin-right: auto;
     height: 85px;
 }
 
@@ -483,9 +483,9 @@ select:-webkit-autofill:focus {
 .subMenu {
     font-size: 22px;
     display: none;
-    position: fixed;
+    position: absolute;
     left: 0;
-    top: 85px;
+    top: 100%;
     background: rgb(255 255 255 / 50%);
     -webkit-backdrop-filter: blur(4px);
     backdrop-filter: blur(4px);
