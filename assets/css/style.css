@@ -443,7 +443,6 @@ select:-webkit-autofill:focus {
 }
 
 .topPanel {
-    padding: 15px 0;
     position: absolute;
     width: 100%;
     z-index: 1;
@@ -457,20 +456,66 @@ select:-webkit-autofill:focus {
 }
 
 .navigation {
-    margin-right: 155px;
+    margin-right: 150px;
+    height: 85px;
 }
 
 .navigation li:not(:first-child) {
-    margin-left: 30px;
+    padding-left: 30px;
 }
 
 .navigation a {
     font-size: 17px;
     font-weight: 500;
+    display: flex;
+    align-items: center;
+    height: 100%;
 }
 
 .navigation a:hover {
     opacity: .6;
+}
+
+.menu {
+    height: 100%;
+}
+
+.subMenu {
+    font-size: 22px;
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 85px;
+    background: rgb(255 255 255 / 50%);
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+    width: 100%;
+}
+
+.subMenu a {
+    font-family: var(--ff-p);
+}
+
+.subMenuWrapper {
+    padding-left: 290px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.subMenuWrapper .desc {
+    font-size: 15px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.subMenuWrapper a {
+    display: block;
+    margin-bottom: 20px;
+}
+
+.navigation li:hover .subMenu {
+    display: block;
 }
 
 .topAbout {
