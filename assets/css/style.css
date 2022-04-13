@@ -173,7 +173,7 @@ select:-webkit-autofill:focus {
     max-width: 1640px;
     width: 100%;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 15px;
 }
 
 .mainWrapper {
@@ -330,6 +330,10 @@ select:-webkit-autofill:focus {
     height: 100%;
     -o-object-fit: cover;
        object-fit: cover;
+       -webkit-transition: all .3s ease;
+       -o-transition: all .3s ease;
+       -moz-transition: all .3s ease;
+       transition: all .3s ease;
 }
 
 .scale:hover img {
@@ -467,8 +471,16 @@ select:-webkit-autofill:focus {
 .navigation a {
     font-size: 17px;
     font-weight: 500;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+       -moz-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     height: 100%;
 }
 
@@ -494,23 +506,54 @@ select:-webkit-autofill:focus {
 
 .subMenu a {
     font-family: var(--ff-p);
+    font-size: 22px;
 }
 
 .subMenuWrapper {
+    padding-top: 25px;
     padding-left: 290px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+       -moz-box-orient: vertical;
+       -moz-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+       -moz-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+}
+
+.subMenuWrapper a {
+    display: block;
+    margin-bottom: 27px;
+}
+
+.subMenuWrapper a:hover {
+    opacity: 1;
+    text-decoration: underline;
+}
+
+.subMenuWrapper a.btn {
+    font-size: 13px;
+    margin-top: 17px;
+    margin-bottom: 30px;
+}
+
+.subMenuWrapper a.btn:hover {
+    text-decoration: none;
 }
 
 .subMenuWrapper .desc {
     font-size: 15px;
     font-weight: 500;
-    margin-bottom: 20px;
-}
-
-.subMenuWrapper a {
-    display: block;
     margin-bottom: 20px;
 }
 
@@ -1020,7 +1063,7 @@ a.phone {
 }
 
 .sliderWithFraction .sliderItemContent {
-    padding: 125px 115px 20px 60px;
+    padding: 125px 115px 70px 60px;
     width: 50%;
 }
 
@@ -1081,6 +1124,10 @@ a.phone {
 
 .sliderItemImg img {
     display: block; 
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
 }
 
 .swiper-pagination-bullet {
@@ -1453,13 +1500,17 @@ a.phone {
 }
 
 .bgHover {
-    display: none;
+    opacity: 0;
     position: absolute;
     top: 0;
     left: 0;
     z-index: -1;
     width: 100%;
     height: 100%;
+    -webkit-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    transition: all .3s ease;
 }
 
 .bgHover img {
@@ -1483,7 +1534,11 @@ a.phone {
 }
 
 .promotionCard:hover .bgHover {
-    display: block;
+    opacity: 1;
+    -webkit-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    transition: all .3s ease;
 }
 
 .promotionSmall .btn {

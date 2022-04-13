@@ -5,11 +5,20 @@
 }
 
 @media screen and (max-width: 1600px) {
-    .navigation {
+    /* .navigation {
         margin-right: 45px;
+    } */
+    .navigation li:not(:first-child) {
+        margin-left: 20px;
     }
     .navigation li:not(:first-child) {
-        margin-left: 15px;
+        padding-left: 0;
+    }
+    .topPanel .logo {
+        margin-right: 25px;
+    }
+    .subMenuWrapper {
+        padding-left: 263px;
     }
     .mapSidebar {
         width: 430px;
@@ -21,6 +30,9 @@
     .promotionCard {
         padding: 30px;
     }
+    .topAbout {
+        margin-right: 30px;
+    }
 }
 
 @media screen and (max-width: 1440px) {
@@ -28,12 +40,23 @@
         overflow-x: hidden;
     }
     .topPanel {
+        padding-top: 15px;
         padding-bottom: 0;   
+    }
+    .subMenu {
+        left: -20px;
+        width: 105%;
+    }
+    .subMenuWrapper {
+        padding-left: 0;
     }
     .topPanel .wrapper {
         -webkit-flex-wrap: wrap;
             -ms-flex-wrap: wrap;
                 flex-wrap: wrap;
+    }
+    .topAbout {
+        margin-left: auto;
     }
     .navigation {
         margin-top: 20px;
@@ -206,13 +229,10 @@
         max-width: 100%;
     }
     .sliderWithFraction .sliderItemContent {
-        padding: 97px 85px 20px 20px;
+        padding: 97px 85px 70px 20px;
     }
     .sliderItemContent p {
         margin-bottom: 20px;
-    }
-    .sliderWithFraction .swiper-slide {
-        height: 408px;
     }
     .sliderWithTimerBullet {
         margin: 0 0 10px 15px;
@@ -582,7 +602,8 @@
     .navigation,
     .filterList,
     .sectionMap .title br,
-    .sliderReview .sliderItemContent .quote::before {
+    .sliderReview .sliderItemContent .quote::before,
+    .offerBanner {
         display: none;
     }
     .mobileElement {
@@ -613,7 +634,6 @@
     .offer,
     .sectionMap,
     .phase,
-    .promotionBigContent,
     .promotionCards {
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
@@ -641,8 +661,8 @@
     }
     .phaseItem .link .arrow {
         position: absolute;
-        bottom: 15px;
-        right: 25px;
+        bottom: 17px;
+        right: 15px;
     }
     .promotionCard:nth-child(2n+2),
     .phaseItem:nth-child(3n+2) .link {
@@ -664,7 +684,9 @@
     .promotionBigCount span {
         font-size: 45px;
     }
-    .mainOffer h1 {
+    .mainOffer h1,
+    .offerBannerTitle h1,
+    .sliderItemContent h1 {
         font-size: 24px;
     }
     .footerContacts h4,
@@ -672,8 +694,11 @@
     .promotionCard h3,
     h1.sectionTitle,
     .reviewSlider .title,
-    .sliderReview .sliderItemContent h3 {
+    .sliderReview .sliderItemContent h3,
+    .phaseItem h3,
+    .offerTitleWithRoulette .title {
         font-size: 20px;
+        line-height: 26px;
     }
     .footerContacts .phone,
     .materialsAbout h3,
@@ -681,8 +706,14 @@
     .promotionSmall h3,
     .promotionBig h1,
     .popularItemBottom .price,
-    .promotionBigCount {
+    .promotionBigCount,
+    .offerPosition .name,
+    .popularItem .name,
+    .sectionOfferTitle {
         font-size: 17px;
+    }
+    .promotionBigCount {
+        font-size: 20px;
     }
     .offerBannerTitle p,
     .address,
@@ -690,11 +721,17 @@
     .materialsAbout p,
     .sliderReview .sliderItemContent .quote,
     .promotionCard p,
-    .mapSidebarItem {
+    .mapSidebarItem,
+    .phaseItem .desc,
+    .sliderItemContent p,
+    .offerDescription p {
         font-size: 15px;
     }
     .materialsBig h3 {
         font-size: 13px;
+    }
+    .promotionBigCount span {
+        font-size: 50px;
     }
     .materialsBig h3 {
         margin: 0 auto 20px;
@@ -713,13 +750,6 @@
             -ms-flex-align: center;
                 align-items: center;
     }
-    .promotionBigContent {
-        -webkit-box-align: start;
-        -webkit-align-items: flex-start;
-           -moz-box-align: start;
-            -ms-flex-align: start;
-                align-items: flex-start;
-    }
     .sectionMap .wrapper,
     .sliderWithFraction .swiper-slide,
     .sliderReview .swiper-slide {
@@ -732,7 +762,7 @@
                 flex-direction: column-reverse;
     }
     .sliderWithFraction .sliderItemContent {
-        padding: 30px 20px 65px 20px;
+        padding: 62px 15px 70px 15px;
     }
     .mapSidebar .btn {
         margin-top: 25px;
@@ -743,19 +773,23 @@
     .mainOffer h1 {
         margin-left: 0;
     }
+    .mainOffer .btn {
+        margin-top: 15px;
+        padding: 13px 0;
+    }
     .reviewSlider .title,
     .sectionOffer {
         text-align: center;
     }
     .mapSidebar {
-        width: 355px;
-        padding: 30px 16px;
+        width: 100%;
+        padding: 30px;
     }
     .sectionMap .title {
         top: 0;
         left: 0;
         max-width: 100%;
-        padding: 16px;
+        padding: 30px 15px;
         font-size: 24px;
         width: 310px;
     }
@@ -768,7 +802,7 @@
     .promotionBig {
         max-width: 100%;
         padding: 20px;
-        min-height: 230px;
+        min-height: 61vw;
     }
     .promotionCard {
         padding: 20px;
@@ -787,8 +821,8 @@
         padding-left: 0;
     }
     .swiperButtons {
-        bottom: 15px;
-        right: 10px;
+        bottom: 32px;
+        right: 13px;
     }
     .footerNav {
         overflow: hidden;
@@ -799,7 +833,7 @@
     .copyright {
         right: auto;
         bottom: auto;
-        top: 135%;
+        top: 155%;
         -webkit-box-orient: horizontal;
         -webkit-box-direction: normal;
         -webkit-flex-direction: row;
@@ -825,7 +859,7 @@
     }
     .topPanel {
         padding-bottom: 15px;
-        position: static;
+        position: relative;
     }
     .citySelect,
     .topAbout {
@@ -850,5 +884,185 @@
     }
     .mainOffer {
         padding-top: 15px;
+    }
+    .changeCity {
+        width: 300px;
+    }
+    .topPanel .btnLight.cityBtn {
+        display: block;
+    }
+    .sectionPhase {
+        margin-bottom: 0;
+        padding-top: 10px;
+    }
+    .phaseItem h3 {
+        margin-bottom: 12px;
+        line-height: 26px;
+    }
+    .phaseItem .link {
+        padding: 20px 85px 20px 15px;
+    }
+    .phaseItem .desc {
+        line-height: 21px;
+    }
+    .offerTitleWithRoulette {
+        padding: 23px 20px;
+    }
+    .offerTitleWithRoulette .title {
+        margin-bottom: 32px;
+    }
+    .rouletteSlider:before {
+        content: '';
+        width: 0;
+        height: 0;
+        border-top: 29px solid transparent;
+        border-left: 24px solid var(--color-2);
+        border-bottom: 29px solid transparent;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        -webkit-transform: translate(0, -50%);
+           -moz-transform: translate(0, -50%);
+            -ms-transform: translate(0, -50%);
+             -o-transform: translate(0, -50%);
+                transform: translate(0, -50%);
+    }
+    .popular .sectionTitle {
+        margin-bottom: 20px;
+    }
+    .popularItemBottom {
+        padding: 21px 16px 21px 20px;
+    }
+    .popular {
+        padding: 40px 0 30px;
+    }
+    .swiper-fraction {
+        top: 70vw;
+        left: 15px;
+        font-size: 17px;
+    }
+    .sliderItemContent h1 {
+        margin-bottom: 15px;
+    }
+    .sliderWithFraction .sliderItemContent {
+        padding-bottom: 50px;
+    }
+    .sliderItemContent .btn {
+        padding: 8px 53px;
+        letter-spacing: 0em;
+        text-align: center;
+    }
+    .swiper-pagination-bullet {
+        width: var(--swiper-pagination-bullet-width,var(--swiper-pagination-bullet-size,5px));
+        height: var(--swiper-pagination-bullet-height,var(--swiper-pagination-bullet-size,5px));
+    }
+    .sectionMap .title .span a {
+        padding-left: 35px;
+    }
+    .sectionMap .title .span a img {
+        width: 20px;
+        top: 3px;
+        left: 3px;
+    }
+    .map {
+        height: 400px!important;
+        overflow: hidden;
+    }
+    .mapSidebarItem:not(:last-of-type) {
+        margin-bottom: 25px;
+    }
+    .sectionOfferTitle {
+        font-size: 17px;
+        line-height: 26px;
+        padding-top: 28px;
+    }
+    .offerDescription .btn {
+        font-size: 13px;
+        padding: 13px 75px;
+        margin-top: -12px;
+        font-weight: 500;
+        letter-spacing: 0.04em;
+    }
+    .sectionPromotion {
+        padding-top: 40px;
+    }
+    .promotionBig h1 {
+        margin-bottom: 45px;
+    }
+    .promotionBigBanks img:first-child {
+        width: 30px;
+    }
+    .promotionBigBanks img:last-child {
+        width: 110px;
+    }
+    .promotionBigBanks {
+        padding-bottom: 17px;
+        margin-left: 30px;
+    }
+    .promotionCard h3 {
+        margin-bottom: 8px;
+    }
+    .promotionCard p {
+        line-height: 24px;
+    }
+    .promotionSmall {
+        min-height: 64vw;
+    }
+    .promotionSmall {
+        padding: 20px 15px;
+    }
+    .promotionSmall .btn {
+        margin-top: 23px;
+        font-size: 14px;
+        line-height: 1.2em;
+        padding: 10px 13px;
+        width: 260px;
+    }
+    .reviewSlider .title br {
+        display: block;
+    }
+    .reviewSlider .title {
+        margin: 35px 0 25px;
+        font-size: 24px;
+    }
+    .sliderReview .sliderItemContent h3 {
+        margin-bottom: 10px;
+    }
+    .sliderReview .sliderItemContent .date {
+        margin-bottom: 15px;
+    }
+    .sliderReview .sliderItemContent .quote p {
+        line-height: 20px;
+        margin-bottom: 18px;
+    }
+    .sliderReview .sliderItemContent {
+        padding: 15px 15px 42px 15px;
+    }
+    .materialSection {
+        padding: 35px 0 13px;
+    }
+    .materialSection h1 {
+        font-size: 24px;
+    }
+    .materialsItem {
+        height: 54vw; 
+    }
+    .materialsAbout {
+        bottom: 20px;
+        left: 20px;
+    }
+    .materialsAbout .flag,
+    .materialsAbout h3 {
+        margin-bottom: 8px;
+    }
+    .footerMenuTop {
+        overflow: scroll;
+        padding-bottom: 20px;
+    }
+    .footerMenuTop ul {
+        width: 850px;
+    }
+    .footerContacts {
+        margin-top: 10px;
     }
 }
