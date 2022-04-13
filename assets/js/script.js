@@ -65,14 +65,21 @@ const sliderReview = new Swiper('.sliderReview', {
 // ANCHOR (City)
 let city =document.querySelector('.citySelect'),
     modal = document.querySelector('.changeCity ');
+// ANCHOR (Burger) 
+let burger =document.querySelector('.burger'),
+    menu = document.querySelector('.navigation');
 
 city.addEventListener('click', function() {
     modal.classList.toggle('active');
 });
-
+burger.addEventListener('click', function() {
+    burger.classList.toggle('active');
+    menu.classList.toggle('active');
+});
 function closeModal() {
     modal.classList.remove('active');
 }
+
 
 
 // // Roullete
@@ -99,35 +106,3 @@ function closeModal() {
 //         rouletteSliderItem[i].setAttribute('style', 'transform: translate(0 , -' + (itemHeight * random) + 'px)')
 //     }
 // });
-
-
-// ymaps.ready(init);
-
-// function init() {
-//     var myMap = new ymaps.Map("map", {
-//             center: [55.76, 37.64],
-//             zoom: 10
-//         }, {
-//             searchControlProvider: 'yandex#search'
-//         }),
-
-//     // Создаем геообъект с типом геометрии "Точка".
-//         myGeoObject = new ymaps.GeoObject({
-//             // Описание геометрии.
-           
-//         }),
-//         myPieChart = new ymaps.Placemark([
-            
-//         ]);
-
-//     myMap.geoObjects
-//         .add(myGeoObject)
-//         .add(myPieChart)
-//         .add(
-//             new ymaps.Placemark([55.826479, 37.487208], {
-//             balloonContent: 'цвет <strong>фэйсбука</strong>'
-//         }, {
-//             preset: 'islands#governmentCircleIcon',
-//             iconColor: '#000'
-//         }));
-// }

@@ -596,25 +596,36 @@
 }
 
 @media screen and (max-width: 800px) {
+    .mainWrapper {
+        overflow-x: hidden;
+    }
     .topPanel .btnLight,
     a.phone,
     .dateWork,
-    .navigation,
     .filterList,
     .sectionMap .title br,
     .sliderReview .sliderItemContent .quote::before,
-    .offerBanner {
+    .offerBanner,
+    .navigation::after {
         display: none;
     }
     .mobileElement {
         display: block;
     }
+    .header {
+        overflow: unset;
+    }
     .burger {
         border: 0;
         outline: none;
+        background: transparent;
     }
-    .burger span {
-        width: 14px;
+    .burger span {        
+        -webkit-transition: all .3s ease;        
+        -o-transition: all .3s ease;        
+        -moz-transition: all .3s ease;        
+        transition: all .3s ease;
+        width: 24px;
         height: 2px;
         display: block;
         background: #67748B;
@@ -624,6 +635,92 @@
     }
     .burger span:not(:last-child) {
         margin-bottom: 3px;
+    }
+    .subMenu .container {
+        padding: 0;
+    }
+    .navigation {
+        opacity: 0;
+        position: fixed;
+        right: -100%;
+        background: #fff;
+    }
+    .navigation.active {
+        opacity: 1;
+        right: 0;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+        top: 59px;
+        -webkit-transition: all .3s ease;
+        -o-transition: all .3s ease;
+        -moz-transition: all .3s ease;
+        transition: all .3s ease;
+        padding: 16px 16px;
+    }
+    .navigation .menu {
+        height: auto;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+           -moz-box-orient: vertical;
+           -moz-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: start;
+        -webkit-align-items: flex-start;
+           -moz-box-align: start;
+            -ms-flex-align: start;
+                align-items: flex-start;
+    }
+    .navigation .menu li {
+        padding-bottom: 24px;
+        width: 100%;
+        position: relative;
+    }
+    .navigation .menu li.dropmenu:after {
+        content: url(../img/icons/dropmenu.svg);
+        position: absolute;
+        right: 0;
+        top: 3px;
+    }
+    .navigation .menu li.dropmenu:hover:after {
+        -webkit-transform: rotate(180deg);
+           -moz-transform: rotate(180deg);
+            -ms-transform: rotate(180deg);
+             -o-transform: rotate(180deg);
+                transform: rotate(180deg);
+    }
+    .navigation li:not(:first-child) {
+        margin-left: 0;
+    }
+    .subMenu {
+        position: unset;
+    }
+    .burger.active span {
+        -webkit-transition: all .3s ease;
+        -o-transition: all .3s ease;
+        -moz-transition: all .3s ease;
+        transition: all .3s ease;
+        margin: 0;
+        background: var(--color-3);
+    }
+    .burger.active span:nth-child(1) {
+        -webkit-transform: rotate(45deg) translate(1px, 2px);
+           -moz-transform: rotate(45deg) translate(1px, 2px);
+            -ms-transform: rotate(45deg) translate(1px, 2px);
+             -o-transform: rotate(45deg) translate(1px, 2px);
+                transform: rotate(45deg) translate(1px, 2px);
+    }
+    .burger.active span:nth-child(2) {
+        display: none;
+    }
+    .burger.active span:nth-child(3) {
+        -webkit-transform: rotate(-45deg) translate(0, 0);
+           -moz-transform: rotate(-45deg) translate(0, 0);
+            -ms-transform: rotate(-45deg) translate(0, 0);
+             -o-transform: rotate(-45deg) translate(0, 0);
+                transform: rotate(-45deg) translate(0, 0);
     }
     .sectionMap .title,
     .mainOfferContainer {
@@ -689,6 +786,7 @@
     .sliderItemContent h1 {
         font-size: 24px;
     }
+    .navigation a,
     .footerContacts h4,
     .socialSection h3,
     .promotionCard h3,
@@ -726,6 +824,16 @@
     .sliderItemContent p,
     .offerDescription p {
         font-size: 15px;
+    }
+    .subMenu a {
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+    .subMenuWrapper {
+        padding-top: 15px;
+    }
+    .subMenuWrapper .desc {
+        display: none;
     }
     .materialsBig h3 {
         font-size: 13px;
