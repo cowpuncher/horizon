@@ -56,8 +56,19 @@ const sliderReview = new Swiper('.sliderReview', {
     loop: true,
     navigation: {
         nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
     },
+});
+
+
+
+const sliderProductBanner = new Swiper('.mainBannerSlider', {
+    loop: true,
+    direction: 'vertical',
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    effect: 'cube',
 });
 
 
