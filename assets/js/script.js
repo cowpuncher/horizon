@@ -58,9 +58,7 @@ const sliderReview = new Swiper('.sliderReview', {
         nextEl: '.swiper-button-next',
     },
 });
-
-
-
+// ANCHOR (Sliders product banner)
 const sliderProductBanner = new Swiper('.mainBannerSlider', {
     loop: true,
     direction: 'vertical',
@@ -70,6 +68,7 @@ const sliderProductBanner = new Swiper('.mainBannerSlider', {
     },
     effect: 'cube',
 });
+
 
 
 // ANCHOR Clicks events
