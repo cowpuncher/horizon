@@ -1,35 +1,41 @@
-ymaps.ready(init);
 
-function init () {
-    var myMap = new ymaps.Map('map', {
-            center: [55.76, 37.64],
-            zoom: 10
-        }, {
-            searchControlProvider: 'yandex#search'
-        }),
-        objectManager = new ymaps.ObjectManager({
-            // Чтобы метки начали кластеризоваться, выставляем опцию.
-            clusterize: true,
-            // ObjectManager принимает те же опции, что и кластеризатор.
-            gridSize: 32,
-            clusterDisableClickZoom: true,
-            iconColor: '#000'
+
+if(document.getElementById('map')) {
+    ymaps.ready(init);
+
+    function init () {
+        var myMap = new ymaps.Map('map', {
+                center: [55.76, 37.64],
+                zoom: 10
+            }, {
+                searchControlProvider: 'yandex#search'
+            }),
+            objectManager = new ymaps.ObjectManager({
+                // Чтобы метки начали кластеризоваться, выставляем опцию.
+                clusterize: true,
+                // ObjectManager принимает те же опции, что и кластеризатор.
+                gridSize: 32,
+                clusterDisableClickZoom: true,
+                iconColor: '#000'
+            });
+    
+        // Чтобы задать опции одиночным объектам и кластерам,
+        // обратимся к дочерним коллекциям ObjectManager.
+        objectManager.objects.options.set('preset', 'islands#blueHomeCircleIcon');
+        objectManager.clusters.options.set('preset', 'islands#invertedBlueClusterIcons');
+        myMap.geoObjects.add(objectManager);
+    
+        $.ajax({
+            url: "../assets/js/data.json"
+        }).done(function(data) {
+            objectManager.add(data);
         });
-
-    // Чтобы задать опции одиночным объектам и кластерам,
-    // обратимся к дочерним коллекциям ObjectManager.
-    objectManager.objects.options.set('preset', 'islands#blueHomeCircleIcon');
-    objectManager.clusters.options.set('preset', 'islands#invertedBlueClusterIcons');
-    myMap.geoObjects.add(objectManager);
-
-    $.ajax({
-        url: "../assets/js/data.json"
-    }).done(function(data) {
-        objectManager.add(data);
-    });
-
+    
+    }
 }
-// ANCHOR Sliders
+
+
+// ANCHOR --- Sliders
 // ANCHOR (Sliders with fraction)
 const sliderWithTimer = new Swiper('.sliderWithFraction', {
     loop: true,
@@ -69,7 +75,7 @@ const sliderProductBanner = new Swiper('.mainBannerSlider', {
     effect: 'cube',
 });
 
-// ANCHOR Clicks events
+// ANCHOR --- Clicks events
 // ANCHOR (City)
 let city =document.querySelector('.citySelect'),
     modal = document.querySelector('.changeCity ');
@@ -90,7 +96,7 @@ function closeModal() {
 // ANCHOR (Banner with tabs) 
 let houseForSaleSliderItem =document.querySelectorAll('.houseForSaleSliderItem'),
     navProductTabs = document.querySelectorAll('.navProduct ul li a');
-    
+
 if(houseForSaleSliderItem) {
     for(let i = 0; i < houseForSaleSliderItem.length; i++) {
         navProductTabs[i].addEventListener('click', e => {
@@ -107,7 +113,31 @@ if(houseForSaleSliderItem) {
     }
 }
 
+// ANCHOR --- Styles 
+// ANCHOR (Height top panel)
+let mainBanner =document.querySelector('.mainBanner'),
+    topPanel = document.querySelector('.topPanel');
 
+mainBanner == null ? topPanel.setAttribute('style', 'position: unset;') : '';
+
+// ANCHOR (Hover effect on project page)
+let projectGroup = document.querySelectorAll('.projectGroup');
+
+window.onload = function () {    
+    for(var i = 0; i < projectGroup.length; i++) {
+        projectGroup[i].onmouseover  = function(e) {
+            for(var i = 0; i < projectGroup.length; i++) {
+                projectGroup[i].setAttribute('style', 'opacity: 0.6;');
+            }
+            e.currentTarget.setAttribute('style', 'opacity: 1;')
+        }
+        projectGroup[i].onmouseout  = function(e) {
+            for(var i = 0; i < projectGroup.length; i++) {
+                projectGroup[i].setAttribute('style', 'opacity: 1;');
+            }
+        }
+    }
+}
 
 // // Roullete
 
