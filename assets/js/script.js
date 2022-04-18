@@ -69,8 +69,6 @@ const sliderProductBanner = new Swiper('.mainBannerSlider', {
     effect: 'cube',
 });
 
-
-
 // ANCHOR Clicks events
 // ANCHOR (City)
 let city =document.querySelector('.citySelect'),
@@ -88,6 +86,25 @@ burger.addEventListener('click', function() {
 });
 function closeModal() {
     modal.classList.remove('active');
+}
+// ANCHOR (Banner with tabs) 
+let houseForSaleSliderItem =document.querySelectorAll('.houseForSaleSliderItem'),
+    navProductTabs = document.querySelectorAll('.navProduct ul li a');
+    
+if(houseForSaleSliderItem) {
+    for(let i = 0; i < houseForSaleSliderItem.length; i++) {
+        navProductTabs[i].addEventListener('click', e => {
+            let targetItem = e.currentTarget;
+            for(var i = 0; i < navProductTabs.length; i++) {
+                navProductTabs[i].classList.remove('active');
+                houseForSaleSliderItem[i].classList.remove('active');
+                targetItem.classList.add('active');
+                if(navProductTabs[i].classList.contains('active')) {
+                    houseForSaleSliderItem[i].classList.add('active');
+                }
+            }
+        })
+    }
 }
 
 
