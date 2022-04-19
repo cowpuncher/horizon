@@ -92,20 +92,19 @@ const sliderProductBanner = new Swiper('.mainBannerSlider', {
 // ANCHOR (City)
 let city =document.querySelector('.citySelect'),
     modal = document.querySelector('.changeCity ');
+city.addEventListener('click', function() {
+    modal.classList.toggle('active');
+});
+
 // ANCHOR (Burger) 
 let burger =document.querySelector('.burger'),
     menu = document.querySelector('.navigation');
 
-city.addEventListener('click', function() {
-    modal.classList.toggle('active');
-});
 burger.addEventListener('click', function() {
     burger.classList.toggle('active');
     menu.classList.toggle('active');
 });
-function closeModal() {
-    modal.classList.remove('active');
-}
+
 // ANCHOR (Banner with tabs) 
 let houseForSaleSliderItem =document.querySelectorAll('.houseForSaleSliderItem'),
     navProductTabs = document.querySelectorAll('.navProduct ul li a');
@@ -150,6 +149,49 @@ window.onload = function () {
         }
     }
 }
+
+// ANCHOR --- Pop-ups
+let popup = document.querySelectorAll('.popup');
+let popupBtnOffer = document.querySelectorAll('.popupBtnOffer');
+let popupClose = document.querySelectorAll('.popupClose');
+let popupOverlay = document.querySelectorAll('.popupOverlay');
+
+const closePopup = el => {
+    for(elem of el) {
+        elem.addEventListener('click', e => {
+            e.currentTarget.parentNode.classList.remove('active');
+        })
+    }
+}
+
+closePopup(popupOverlay);
+closePopup(popupClose);
+
+const activePopup = (btn, modal) => {
+    for(popupBtn of btn) {
+        popupBtn.addEventListener('click', e => {
+            e.preventDefault();
+            for(var i = 0; i < popup.length; i++) {
+                popup[i].id === modal ? popup[i].classList.add('active') : '';
+            }
+        })
+    }
+}
+
+activePopup(popupBtnOffer, 'popupPersonalOffer');
+
+
+// for(popupBtn of popupBtnOffer) {
+//     popupBtn.addEventListener('click', e => {
+//         e.preventDefault();
+//         for(var i = 0; i < popup.length; i++) {
+//             if (popup[i].id === 'popupPersonalOffer') {
+//                console.log(popup[i].id )
+//                 popup[i].classList.add('active');
+//            }
+//         }
+//     })
+// }
 
 // // Roullete
 
