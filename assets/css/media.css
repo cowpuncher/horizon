@@ -599,6 +599,7 @@
     .mainWrapper {
         overflow-x: hidden;
     }
+    .mainBannerLabel,
     .topPanel .btnLight,
     a.phone,
     .dateWork,
@@ -695,6 +696,7 @@
         transition: all .3s ease;
         padding: 16px 16px;
     }
+    .mainOffer .wrapper,
     .navigation .menu {
         height: auto;
         -webkit-box-orient: vertical;

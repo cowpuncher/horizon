@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Map -->
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=67def038-3dc4-4d95-b920-c6097d297d2e&lang=ru_RU" type="text/javascript">
+    </script>
+    
+    <!-- 
+        Library style 
+    -->
+    <!-- Swiper style -->
+    <link  rel="stylesheet"  href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+
+    <!-- Main style -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <!--
+        Media queries
+    -->
+    <link rel="stylesheet" href="./assets/css/media.css">
+    <title>Главная страница Горизонт</title>
+</head>
+<body>
+    <div class="mainWrapper">
+        <header class="header">
+            <div class="topPanel pos-r ">
+                <div class="container">   
+                    <div class="wrapper dFlex aic jcsb">
+                        <a href="/" class="logo">
+                            <img src="./assets/img/icons/logo.svg" alt="logo">
+                        </a>
+                        <nav class="navigation">
+                            <ul class="menu dFlex">
+                                <li class="dropmenu">
+                                    <a href="#">
+                                        Проекты
+                                    </a>
+                                    <div class="subMenu">
+                                        <div class="container">
+                                            <div class="subMenuWrapper">
+                                                <a href="#">Рассчитать стоимость</a>
+                                                <p class="desc">
+                                                    Воспользуйтесь нашим калькулятором или попросите о точной смете нас
+                                                </p>
+                                                <a href="#" class="btn btnLight">
+                                                    Получить расчет с учетом бюджета
+                                                </a>
+                                                <a href="#">Построенные дома</a>
+                                                <p class="desc">
+                                                    Завершенные полностью и частично
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Строительство домов
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Покупка готового дома
+                                    </a>
+                                </li>
+                                <li class="dropmenu">
+                                    <a href="#">
+                                        Услуги
+                                    </a>
+                                    <div class="subMenu">
+                                        <div class="container">
+                                            <div class="subMenuWrapper">
+                                                <a href="#">Проектирование и дизайн</a>
+                                                <a href="#">Строительные и отделочные работы</a>
+                                                <a href="#">Благоустройство дома и участка</a>
+                                                <a href="#">Аренда транспорта и услуги спецтехники</a>
+                                                <a href="#">Промышленное и гражданское строительство</a>
+                                                <a href="#">Технический надзор за строительством</a>
+                                                <a href="#">Энергосбережение</a>
+                                                <a href="#">Бесшовные пластиковые погреба TINGARD</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="dropmenu">
+                                    <a href="#">
+                                        О компании
+                                    </a>
+                                    <div class="subMenu">
+                                        <div class="container">
+                                            <div class="subMenuWrapper">
+                                                <a href="#">Наши работы</a>
+                                                <a href="#">Акции</a>
+                                                <a href="#">Отзывы клиентов</a>
+                                                <a href="#">Новости</a>
+                                                <a href="#">Вопросы и ответы</a>
+                                                <a href="#">Наша команда</a>
+                                                <a href="#">Вакансии</a>
+                                                <a href="#">Библиотека строителя</a>
+                                                <a href="#">Техрегламент</a>
+                                                <a href="#">Конакты</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="navFooter mobileElement">
+                                <span class="title">
+                                    Мы в соцсетях
+                                </span>
+                                <div class="navigationSocial dFlex aic">
+                                    <a href="#">
+                                        <div class="icon-vk"></div>
+                                    </a>
+                                    <a href="#">
+                                        <div class="icon-tlg"></div>
+                                    </a>
+                                    <a href="#">
+                                        <div class="icon-youtube"></div>
+                                    </a>
+                                    <a href="#">
+                                        <div class="icon-fb"></div>
+                                    </a>
+                                </div>
+                            </div>
+                        </nav>
+                        <div class="topAbout pos-r dFlex aifs fdc">
+                            <div  id="city" class="citySelect">
+                                <img src="./assets/img/icons/gerb-izhevsk-sm.svg" alt="gerb-izhevsk">
+                                Ижевск
+                            </div>
+                            <div class="changeCity pos-a">
+                                <div class="changeCityBody">
+                                    <p>
+                                        Планируете строительство <br>
+                                        в <span>Ижевске</span>?
+                                    </p>
+                                    <div class="cityButtons dFlex aic jcsb">
+                                        <a href="#" class="cityBtn btn btnLight">Да</a>
+                                        <a href="#" class="cityBtn link">Нет, планирую в Перми</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="tel:89112221133" class="phone">
+                                (3412) 64-31-51
+                            </a>
+                            <span class="dateWork">
+                                c 10 до 20
+                            </span>
+                        </div>
+                        <button class="btn btnLight">
+                            Перезвоните мне
+                        </button>
+                        <button class="burger mobileElement">
+                            <span></span><span></span><span></span>
+                        </button>
+                    </div>             
+                </div>
+            </div>
+        </header>
+        <main>
+            <section class="projectsSection">
+                <div class="container">
+                    <h1 class="sectionTitle">
+                        Проекты
+                    </h1>
+                    <form action="#" class="choiceForm dFlex aic jcc fww">
+                        <div class="group dFlex aic">
+                            <label>
+                                <input type="checkbox">
+                                <span>Одноэтажный</span>
+                            </label>
+                            <label>
+                                <input type="checkbox">
+                                <span>Двухэтажный</span>
+                            </label>
+                        </div>
+                        <div class="group dFlex aic">
+                            <label>
+                                <input type="checkbox">
+                                <span>Компактные до 100 м²</span>
+                            </label>
+                            <label>
+                                <input type="checkbox">
+                                <span>100-200 м²</span>
+                            </label>
+                            <label>
+                                <input type="checkbox">
+                                <span>Просторные от 200 м²</span>
+                            </label>
+                        </div>
+                        <div class="group dFlex aic">
+                            <label>
+                                <input type="checkbox">
+                                <span>1-2 спальни</span>
+                            </label>
+                            <label>
+                                <input type="checkbox">
+                                <span>3-4 спальни</span>
+                            </label>
+                            <label>
+                                <input type="checkbox">
+                                <span>более 4 спален</span>
+                            </label>
+                        </div>
+                    </form>
+                </div>
+            </section>
+            <section class="sectionOffer bgSection">
+                <div class="container"> 
+                    <p class="sectionOfferDesc">
+                        Нет типовых решений по вашему запросу. <a href="#">Посмотреть все</a>
+                    </p>
+                    <h2 class="title sectionOfferTitle">
+                        Постройте дом <br>
+                        по индивидуальному проекту
+                   </h2>
+                    <div class="offer dFlex">
+                        <div class="offerTitle">                            
+                            <div class="offerPerson  dFlex aic">
+                                <div class="img rhomb">
+                                    <img src="./assets/img/bossp.png" alt="boss">
+                                </div>
+                                <div class="offerPosition dFlex fdc">
+                                    <span class="name">
+                                        Антон Микишев
+                                    </span>
+                                    <span class="position">
+                                        Генеральный директор
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="offerDescription">
+                            <p class="desc">
+                                Мы — команда специалистов со строительным и архитектурным образованием. Мы не просто рисуем красивые картинки, мы создаем ожидаемо качественные дома
+                            </p>
+                            <a href="#" class="btn bgGreen">
+                                Получить расчет с учетом бюджета
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="sectionPopular">
+                <div class="container">
+                    <div class="popular">
+                        <h1 class="sectionTitle">
+                            Популярные проекты
+                        </h1>
+                        <div class="popularList dFlex jcsb aic fww">
+                            <a href="#" class="popularItem">
+                                <div class="img effect scale">
+                                    <img src="./assets/img/pop-home1.jpg" alt="pop-home">
+                                    <span class="name">ГД-129</span>
+                                </div>
+                                <div class="popularItemBottom dFlex aic ">
+                                    <span class="price">от 3 450 000 ₽</span>
+                                    <span class="place">
+                                        <img src="./assets/img/icons/space.svg" alt="space">
+                                        89 м²
+                                    </span>
+                                    <span class="place">
+                                        <img src="./assets/img/icons/bath.svg" alt="space">
+                                        2
+                                    </span>
+                                    <span class="place">
+                                        <img src="./assets/img/icons/room.svg" alt="space">
+                                        4
+                                    </span>
+                                </div>
+                            </a>
+                            <a href="#" class="popularItem">
+                                <div class="img effect scale">
+                                    <img src="./assets/img/pop-home2.jpg" alt="pop-home">
+                                    <span class="name">Марино</span>
+                                </div>
+                                <div class="popularItemBottom dFlex aic ">
+                                    <span class="price">от 3 450 000 ₽</span>
+                                    <span class="place">
+                                        <img src="./assets/img/icons/space.svg" alt="space">
+                                        89 м²
+                                    </span>
+                                    <span class="place">
+                                        <img src="./assets/img/icons/bath.svg" alt="space">
+                                        2
+                                    </span>
+                                    <span class="place">
+                                        <img src="./assets/img/icons/room.svg" alt="space">
+                                        4
+                                    </span>
+                                </div>
+                            </a>
+                            <a href="#" class="popularItem">
+                                <div class="img effect scale">
+                                    <img src="./assets/img/pop-home3.jpg" alt="pop-home">
+                                    <span class="name">ГД-129</span>
+                                </div>
+                                <div class="popularItemBottom dFlex aic ">
+                                    <span class="price">от 3 450 000 ₽</span>
+                                    <span class="place">
+                                        <img src="./assets/img/icons/space.svg" alt="space">
+                                        89 м²
+                                    </span>
+                                    <span class="place">
+                                        <img src="./assets/img/icons/bath.svg" alt="space">
+                                        2
+                                    </span>
+                                    <span class="place">
+                                        <img src="./assets/img/icons/room.svg" alt="space">
+                                        4
+                                    </span>
+                                </div>
+                            </a>
+                            <a href="#" class="popularItem">
+                                <div class="img effect scale">
+                                    <img src="./assets/img/pop-home4.jpg" alt="pop-home">
+                                    <span class="name">ГД-129</span>
+                                </div>
+                                <div class="popularItemBottom dFlex aic ">
+                                    <span class="price">от 3 450 000 ₽</span>
+                                    <span class="place">
+                                        <img src="./assets/img/icons/space.svg" alt="space">
+                                        89 м²
+                                    </span>
+                                    <span class="place">
+                                        <img src="./assets/img/icons/bath.svg" alt="space">
+                                        2
+                                    </span>
+                                    <span class="place">
+                                        <img src="./assets/img/icons/room.svg" alt="space">
+                                        4
+                                    </span>
+                                </div>
+                            </a>
+                            <a href="#" class="popularItem">
+                                <div class="img effect scale">
+                                    <img src="./assets/img/pop-home5.jpg" alt="pop-home">
+                                    <span class="name">ГД-129</span>
+                                </div>
+                                <div class="popularItemBottom dFlex aic ">
+                                    <span class="price">от 3 450 000 ₽</span>
+                                    <span class="place">
+                                        <img src="./assets/img/icons/space.svg" alt="space">
+                                        89 м²
+                                    </span>
+                                    <span class="place">
+                                        <img src="./assets/img/icons/bath.svg" alt="space">
+                                        2
+                                    </span>
+                                    <span class="place">
+                                        <img src="./assets/img/icons/room.svg" alt="space">
+                                        4
+                                    </span>
+                                </div>
+                            </a>
+                            <a href="#" class="popularItem">
+                                <div class="img effect scale">
+                                    <img src="./assets/img/pop-home6.jpg" alt="pop-home">
+                                    <span class="name">ГД-129</span>
+                                </div>
+                                <div class="popularItemBottom dFlex aic ">
+                                    <span class="price">от 3 450 000 ₽</span>
+                                    <span class="place">
+                                        <img src="./assets/img/icons/space.svg" alt="space">
+                                        89 м²
+                                    </span>
+                                    <span class="place">
+                                        <img src="./assets/img/icons/bath.svg" alt="space">
+                                        2
+                                    </span>
+                                    <span class="place">
+                                        <img src="./assets/img/icons/room.svg" alt="space">
+                                        4
+                                    </span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="footerSection">
+            <div class="container">
+                <div class="footer dFlex pos-r">
+                    <div class="footerSidebar">
+                        <a href="/" class="logo">
+                            <img src="./assets/img/icons/logo-footer.svg" alt="">
+                        </a>
+                        <div class="footerSidebarSoc">
+                            <a href="#">
+                                <img src="./assets/img/icons/ins-grey.svg" alt="">
+                            </a>
+                            <a href="#">
+                                <img src="./assets/img/icons/vk-grey.svg" alt="">
+                            </a>
+                            <a href="#">
+                                <img src="./assets/img/icons/fb-grey.svg" alt="">
+                            </a>
+                            <a href="#">
+                                <img src="./assets/img/icons/tlg-grey.svg" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="footerNav">
+                        <div class="footerMenuTop">
+                            <ul  class="dFlex aic">
+                                <li>
+                                    <a href="#">
+                                        Строительство домов
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Покупка готового дома
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Индивидуальное проектирование
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>                        
+                        <div class="footerContacts dFlex">
+                            <div class="contact dFlex fdc">
+                                <h4 class="city">
+                                    Ижевск
+                                </h4>
+                                <a href="tel:89112223344" class="phone">(3412) 64-31-51</a>
+                                <a href="#" class="links">Заказать звонок</a>
+                                <address class="address">ул. Ворошилова, 32</address>
+                            </div>
+                            <div class="contact dFlex fdc">
+                                <h4 class="city">
+                                    Пермь
+                                </h4>
+                                <a href="tel:89112223344" class="phone">(342) 270-0-260</a>
+                                <a href="#" class="links">Заказать звонок</a>
+                                <address class="address">ул. Чкалова, 9Е</address>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="copyright dFlex aic pos-a">
+                        Сделано
+                        <img src="./assets/img/company.png" alt="company">
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- 
+            Library Script 
+        -->
+        <script  src="https://code.jquery.com/jquery-3.6.0.min.js"  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="  crossorigin="anonymous"></script>
+        <!-- Fancybox Script -->
+        <script src="./assets/lib/lightbox/fslightbox.js"></script>
+        <!-- Swiper Script -->
+        <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
+        <!-- Main Script -->
+        <script src="./assets/js/script.js"></script>
+    </div>
+</body>
+</html>

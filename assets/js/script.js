@@ -39,6 +39,10 @@ if(document.getElementById('map')) {
 // ANCHOR (Sliders with fraction)
 const sliderWithTimer = new Swiper('.sliderWithFraction', {
     loop: true,
+    autoplay: {
+        delay: 2000,
+        disableOnInteraction: false,
+    },
     pagination: {
         el: '.sliderWithTimerBullet',
         type: 'bullets',
@@ -49,6 +53,14 @@ const sliderWithTimer = new Swiper('.sliderWithFraction', {
         init: function() {
           var totalSlides = this.slides.length - this.loopedSlides*2;
           document.querySelector('.swiper-fraction-current').innerHTML = totalSlides;
+
+          this.el.addEventListener('mouseenter', () => {
+            this.autoplay.stop();
+          });
+    
+          this.el.addEventListener('mouseleave', () => {
+            this.autoplay.start();
+          });
         },
         slideChange: function() {
           var currentSlide = this.realIndex + 1;
@@ -62,6 +74,7 @@ const sliderReview = new Swiper('.sliderReview', {
     loop: true,
     navigation: {
         nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
     },
 });
 // ANCHOR (Sliders product banner)
@@ -127,9 +140,8 @@ window.onload = function () {
     for(var i = 0; i < projectGroup.length; i++) {
         projectGroup[i].onmouseover  = function(e) {
             for(var i = 0; i < projectGroup.length; i++) {
-                projectGroup[i].setAttribute('style', 'opacity: 0.6;');
+                projectGroup[i] !== e.currentTarget ? projectGroup[i].setAttribute('style', 'opacity: 0.6;') : '';
             }
-            e.currentTarget.setAttribute('style', 'opacity: 1;')
         }
         projectGroup[i].onmouseout  = function(e) {
             for(var i = 0; i < projectGroup.length; i++) {

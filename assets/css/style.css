@@ -225,10 +225,10 @@ select:-webkit-autofill:focus {
 .bgTitle .span {
     padding-right: 15px;
     display: inline;
-    background-color: rgba(255, 255, 255, 0.5);
-    -webkit-box-shadow: -15px 0 0 rgb(255 255 255 / 50%), 25px 0 0 rgb(255 255 255 / 50%);
-       -moz-box-shadow: -15px 0 0 rgb(255 255 255 / 50%), 25px 0 0 rgb(255 255 255 / 50%);
-            box-shadow: -15px 0 0 rgb(255 255 255 / 50%), 25px 0 0 rgb(255 255 255 / 50%);
+    background-color: rgba(255, 255, 255, 0.7);
+    -webkit-box-shadow: -15px 0 0 rgb(255 255 255 / 70%), 25px 0 0 rgb(255 255 255 / 70%);
+       -moz-box-shadow: -15px 0 0 rgb(255 255 255 / 70%), 25px 0 0 rgb(255 255 255 / 70%);
+            box-shadow: -15px 0 0 rgb(255 255 255 / 70%), 25px 0 0 rgb(255 255 255 / 70%);
 }
 
 .changeCity {
@@ -241,6 +241,10 @@ select:-webkit-autofill:focus {
     right: -40%;
     background: var(--color-6);
     line-height: var(--lh-1);
+    /*FIXME Добавил тень для выбора города*/
+    -webkit-box-shadow: 2px 2px 13px rgb(0 0 0 / 10%);
+       -moz-box-shadow: 2px 2px 13px rgb(0 0 0 / 10%);
+            box-shadow: 2px 2px 13px rgb(0 0 0 / 10%);
 }
 
 .changeCity.active {
@@ -309,6 +313,16 @@ select:-webkit-autofill:focus {
     background: linear-gradient(93.7deg, #6FD50A 0%, #90F52C 100%);
 }
 
+.btnWhite {
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    background: rgba(255, 255, 255, 0.6);
+    -webkit-backdrop-filter: blur(7px);
+            backdrop-filter: blur(7px);
+}
+
 .btnLight {
     color: var(--color-3);
     text-transform: uppercase;
@@ -317,6 +331,13 @@ select:-webkit-autofill:focus {
     padding: 12px 24px;
     letter-spacing: var(--letter-spacing-1);
     font-size: var(--fs-2);
+}
+
+.btnLight:hover {
+    background: rgba(255, 255, 255, 0.4);
+    -webkit-backdrop-filter: blur(24px);
+            backdrop-filter: blur(24px);
+    border-color: transparent;
 }
 
 /* ANCHOR ---- (backgrounds)  */
@@ -510,9 +531,19 @@ select:-webkit-autofill:focus {
     position: absolute;
     width: 100%;
     z-index: 2;
-    background: rgb(255 255 255 / 50%);
-    -webkit-backdrop-filter: blur(4px);
-            backdrop-filter: blur(4px);
+}
+
+.topPanel::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    background: rgba(255, 255, 255, .5);
+    -webkit-backdrop-filter: blur(24px);
+            backdrop-filter: blur(24px);
+
 }
 
 .topPanel .logo {
@@ -558,10 +589,19 @@ select:-webkit-autofill:focus {
     position: absolute;
     left: 0;
     top: 100%;
-    background: rgb(255 255 255 / 50%);
-    -webkit-backdrop-filter: blur(4px);
-    backdrop-filter: blur(4px);
     width: 100%;
+}
+
+.subMenu:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    background: rgba(255, 255, 255, .5);
+    -webkit-backdrop-filter: blur(35px);
+    backdrop-filter: blur(35px);
 }
 
 .subMenu a {
@@ -694,6 +734,52 @@ a.phone {
     margin-top: 40px;
 }
 
+.mainOffer .btnWhite {
+    margin-right: 16px;
+}
+
+.mainBannerLabel {
+    font-weight: 500;
+    font-size: 17px;
+    position: absolute;
+    bottom: 88px;
+    right: 58px;
+    z-index: 1;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+       -moz-box-orient: vertical;
+       -moz-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: end;
+    -webkit-align-items: flex-end;
+       -moz-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+}
+
+.mainBannerLabel span {
+    padding: 12px 10px;
+    background: rgba(255, 255, 255, 0.6);
+    -webkit-backdrop-filter: blur(7px);
+            backdrop-filter: blur(7px);
+}
+
+.mainBannerLabel .name {
+    
+}
+
+.mainBannerLabel .size {
+    font-size: 13px;
+    margin-top: -10px;
+}
+
 /* ANCHOR ---- (filter in banner)  */
 
 .filterList {
@@ -824,6 +910,10 @@ a.navProductMore {
     font-size: 14px;
     text-transform: uppercase;
     letter-spacing: 0.05em;
+}
+
+.footerMenuTop a:hover {
+    opacity: .6;
 }
 
 .footerContacts {
@@ -987,6 +1077,15 @@ a.navProductMore {
     font-weight: 500;
 }
 
+.sectionOfferDesc {
+    font-size: 20px;
+    margin-bottom: 32px;
+}
+
+.sectionOfferDesc a {
+    color: var(--color-3);
+}
+
 .sectionOfferWithRoulette {
     padding: 0;
 }
@@ -1037,6 +1136,13 @@ a.navProductMore {
     text-transform: uppercase;
     padding: 20px 20px;
     letter-spacing: var(--letter-spacing-1);
+}
+
+.offerBannerTitle .btn:hover  {
+    color: var(--color-6);
+    background: rgba(255, 255, 255, 0.2);
+    -webkit-backdrop-filter: blur(24px);
+            backdrop-filter: blur(24px);
 }
 
 .sectionOfferTitle {
@@ -1492,7 +1598,7 @@ a.navProductMore {
     background: url(../img/prom1.jpg) no-repeat 0 0 / cover;
     max-width: 860px;
     width: 100%;
-    padding: 50px 120px 130px 60px;
+    padding: 50px 120px 50px 60px;
     min-height: 710px;
 }
 
@@ -1516,6 +1622,7 @@ a.navProductMore {
 }
 
 .positionContent {  
+    color: var(--color-6);
     height: 100%;  
     position: relative;
     z-index: 1;
@@ -1568,6 +1675,12 @@ a.navProductMore {
 
 .promotionBigBanks img:not(:first-of-type) {
     margin-left: 20px;
+}
+
+.promotionBig .img {
+    margin-top: auto;
+    -webkit-filter: invert(25%) sepia(126%) saturate(113%) hue-rotate(139deg) brightness(320%) contrast(113%);
+            filter: invert(25%) sepia(126%) saturate(113%) hue-rotate(139deg) brightness(320%) contrast(113%);
 }
 
 .promotionCard {
@@ -1645,6 +1758,17 @@ a.navProductMore {
     transition: all .3s ease;
 }
 
+.promotionCard:hover .bgHover:after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: rgb(0 0 0 / 40%);
+    position: absolute;
+    z-index: 9999;
+    top: 0;
+}
+
 .promotionSmall .btn {
     background: rgba(255, 255, 255, 0.6);
     -webkit-backdrop-filter: blur(24px);
@@ -1697,6 +1821,7 @@ a.navProductMore {
 
 .materialsItem::before {
     content: '';
+    z-index: 1;
     display: block;
     width: 100%;
     height: 100%;
@@ -1859,7 +1984,7 @@ a.navProductMore {
     margin-right: 15px;
 }
 
-.socialCard  .btn {
+.socialCard .btn {
     border: 1px solid #C8D8E4;
     color: var(--color-3);
     margin-top: auto;
@@ -1868,6 +1993,10 @@ a.navProductMore {
     text-align: center;
     text-transform: uppercase;
     font-weight: 700;
+}
+
+.socialCard .btn:hover {
+    border-color: var(--color-3);
 }
 
 /* ANCHOR -- \\PRODUCT PAGE// */
