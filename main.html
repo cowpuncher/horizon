@@ -570,7 +570,7 @@
                             надежной работы
                         </span>
                     </div>
-                    <a href="#" class="btn bgGreen">
+                    <a href="#" class="btn bgGreen popupBtnOrder">
                         Посчитайте мне дом
                     </a>
                 </div>
@@ -1082,14 +1082,16 @@
             </button>
             <div class="popupOverlay"></div>
             <div class="popupWindow">
-                <div class="popupTop">
-                    Header
+                <div class="popupHeader">
+                    <h3 class="title">
+                        Персональное предложение
+                    </h3>
+                    <p class="desc">
+                        Сделаем персональное предложение на основнии индивидуальных параметров
+                    </p>
                 </div>
                 <div class="popupBody">
                     Any content text
-                </div>
-                <div class="popupFooter">
-                    Footer
                 </div>
             </div>
         </div>
@@ -1100,14 +1102,122 @@
             </button>
             <div class="popupOverlay"></div>
             <div class="popupWindow">
-                <div class="popupTop">
-                    Header Order
-                </div>
+                <h3 class="title">
+                    Закажите смету
+                </h3>
                 <div class="popupBody">
-                    Body Order
-                </div>
-                <div class="popupFooter">
-                    Footer Order
+                    <form action="#" class="formPopup dFlex aifs fdc">
+                        <p class="desc">
+                            Закажите смету для быстрого расчета стоимости дома бесплатно. Наш менеджер ответит вам в кратчайшие сроки. 
+                        </p>
+                        <label>
+                            <span class="name">
+                                Имя
+                            </span>
+                            <input name="name" type="text">
+                        </label>
+                        <label>
+                            <span class="name">
+                                Телефон
+                            </span>
+                            <input name="phone" type="tel">
+                        </label>
+                        <label>
+                            <span class="name">
+                                Email
+                            </span>
+                            <input name="email" type="mail">
+                        </label>
+                        <label>
+                            <span class="name">
+                                Этажность
+                            </span>
+                            <select name="" id="">
+                                <option value="1 этаж">
+                                    1 этаж
+                                </option>
+                                <option value="2 этаж">
+                                    2 этаж
+                                </option>
+                                <option value="3 этаж">
+                                    3 этаж
+                                </option>
+                            </select>
+                        </label>
+                        <label>
+                            <span class="name">
+                                Количество спален
+                            </span>
+                            <select name="" id="">
+                                <option value="1 ">
+                                    1 
+                                </option>
+                                <option value="2 ">
+                                    2 
+                                </option>
+                                <option value="3 ">
+                                    3 
+                                </option>
+                            </select>
+                        </label>
+                        <label>
+                            <span class="name">
+                                Материал стен
+                            </span>
+                            <select name="" id="">
+                                <option value="Камень">
+                                    Камень
+                                </option>
+                                <option value="Сено">
+                                    Сено
+                                </option>
+                                <option value="Ветки">
+                                    Ветки
+                                </option>
+                            </select>
+                        </label>
+                        <label>
+                            <span class="name">
+                                Наличие участка
+                            </span>
+                            <select name="" id="">
+                                <option value="Есть">
+                                    Есть
+                                </option>
+                                <option value="Нет">
+                                    Нет
+                                </option>
+                            </select>
+                        </label>
+                        <label>
+                            <span class="name">
+                                Фасад
+                            </span>
+                            <select name="" id="">
+                                <option value="Есть">
+                                    Есть
+                                </option>
+                                <option value="Нет">
+                                    Нет
+                                </option>
+                            </select>
+                        </label>
+                        <label>
+                            <span class="name">
+                                Пожелания
+                            </span>
+                            <textarea> </textarea>
+                        </label>
+                        <label class="dFlex aifs">
+                            <input type="checkbox">
+                            <p>
+                                Я согласен с <a href="#">условиями использования</a> и <a href="#">политикой конфиденциальности</a>
+                            </p>
+                        </label>
+                        <button class="btn bgGreen">
+                            Отправить
+                        </button>
+                    </form>
                 </div>
             </div>
         </div>

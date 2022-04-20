@@ -184,6 +184,7 @@ const activePopup = (btn, modal) => {
     }
 }
 activePopup('.popupBtnOffer', 'popupPersonalOffer');
+activePopup('.popupBtnOrder', 'popupOrder');
 
 // // Roullete
 
@@ -191,7 +192,6 @@ const rouletteSlider = document.querySelector('.rouletteSlider');
 const rouletteBtn = document.getElementById('rouletteBtn');
 let rouletteSliderItem = document.querySelectorAll('.rouletteSliderItem');
 
-console.log(rouletteSliderItem)
 for(let i = 0; i < rouletteSliderItem.length; i++) {
     let roulleteHeight = rouletteSliderItem[i].offsetHeight * rouletteSliderItem.length;
 
@@ -214,6 +214,6 @@ rouletteBtn.addEventListener('click', e => {
     rouletteSliderItem = document.querySelectorAll('.rouletteSliderItem');
     for(let i = 0; i < rouletteSliderItem.length; i++) {
         let itemHeight = rouletteSliderItem[i].offsetHeight;
-        rouletteSliderItem[i].setAttribute('style', 'transform: translate(0 , -' + (itemHeight * random) + 'px)')
+        rouletteSliderItem[i].setAttribute('style', 'transform: translate(0 , -' + (itemHeight * random) + 'px)');
     }
 });
