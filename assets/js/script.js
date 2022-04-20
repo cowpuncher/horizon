@@ -185,40 +185,35 @@ const activePopup = (btn, modal) => {
 }
 activePopup('.popupBtnOffer', 'popupPersonalOffer');
 
-
-// for(popupBtn of popupBtnOffer) {
-//     popupBtn.addEventListener('click', e => {
-//         e.preventDefault();
-//         for(var i = 0; i < popup.length; i++) {
-//             if (popup[i].id === 'popupPersonalOffer') {
-//                console.log(popup[i].id )
-//                 popup[i].classList.add('active');
-//            }
-//         }
-//     })
-// }
-
 // // Roullete
 
-// const rouletteSlider = document.querySelector('.rouletteSlider');
-// const rouletteBtn = document.getElementById('rouletteBtn');
-// let rouletteSliderItem = document.querySelectorAll('.rouletteSliderItem');
+const rouletteSlider = document.querySelector('.rouletteSlider');
+const rouletteBtn = document.getElementById('rouletteBtn');
+let rouletteSliderItem = document.querySelectorAll('.rouletteSliderItem');
 
-// for(let i = 0; i < rouletteSliderItem.length; i++) {
-//     // rouletteSlider.append(rouletteSliderItem[i].cloneNode(true));
-//     let itemHeight = rouletteSliderItem[i].offsetHeight;
-//     rouletteSliderItem[i].classList.add('rouletteSliderItem-show')
-//     // rouletteSlider.setAttribute('style', 'height: ' + itemHeight * rouletteSliderItem.length + 'px;');
+console.log(rouletteSliderItem)
+for(let i = 0; i < rouletteSliderItem.length; i++) {
+    let roulleteHeight = rouletteSliderItem[i].offsetHeight * rouletteSliderItem.length;
+
     
-// }
+    rouletteSliderItem[2].classList.add('rouletteSliderItem-show');
 
-// var random = Math.floor(Math.random() * 9) + 1; // От 0 до 8
+    rouletteSlider.setAttribute('style', 'height:' + roulleteHeight + 'px;');
 
-// rouletteBtn.addEventListener('click', e => {    
-//     // rouletteSliderItem = document.querySelectorAll('.rouletteSliderItem');
-//     console.log(random)
-//     for(let i = 0; i < rouletteSliderItem.length; i++) {
-//         let itemHeight = rouletteSliderItem[i].offsetHeight;
-//         rouletteSliderItem[i].setAttribute('style', 'transform: translate(0 , -' + (itemHeight * random) + 'px)')
-//     }
-// });
+    rouletteSlider.append(rouletteSliderItem[i].cloneNode(true));
+    let itemHeight = rouletteSliderItem[i].offsetHeight;
+
+
+    rouletteSlider.setAttribute('style', 'height: ' + itemHeight * rouletteSliderItem.length + 'px;');
+    
+}
+
+var random = Math.floor(Math.random() * 9) + 1; // От 0 до 8
+
+rouletteBtn.addEventListener('click', e => {    
+    rouletteSliderItem = document.querySelectorAll('.rouletteSliderItem');
+    for(let i = 0; i < rouletteSliderItem.length; i++) {
+        let itemHeight = rouletteSliderItem[i].offsetHeight;
+        rouletteSliderItem[i].setAttribute('style', 'transform: translate(0 , -' + (itemHeight * random) + 'px)')
+    }
+});

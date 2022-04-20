@@ -544,6 +544,41 @@ select:-webkit-autofill:focus {
 .rouletteSlider {
     position: relative;
     border-left: 1px solid var(--color-7);
+    overflow: hidden;
+}
+
+.rouletteSlider:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(59%, rgba(196, 196, 196, 0)), color-stop(50%, #C4C4C4), to(rgba(196, 196, 196, 0)));
+    background: -webkit-linear-gradient(top, rgba(196, 196, 196, 0) 59%, #C4C4C4 50%, rgba(196, 196, 196, 0) 100%);
+    background: -moz-linear-gradient(top, rgba(196, 196, 196, 0) 59%, #C4C4C4 50%, rgba(196, 196, 196, 0) 100%);
+    background: -o-linear-gradient(top, rgba(196, 196, 196, 0) 59%, #C4C4C4 50%, rgba(196, 196, 196, 0) 100%);
+    background: linear-gradient(180deg, rgba(196, 196, 196, 0) 59%, #C4C4C4 50%, rgba(196, 196, 196, 0) 100%);
+    z-index: 10;
+    top: -59%;
+}
+
+.rouletteSlider:after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(59%, rgba(196, 196, 196, 0)), color-stop(50%, #C4C4C4), to(rgba(196, 196, 196, 0)));
+    background: -webkit-linear-gradient(top, rgba(196, 196, 196, 0) 59%, #C4C4C4 50%, rgba(196, 196, 196, 0) 100%);
+    background: -moz-linear-gradient(top, rgba(196, 196, 196, 0) 59%, #C4C4C4 50%, rgba(196, 196, 196, 0) 100%);
+    background: -o-linear-gradient(top, rgba(196, 196, 196, 0) 59%, #C4C4C4 50%, rgba(196, 196, 196, 0) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(196, 196, 196, 0)), color-stop(50%, #C4C4C4), color-stop(50%, rgba(196, 196, 196, 0)));
+    background: -webkit-linear-gradient(top, rgba(196, 196, 196, 0) 0%, #C4C4C4 50%, rgba(196, 196, 196, 0) 50%);
+    background: -moz-linear-gradient(top, rgba(196, 196, 196, 0) 0%, #C4C4C4 50%, rgba(196, 196, 196, 0) 50%);
+    background: -o-linear-gradient(top, rgba(196, 196, 196, 0) 0%, #C4C4C4 50%, rgba(196, 196, 196, 0) 50%);
+    background: linear-gradient(180deg, rgba(196, 196, 196, 0) 0%, #C4C4C4 50%, rgba(196, 196, 196, 0) 50%);
+    z-index: 10;
+    top: 59%;
 }
 
 .rouletteSliderItem {
@@ -555,6 +590,10 @@ select:-webkit-autofill:focus {
     display: -moz-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    transition: all .5s ease;
     -webkit-box-align: center;
     -webkit-align-items: center;
        -moz-box-align: center;
