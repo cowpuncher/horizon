@@ -37,11 +37,11 @@ if(document.getElementById('map')) {
 
 // ANCHOR --- Sliders
 // ANCHOR (Sliders with fraction)
+const speedSlide = 5000;
 const sliderWithTimer = new Swiper('.sliderWithFraction', {
     loop: true,
     autoplay: {
-        delay: 2000,
-        disableOnInteraction: false,
+        delay: speedSlide,
     },
     pagination: {
         el: '.sliderWithTimerBullet',
@@ -51,17 +51,24 @@ const sliderWithTimer = new Swiper('.sliderWithFraction', {
     },
     on: {
         init: function() {
-          var totalSlides = this.slides.length - this.loopedSlides*2;
-          document.querySelector('.swiper-fraction-current').innerHTML = totalSlides;
+            var totalSlides = this.slides.length - this.loopedSlides*2;
+            document.querySelector('.swiper-fraction-current').innerHTML = totalSlides;
+            // Таймер текущего слайда, работает через @keyframe activeSlide в style.css и переменную --speed-slide
+            for(el of this.pagination.bullets) {
+                el.style.setProperty('--speed-slide', speedSlide/1000 + 's');
+            }
+            // Остановка слайдера при наведении
+            this.el.addEventListener('mouseenter', () => {
+                this.autoplay.stop();
+            });
+        
+            this.el.addEventListener('mouseleave', () => {
+                this.autoplay.start();
+            });
 
-          this.el.addEventListener('mouseenter', () => {
-            this.autoplay.stop();
-          });
-    
-          this.el.addEventListener('mouseleave', () => {
-            this.autoplay.start();
-          });
         },
+
+        // Фракции слайдера
         slideChange: function() {
           var currentSlide = this.realIndex + 1;
           
@@ -152,7 +159,6 @@ window.onload = function () {
 
 // ANCHOR --- Pop-ups
 let popup = document.querySelectorAll('.popup');
-let popupBtnOffer = document.querySelectorAll('.popupBtnOffer');
 let popupClose = document.querySelectorAll('.popupClose');
 let popupOverlay = document.querySelectorAll('.popupOverlay');
 
@@ -163,12 +169,12 @@ const closePopup = el => {
         })
     }
 }
-
 closePopup(popupOverlay);
 closePopup(popupClose);
 
 const activePopup = (btn, modal) => {
-    for(popupBtn of btn) {
+    btnCollection =  document.querySelectorAll(btn);
+    for(popupBtn of btnCollection) {
         popupBtn.addEventListener('click', e => {
             e.preventDefault();
             for(var i = 0; i < popup.length; i++) {
@@ -177,8 +183,7 @@ const activePopup = (btn, modal) => {
         })
     }
 }
-
-activePopup(popupBtnOffer, 'popupPersonalOffer');
+activePopup('.popupBtnOffer', 'popupPersonalOffer');
 
 
 // for(popupBtn of popupBtnOffer) {
