@@ -26,7 +26,7 @@ if(document.getElementById('map')) {
         myMap.geoObjects.add(objectManager);
     
         $.ajax({
-            url: "../assets/js/data.json"
+            url: "./assets/js/data.json"
         }).done(function(data) {
             objectManager.add(data);
         });
@@ -139,6 +139,21 @@ let mainBanner =document.querySelector('.mainBanner'),
 
 mainBanner == null ? topPanel.setAttribute('style', 'position: unset;') : '';
 
+// --------- Fixed top menu 
+const fixedMenu = () => {
+    if(pageYOffset > topPanel.offsetHeight) {
+        topPanel.classList.add('active');
+        topPanel.setAttribute('style', 'transform: translate(0px, 0px);' );  
+    } else if(pageYOffset < topPanel.offsetHeight) {
+        topPanel.classList.remove('active');
+        topPanel.removeAttribute('style', 'transform: translate(0px, 0px);' );
+    }
+}
+fixedMenu();
+window.addEventListener('scroll', function() {
+    fixedMenu();
+});
+
 // ANCHOR (Hover effect on project page)
 let projectGroup = document.querySelectorAll('.projectGroup');
 
@@ -162,12 +177,15 @@ let popup = document.querySelectorAll('.popup');
 let popupClose = document.querySelectorAll('.popupClose');
 let popupOverlay = document.querySelectorAll('.popupOverlay');
 
-const closePopup = el => {
-    for(elem of el) {
-        elem.addEventListener('click', e => {
-            e.currentTarget.parentNode.classList.remove('active');
-        })
-    }
+const closePopup = (el, timer = 0) => {
+    setTimeout(() => {
+        for(elem of el) {
+            elem.addEventListener('click', e => {
+                e.currentTarget.parentNode.classList.remove('active');
+            })
+        }
+        
+    }, timer);
 }
 closePopup(popupOverlay);
 closePopup(popupClose);
@@ -185,6 +203,7 @@ const activePopup = (btn, modal) => {
 }
 activePopup('.popupBtnOffer', 'popupPersonalOffer');
 activePopup('.popupBtnOrder', 'popupOrder');
+
 
 // // Roullete
 

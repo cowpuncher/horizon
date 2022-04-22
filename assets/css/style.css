@@ -601,6 +601,59 @@ textarea {
     resize: none;
 }
 
+input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    opacity: 0;
+    margin-right: 18px;
+}
+
+.labelCheckdox {
+    margin-bottom: 15px;
+}
+
+.labelCheckdox p::after,
+.labelCheckdox p::before {
+    width: 20px;
+    height: 20px;
+    border: 1px solid var(--color-7);
+    content: '';
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+       -moz-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+       -moz-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.labelCheckdox::after {
+    opacity: 0;
+    z-index: -10;
+}
+
+.labelCheckdox input[type="checkbox"]:checked ~ p::after {
+    background: var(--color-2);
+    opacity: 1;
+    z-index: 1;
+    content: url(../img/icons/check.svg);
+}
+
+.labelCheckdox a {
+    color: var(--color-3);
+}
 
 
 /* ANCHOR ---- (roulette)  */
@@ -624,11 +677,11 @@ textarea {
     width: 100%;
     height: 100%;
     position: absolute;
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(59%, rgba(196, 196, 196, 0)), color-stop(50%, #dddddd), to(rgba(196, 196, 196, 0)));
-    background: -webkit-linear-gradient(top, rgba(196, 196, 196, 0) 59%, #dddddd 50%, rgba(196, 196, 196, 0) 100%);
-    background: -moz-linear-gradient(top, rgba(196, 196, 196, 0) 59%, #dddddd 50%, rgba(196, 196, 196, 0) 100%);
-    background: -o-linear-gradient(top, rgba(196, 196, 196, 0) 59%, #dddddd 50%, rgba(196, 196, 196, 0) 100%);
-    background: linear-gradient(180deg, rgba(196, 196, 196, 0) 59%, #dddddd 50%, rgba(196, 196, 196, 0) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(59%, rgba(196, 196, 196, 0)), color-stop(50%, var(--color-5)), to(rgba(196, 196, 196, 0)));
+    background: -webkit-linear-gradient(top, rgba(196, 196, 196, 0) 59%, var(--color-5) 50%, rgba(196, 196, 196, 0) 100%);
+    background: -moz-linear-gradient(top, rgba(196, 196, 196, 0) 59%, var(--color-5) 50%, rgba(196, 196, 196, 0) 100%);
+    background: -o-linear-gradient(top, rgba(196, 196, 196, 0) 59%, var(--color-5) 50%, rgba(196, 196, 196, 0) 100%);
+    background: linear-gradient(180deg, rgba(196, 196, 196, 0) 59%, var(--color-5) 50%, rgba(196, 196, 196, 0) 100%);
     z-index: 10;
     top: -59%;
 }
@@ -639,13 +692,13 @@ textarea {
     width: 100%;
     height: 100%;
     position: absolute;
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(196, 196, 196, 0)), color-stop(50%, #dddddd), color-stop(50%, rgba(196, 196, 196, 0)));
-    background: -webkit-linear-gradient(top, rgba(196, 196, 196, 0) 0%, #dddddd 50%, rgba(196, 196, 196, 0) 50%);
-    background: -moz-linear-gradient(top, rgba(196, 196, 196, 0) 0%, #dddddd 50%, rgba(196, 196, 196, 0) 50%);
-    background: -o-linear-gradient(top, rgba(196, 196, 196, 0) 0%, #dddddd 50%, rgba(196, 196, 196, 0) 50%);
-    background: linear-gradient(180deg, rgba(196, 196, 196, 0) 0%, #dddddd 50%, rgba(196, 196, 196, 0) 50%);
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(196, 196, 196, 0)), color-stop(50%, var(--color-5)), color-stop(50%, rgba(196, 196, 196, 0)));
+    background: -webkit-linear-gradient(top, rgba(196, 196, 196, 0) 0%, var(--color-5) 50%, rgba(196, 196, 196, 0) 50%);
+    background: -moz-linear-gradient(top, rgba(196, 196, 196, 0) 0%, var(--color-5) 50%, rgba(196, 196, 196, 0) 50%);
+    background: -o-linear-gradient(top, rgba(196, 196, 196, 0) 0%, var(--color-5) 50%, rgba(196, 196, 196, 0) 50%);
+    background: linear-gradient(180deg, rgba(196, 196, 196, 0) 0%, var(--color-5) 50%, rgba(196, 196, 196, 0) 50%);
     z-index: 10;
-    top: 59%;
+    top: 50%;
 }
 
 .rouletteSliderItem {
@@ -715,6 +768,19 @@ textarea {
     z-index: 2;
 }
 
+.topPanel.active {
+    position: fixed;
+    padding: 5px 0;
+    z-index: 999;
+    -webkit-transition: all .1s linear;
+    -o-transition: all .1s linear;
+    -moz-transition: all .1s linear;
+    transition: all .1s linear;
+    -webkit-box-shadow: 20px 24px 44px rgba(0, 0, 0, 0.13);
+    -moz-box-shadow: 20px 24px 44px rgba(0, 0, 0, 0.13);
+         box-shadow: 20px 24px 44px rgba(0, 0, 0, 0.13);
+  }
+
 .topPanel::before {
     content: '';
     display: block;
@@ -722,6 +788,7 @@ textarea {
     height: 100%;
     position: absolute;
     z-index: -1;
+    top: 0;
     background: rgba(255, 255, 255, .5);
     -webkit-backdrop-filter: blur(24px);
             backdrop-filter: blur(24px);

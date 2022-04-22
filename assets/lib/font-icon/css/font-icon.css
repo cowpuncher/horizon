@@ -10,13 +10,13 @@
     font-style: normal;
 }
 [class*='icon-']:before{
-	display: inline-block;
-   font-family: 'Glyphter';
-   font-style: normal;
-   font-weight: normal;
-   line-height: 1;
-   -webkit-font-smoothing: antialiased;
-   -moz-osx-font-smoothing: grayscale
+    display: inline-block;
+    font-family: 'Glyphter';
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
 }
 .icon-fb:before{content:'\0041';}
 .icon-arrow-drop:before{content:'\0042';}

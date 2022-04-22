@@ -1,9 +1,11 @@
+/*ANCHOR max-width: 1700 */
 @media screen and (max-width: 1700px) {
     .sliderWithTimerBullet {
         margin-bottom: 20px;
     }
 }
 
+/*ANCHOR max-width: 1600 */
 @media screen and (max-width: 1600px) {
     /* .navigation {
         margin-right: 45px;
@@ -34,6 +36,7 @@
         margin-right: 30px;
     }
 }
+/*ANCHOR max-width: 1440 */
 
 @media screen and (max-width: 1440px) {
     .header {
@@ -110,6 +113,7 @@
         margin-right: 15px;
     }
 }
+/*ANCHOR max-width: 1200 */
 @media screen and (max-width: 1200px) {
     h1 {
         font-size: 40px;
@@ -505,6 +509,7 @@
     }
 }
 
+/*ANCHOR max-width: 993 */
 @media screen and (max-width: 993px) {
     #rouletteBtn:after {
         display: none;
@@ -594,8 +599,8 @@
         height: auto;
     }
 }
-
-@media screen and (max-width: 800px) {
+/*ANCHOR max-width: 768 */
+@media screen and (max-width: 768px) {
     .mainWrapper {
         overflow-x: hidden;
     }
