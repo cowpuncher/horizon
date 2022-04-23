@@ -625,6 +625,19 @@
     .sliderWithFraction .swiper-slide {
         height: auto;
     }
+    
+    .promotionCard p {
+        margin-bottom: 25px;
+    }
+    
+    .promotionCards {
+        align-items: stretch;
+    }
+    .promotionCard {
+        min-height: 100%;
+        height: auto;
+        padding-right: 50px;
+    }
 }
 /*ANCHOR max-width: 768 */
 @media screen and (max-width: 768px) {

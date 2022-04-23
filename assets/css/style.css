@@ -2300,6 +2300,10 @@ a.navProductMore {
     min-height: 300px;
 }
 
+.socialCard.mobileElement {
+    display: none;
+}
+
 .socialCard:not(:last-of-type) {
     margin-right: 20px;
 }
