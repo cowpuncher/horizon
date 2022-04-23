@@ -300,6 +300,20 @@ select:-webkit-autofill:focus {
     background: linear-gradient(104.53deg, #E1EAFB -0.68%, rgba(225, 234, 251, 0.586116) 40.99%, rgba(225, 234, 251, 0) 100%);
 }
 
+.dropmenu .arrow {
+    margin: 0 15px;
+    display: none;
+    position: absolute;
+    top: 13px;
+    right: 0;
+    transform: translate(0, -50%);
+}
+
+.dropmenu .arrow img {
+    width: 10px;
+}
+
+
 /* ANCHOR ---- (buttons)  */
 
 .btn {
@@ -349,6 +363,22 @@ select:-webkit-autofill:focus {
     -webkit-backdrop-filter: blur(24px);
             backdrop-filter: blur(24px);
     border-color: transparent;
+}
+
+.crossedOut {
+    position: relative;
+    margin: 0 10px;
+}
+
+.crossedOut::after {
+    position: absolute;
+    content: '';
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: #FC0000;
+    position: absolute;
+    top: 50%;
 }
 
 /* ANCHOR ---- (backgrounds)  */
@@ -484,7 +514,7 @@ select:-webkit-autofill:focus {
     opacity: 1;
     visibility: visible;
     background: rgba(0, 0, 0, 0.8);
-    z-index: 99;
+    z-index: 999;
     width: 100%;
     height: 100%;
 }
@@ -770,12 +800,8 @@ input[type="checkbox"] {
 
 .topPanel.active {
     position: fixed;
-    padding: 5px 0;
     z-index: 999;
-    -webkit-transition: all .1s linear;
-    -o-transition: all .1s linear;
-    -moz-transition: all .1s linear;
-    transition: all .1s linear;
+    left: 0;
     -webkit-box-shadow: 20px 24px 44px rgba(0, 0, 0, 0.13);
     -moz-box-shadow: 20px 24px 44px rgba(0, 0, 0, 0.13);
          box-shadow: 20px 24px 44px rgba(0, 0, 0, 0.13);
@@ -822,6 +848,7 @@ input[type="checkbox"] {
         -ms-flex-align: center;
             align-items: center;
     height: 100%;
+    width: 90%;
 }
 
 .navigation a:hover {
@@ -834,11 +861,24 @@ input[type="checkbox"] {
 
 .subMenu {
     font-size: 22px;
-    display: none;
+    opacity: 0;
+    height: 0;
+    visibility: hidden;
     position: absolute;
     left: 0;
     top: 100%;
     width: 100%;
+}
+
+.subMenu.active {
+    opacity: 1;
+    height: 100%;
+    visibility: visible;
+    transition: all .5s ease;
+}
+
+.subMenu.active ~ .arrow {
+    transform: rotate(-180deg) translate(0, 8px);
 }
 
 .subMenu:before {
@@ -906,8 +946,10 @@ input[type="checkbox"] {
     margin-bottom: 20px;
 }
 
-.navigation li:hover .subMenu {
-    display: block;
+@media screen and (min-width: 768px) {
+    .navigation li:hover .subMenu {
+        display: block;
+    }
 }
 
 .topAbout {
