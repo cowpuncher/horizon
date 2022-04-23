@@ -134,22 +134,19 @@ if(houseForSaleSliderItem) {
 
 // ANCHOR --- Styles 
 // ANCHOR (Height top panel)
-let mainBanner =document.querySelector('.mainBanner'),
+let mainBanner = document.querySelector('.mainBanner'),
     topPanel = document.querySelector('.topPanel');
 
 mainBanner == null ? topPanel.setAttribute('style', 'position: unset;') : '';
 
 // ANCHOR Fixed top menu 
 const fixedMenu = () => {
-    const main = document.querySelector('main');
     if(pageYOffset > 0) {
         topPanel.classList.add('active');
         topPanel.setAttribute('style', 'background: #ffffff; transform: translate(0px, 0px); backdrop-filter: blur(0px)' );  
-        main.setAttribute('style', 'margin-top:' + topPanel.offsetHeight + 'px');  
     } else {
         topPanel.classList.remove('active');
         topPanel.removeAttribute('style', 'transform: translate(0px, 0px);' );
-        main.removeAttribute('style', 'margin-top:' + topPanel.offsetHeight + 'px');  
     }
 }
 fixedMenu();

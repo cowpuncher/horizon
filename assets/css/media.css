@@ -638,6 +638,7 @@
     .swiper-pagination-bullet-active {
         width: 30px!important;
     }
+    .socialCard,
     .mainBannerLabel,
     .topPanel .btnLight,
     .topPanel a.phone,
@@ -649,6 +650,28 @@
     .navigation::after,
     .phase:last-of-type {
         display: none;
+    }
+    .socialCard.mobileElement {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        min-height: auto;
+        padding: 15px 0 ;
+        margin: 0;
+        width: 100%;
+        max-width: 100%;
+        margin: 0px 0 12px !important;
+    }
+    .socialCard.mobileElement .title {
+        margin: 0 15px 0 0;
+    }
+    .socialCard .title img {
+        margin-right: 15px;
+        width: 32px;
+    }
+    .navigation a {
+        width: 90%;
     }
     .dropmenu .arrow,
     .mobileElement {

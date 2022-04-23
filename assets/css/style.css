@@ -848,7 +848,6 @@ input[type="checkbox"] {
         -ms-flex-align: center;
             align-items: center;
     height: 100%;
-    width: 90%;
 }
 
 .navigation a:hover {
@@ -949,6 +948,12 @@ input[type="checkbox"] {
 @media screen and (min-width: 768px) {
     .navigation li:hover .subMenu {
         display: block;
+        opacity: 1;
+        height: auto;
+        visibility: visible;
+    }
+    .topPanel.active .navigation li:hover .subMenu {
+        background: var(--color-6);
     }
 }
 
