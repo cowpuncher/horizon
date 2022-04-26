@@ -221,6 +221,10 @@ select:-webkit-autofill:focus {
     margin-bottom: 40px;
 }
 
+.innerPage {
+    padding-top: 85px;
+}
+
 .offerPosition .name {
     font-size: 20px;
     font-weight: 500;
@@ -770,8 +774,9 @@ input[type="checkbox"] {
 
 .topPanel.active {
     position: fixed;
-    padding: 5px 0;
     z-index: 999;
+    left: 0;
+    background: var(--color-6);
     -webkit-transition: all .1s linear;
     -o-transition: all .1s linear;
     -moz-transition: all .1s linear;
