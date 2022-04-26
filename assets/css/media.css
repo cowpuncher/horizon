@@ -143,7 +143,7 @@
     }
     .changeCity {
         top: 175%;
-        right: 0;
+        right: -55px;
     }
     .mainBanner {
         height: 635px;
@@ -407,6 +407,7 @@
     .swiper-button-prev, .swiper-button-next {
         width: 40px;
         height: 40px;
+        margin-left: -1px;
     }
     .sectionTitle {
         margin-bottom: 25px;
@@ -551,6 +552,7 @@
         margin: 0 0 15px;
     }
     .roulette {
+        position: relative;
         padding-bottom: 15px;
         font-size: 14px;
         width: 100%;
@@ -559,9 +561,9 @@
         display: -moz-box;
         display: -ms-flexbox;
         display: flex;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-       -moz-box-align: center;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -moz-box-align: center;  
         -ms-flex-align: center;
             align-items: center;
         -webkit-box-orient: vertical;
@@ -571,6 +573,31 @@
            -moz-box-direction: reverse;
             -ms-flex-direction: column-reverse;
                 flex-direction: column-reverse;
+    }
+    .roulette::after,
+    .roulette::before {
+        content: '';
+        display: block;
+        background: var(--color-2);
+        position: absolute;
+        top: 50%;
+    }
+    .roulette::before {
+        width: 21px;
+        background: var(--color-2);
+        height: 60px;
+        left: 0;
+        transform: translate(0, -125%);
+    }
+    .roulette:after {
+        border-top: 30px solid transparent;
+        border-left: 24px solid var(--color-2);
+        border-bottom: 30px solid transparent;
+        width: 0;
+        height: 0;
+        left: 19px;
+        background: transparent;
+        transform: translate(0, -125%);
     }
     .rouletteSliderItem {
         -webkit-box-pack: center;
@@ -598,12 +625,33 @@
     .sliderWithFraction .swiper-slide {
         height: auto;
     }
+    
+    .promotionCard p {
+        margin-bottom: 25px;
+    }
+    
+    .promotionCards {
+        align-items: stretch;
+    }
+    .promotionCard {
+        min-height: 100%;
+        height: auto;
+        padding-right: 50px;
+    }
 }
 /*ANCHOR max-width: 768 */
 @media screen and (max-width: 768px) {
     .mainWrapper {
         overflow-x: hidden;
     }
+    .topPanel {
+        background: var(--color-6);
+        backdrop-filter: blur(0);
+    }
+    .swiper-pagination-bullet-active {
+        width: 30px!important;
+    }
+    .socialCard,
     .mainBannerLabel,
     .topPanel .btnLight,
     .topPanel a.phone,
@@ -612,9 +660,33 @@
     .sectionMap .title br,
     .sliderReview .sliderItemContent .quote::before,
     .offerBanner,
-    .navigation::after {
+    .navigation::after,
+    .phase:last-of-type {
         display: none;
     }
+    .socialCard.mobileElement {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        min-height: auto;
+        padding: 15px 0 ;
+        margin: 0;
+        width: 100%;
+        max-width: 100%;
+        margin: 0px 0 12px !important;
+    }
+    .socialCard.mobileElement .title {
+        margin: 0 15px 0 0;
+    }
+    .socialCard .title img {
+        margin-right: 15px;
+        width: 32px;
+    }
+    .navigation a {
+        width: 90%;
+    }
+    .dropmenu .arrow,
     .mobileElement {
         display: block;
     }
@@ -685,16 +757,18 @@
     .navigation {
         opacity: 0;
         position: fixed;
-        right: -100%;
+        top: -100%;
+        left: 0;
         background: #fff;
+        z-index: -99;
     }
     .navigation.active {
         opacity: 1;
-        right: 0;
         height: 100vh;
         margin: 0;
         padding: 0;
         top: 59px;
+        z-index: 999;
         -webkit-transition: all .3s ease;
         -o-transition: all .3s ease;
         -moz-transition: all .3s ease;
@@ -721,19 +795,6 @@
         padding-bottom: 24px;
         width: 100%;
         position: relative;
-    }
-    .navigation .menu li.dropmenu:after {
-        content: url(../img/icons/dropmenu.svg);
-        position: absolute;
-        right: 0;
-        top: 3px;
-    }
-    .navigation .menu li.dropmenu:hover:after {
-        -webkit-transform: rotate(180deg);
-           -moz-transform: rotate(180deg);
-            -ms-transform: rotate(180deg);
-             -o-transform: rotate(180deg);
-                transform: rotate(180deg);
     }
     .navigation li:not(:first-child) {
         margin-left: 0;
@@ -784,6 +845,7 @@
             -ms-flex-direction: column;
                 flex-direction: column;
     }
+    .subMenu,
     .mainOffer .btn,
     .materialsList .materialsItem,
     .materialsItem,
@@ -1063,7 +1125,7 @@
     .offerTitleWithRoulette .title {
         margin-bottom: 32px;
     }
-    .rouletteSlider:before {
+    /* .rouletteSlider:before {
         content: '';
         width: 0;
         height: 0;
@@ -1078,7 +1140,7 @@
             -ms-transform: translate(0, -50%);
              -o-transform: translate(0, -50%);
                 transform: translate(0, -50%);
-    }
+    } */
     .popular .sectionTitle {
         margin-bottom: 20px;
     }

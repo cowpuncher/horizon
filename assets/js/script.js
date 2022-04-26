@@ -134,17 +134,17 @@ if(houseForSaleSliderItem) {
 
 // ANCHOR --- Styles 
 // ANCHOR (Height top panel)
-let mainBanner =document.querySelector('.mainBanner'),
+let mainBanner = document.querySelector('.mainBanner'),
     topPanel = document.querySelector('.topPanel');
 
 mainBanner == null ? topPanel.setAttribute('style', 'position: unset;') : '';
 
-// --------- Fixed top menu 
+// ANCHOR Fixed top menu 
 const fixedMenu = () => {
-    if(pageYOffset > topPanel.offsetHeight) {
+    if(pageYOffset > 0) {
         topPanel.classList.add('active');
-        topPanel.setAttribute('style', 'transform: translate(0px, 0px);' );  
-    } else if(pageYOffset < topPanel.offsetHeight) {
+        topPanel.setAttribute('style', 'background: #ffffff; transform: translate(0px, 0px); backdrop-filter: blur(0px)' );  
+    } else {
         topPanel.classList.remove('active');
         topPanel.removeAttribute('style', 'transform: translate(0px, 0px);' );
     }
@@ -153,6 +153,24 @@ fixedMenu();
 window.addEventListener('scroll', function() {
     fixedMenu();
 });
+
+// ANCHOR (Dropdown menu mobile)
+let dropdownArrow = document.querySelectorAll('.dropmenu .arrow');
+for (let i = 0; i < dropdownArrow.length; i++) {
+    dropdownArrow[i].addEventListener('click', e => {
+        let tarElm = e.currentTarget;
+        for (let i = 0; i < dropdownArrow.length; i++) {
+            if (tarElm !== dropdownArrow[i]) {
+                dropdownArrow[i].previousSibling.previousSibling.classList.remove('active');
+            }
+        }
+        tarElm.previousSibling.previousSibling.classList.toggle('active');
+    });
+};
+
+// window.addEventListener('resize', () => {
+    
+// });
 
 // ANCHOR (Hover effect on project page)
 let projectGroup = document.querySelectorAll('.projectGroup');
