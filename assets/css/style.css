@@ -310,7 +310,11 @@ select:-webkit-autofill:focus {
     position: absolute;
     top: 13px;
     right: 0;
-    transform: translate(0, -50%);
+    -webkit-transform: translate(0, -50%);
+       -moz-transform: translate(0, -50%);
+        -ms-transform: translate(0, -50%);
+         -o-transform: translate(0, -50%);
+            transform: translate(0, -50%);
 }
 
 .dropmenu .arrow img {
@@ -525,7 +529,6 @@ select:-webkit-autofill:focus {
 
 .popupWindow {
     overflow: overlay;
-    height: 100%;
     padding: 40px;
     position: fixed;
     top: 50%;
@@ -551,7 +554,7 @@ select:-webkit-autofill:focus {
     position: fixed;
     top: 20px;
     right: 20px;
-    z-index: 999;
+    z-index: 99999;
     background: transparent;
     width: 44px;
     height: 44px;
@@ -807,16 +810,26 @@ input[type="checkbox"] {
     z-index: 999;
     left: 0;
 <<<<<<< HEAD
-    background: var(--color-6);
+    background: var(--color-6);HEADbackgroundHEADbackgroundHEADbackgroundHEADbackgroundHEADbackgroundHEADbackground
+    -webkit-transition: all .1s linear;-webkit-transition-webkit-transition-webkit-transition-webkit-transition-webkit-transition
+    -o-transition: all .1s linear;-o-transition-o-transition-o-transition-o-transition
+    -moz-transition: all .1s linear;-moz-transition-moz-transition-moz-transition
+    -webkit-transition: all .1s linear;-webkit-transition-webkit-transition
+    -o-transition: all .1s linear;-o-transition
+    -moz-transition: all .1s linear;
     -webkit-transition: all .1s linear;
     -o-transition: all .1s linear;
-    -moz-transition: all .1s linear;
     transition: all .1s linear;
 =======
 >>>>>>> 4a1ad80b7d52942983e0d4f074f8c619bcd43ea4
-    -webkit-box-shadow: 20px 24px 44px rgba(0, 0, 0, 0.13);
-    -moz-box-shadow: 20px 24px 44px rgba(0, 0, 0, 0.13);
-         box-shadow: 20px 24px 44px rgba(0, 0, 0, 0.13);
+    -webkit-box-shadow: 20px 24px 44px rgba(0, 0, 0, 0.13);4a1ad80b7d52942983e0d4f074f8c619bcd43ea4-webkit-box-shadow4a1ad80b7d52942983e0d4f074f8c619bcd43ea4-webkit-box-shadow4a1ad80b7d52942983e0d4f074f8c619bcd43ea4-webkit-box-shadow4a1ad80b7d52942983e0d4f074f8c619bcd43ea4-webkit-box-shadow4a1ad80b7d52942983e0d4f074f8c619bcd43ea4-webkit-box-shadow4a1ad80b7d52942983e0d4f074f8c619bcd43ea4-webkit-box-shadow
+    -moz-box-shadow: 20px 24px 44px rgba(0, 0, 0, 0.13);-moz-box-shadow-moz-box-shadow-moz-box-shadow-moz-box-shadow-moz-box-shadow
+         -webkit-box-shadow: 20px 24px 44px rgba(0, 0, 0, 0.13);-webkit-box-shadow-webkit-box-shadow-webkit-box-shadow-webkit-box-shadow
+            -moz-box-shadow: 20px 24px 44px rgba(0, 0, 0, 0.13);-moz-box-shadow-moz-box-shadow-moz-box-shadow
+              -webkit-box-shadow: 20px 24px 44px rgba(0, 0, 0, 0.13);-webkit-box-shadow-webkit-box-shadow
+                    -moz-box-shadow: 20px 24px 44px rgba(0, 0, 0, 0.13);-moz-box-shadow
+                   -webkit-box-shadow: 20px 24px 44px rgba(0, 0, 0, 0.13);
+-moz-box-shadow        box-shadow: 20px 24px 44px rgba(0, 0, 0, 0.13);box-shadow
   }
 
 .topPanel::before {
@@ -885,11 +898,18 @@ input[type="checkbox"] {
     opacity: 1;
     height: 100%;
     visibility: visible;
+    -webkit-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    -moz-transition: all .5s ease;
     transition: all .5s ease;
 }
 
 .subMenu.active ~ .arrow {
-    transform: rotate(-180deg) translate(0, 8px);
+    -webkit-transform: rotate(-180deg) translate(0, 8px);
+       -moz-transform: rotate(-180deg) translate(0, 8px);
+        -ms-transform: rotate(-180deg) translate(0, 8px);
+         -o-transform: rotate(-180deg) translate(0, 8px);
+            transform: rotate(-180deg) translate(0, 8px);
 }
 
 .subMenu:before {
@@ -2815,7 +2835,7 @@ a.navProductMore {
 /* ANCHOR -- (projects)  */
 
 .projectsSection {
-    padding: 25px 0 0;
+    padding: 25px 0 60px;
 }
  
 .projectGroupItem {
@@ -2827,6 +2847,23 @@ a.navProductMore {
     height: 100%;
     -o-object-fit: cover;
        object-fit: cover;
+}
+
+.projectAbout {
+    border: 1px solid var(--color-7);
+}
+
+.projectAbout .popupBtnMap {
+    font-weight: 500;
+    font-size: 17px;
+    padding: 0;
+    display: inline;
+    background: transparent;
+    border: 0;
+    color: var(--color-3);
+    text-align: left;
+    margin-top: 10px;
+    cursor: pointer;
 }
 
 .projectAbout .wrapper {

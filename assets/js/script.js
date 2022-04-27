@@ -198,6 +198,29 @@ let popup = document.querySelectorAll('.popup');
 let popupClose = document.querySelectorAll('.popupClose');
 let popupOverlay = document.querySelectorAll('.popupOverlay');
 
+// class Popup {
+//     constructor(popup = document.querySelectorAll('.popup'), close = document.querySelectorAll('.popupClose'), overlay = document.querySelectorAll('.popupOverlay')) {
+//         this.popup = popup;
+//         this.close = close;
+//         this.overlay = overlay;
+
+//     }
+
+//     closePopup = (el, timer = 0) => {
+//         setTimeout(() => {
+//             for(elem of el) {
+//                 elem.addEventListener('click', e => {
+//                     e.currentTarget.parentNode.classList.remove('active');
+//                 })
+//             }
+            
+//         }, timer);
+        
+//         closePopup(overlay);
+//         closePopup(close);
+//     }
+// }
+
 if (popup) {
     const closePopup = (el, timer = 0) => {
         setTimeout(() => {
@@ -216,15 +239,21 @@ if (popup) {
         btnCollection =  document.querySelectorAll(btn);
         for(popupBtn of btnCollection) {
             popupBtn.addEventListener('click', e => {
+                
                 e.preventDefault();
                 for(var i = 0; i < popup.length; i++) {
-                    popup[i].id === modal ? popup[i].classList.add('active') : '';
+                    popup[i].id === modal ? popup[i].classList.add('active') : ''; 
+                }
+                if (e.target.nextElementSibling.classList.contains('popup')) {
+                    e.target.nextElementSibling.classList.add('active');
                 }
             })
         }
     }
     activePopup('.popupBtnOffer', 'popupPersonalOffer');
     activePopup('.popupBtnOrder', 'popupOrder');
+    activePopup('.popupBtnMap', 'popupMap');
+
 }
 
 
