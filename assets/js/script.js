@@ -244,8 +244,10 @@ if (popup) {
                 for(var i = 0; i < popup.length; i++) {
                     popup[i].id === modal ? popup[i].classList.add('active') : ''; 
                 }
-                if (e.target.nextElementSibling.classList.contains('popup')) {
-                    e.target.nextElementSibling.classList.add('active');
+                if (e.target.nextElementSibling) {
+                    if (e.target.nextElementSibling.classList.contains('popup')) {
+                        e.target.nextElementSibling.classList.add('active');
+                    }
                 }
             })
         }

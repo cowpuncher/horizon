@@ -499,9 +499,8 @@
             -ms-flex-align: start;
                 align-items: flex-start;
     }
-    .copyright img {
+    .copyrightWrap {
         margin-left: 0;
-        width: 220px;
         margin-top: 10px;
     }
     .materialsBig h3 {
@@ -512,6 +511,9 @@
 
 /*ANCHOR max-width: 993 */
 @media screen and (max-width: 993px) {
+    .sectionSlider {
+        padding: 0 15px;
+    }
     #rouletteBtn:after {
         display: none;
     }
@@ -587,7 +589,11 @@
         background: var(--color-2);
         height: 60px;
         left: 0;
-        transform: translate(0, -125%);
+        -webkit-transform: translate(0, -112%);
+           -moz-transform: translate(0, -112%);
+            -ms-transform: translate(0, -112%);
+             -o-transform: translate(0, -112%);
+                transform: translate(0, -112%);
     }
     .roulette:after {
         border-top: 30px solid transparent;
@@ -597,7 +603,11 @@
         height: 0;
         left: 19px;
         background: transparent;
-        transform: translate(0, -125%);
+        -webkit-transform: translate(0, -112%);
+           -moz-transform: translate(0, -112%);
+            -ms-transform: translate(0, -112%);
+             -o-transform: translate(0, -112%);
+                transform: translate(0, -112%);
     }
     .rouletteSliderItem {
         -webkit-box-pack: center;
@@ -631,12 +641,21 @@
     }
     
     .promotionCards {
-        align-items: stretch;
+        -webkit-box-align: stretch;
+        -webkit-align-items: stretch;
+           -moz-box-align: stretch;
+            -ms-flex-align: stretch;
+                align-items: stretch;
     }
     .promotionCard {
         min-height: 100%;
         height: auto;
         padding-right: 50px;
+    }
+    
+    .copyrightWrap {
+        margin-left: 0;
+        margin-top: 0;
     }
 }
 /*ANCHOR max-width: 768 */
@@ -646,7 +665,8 @@
     }
     .topPanel {
         background: var(--color-6);
-        backdrop-filter: blur(0);
+        -webkit-backdrop-filter: blur(0);
+                backdrop-filter: blur(0);
     }
     .swiper-pagination-bullet-active {
         width: 30px!important;
@@ -665,10 +685,28 @@
         display: none;
     }
     .socialCard.mobileElement {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-box;
+        display: -ms-flexbox;
         display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: row;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+           -moz-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+           -moz-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: row;
+           -moz-box-orient: horizontal;
+           -moz-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
         min-height: auto;
         padding: 15px 0 ;
         margin: 0;
@@ -757,7 +795,7 @@
     .navigation {
         opacity: 0;
         position: fixed;
-        top: -100%;
+        top: -1000%;
         left: 0;
         background: #fff;
         z-index: -99;
@@ -1047,7 +1085,8 @@
     .copyright {
         right: auto;
         bottom: auto;
-        top: 155%;
+        top: 145%;
+        font-size: 13px;
         -webkit-box-orient: horizontal;
         -webkit-box-direction: normal;
         -webkit-flex-direction: row;
@@ -1061,7 +1100,7 @@
             -ms-flex-align: center;
                 align-items: center;
     }
-    .copyright img {
+    .copyrightWrap {
         margin: 0 0 0 10px;
     }
     .topPanel .logo {
@@ -1125,22 +1164,6 @@
     .offerTitleWithRoulette .title {
         margin-bottom: 32px;
     }
-    /* .rouletteSlider:before {
-        content: '';
-        width: 0;
-        height: 0;
-        border-top: 29px solid transparent;
-        border-left: 24px solid var(--color-2);
-        border-bottom: 29px solid transparent;
-        position: absolute;
-        top: 50%;
-        left: 0;
-        -webkit-transform: translate(0, -50%);
-           -moz-transform: translate(0, -50%);
-            -ms-transform: translate(0, -50%);
-             -o-transform: translate(0, -50%);
-                transform: translate(0, -50%);
-    } */
     .popular .sectionTitle {
         margin-bottom: 20px;
     }
@@ -1278,5 +1301,8 @@
     }
     .footerContacts {
         margin-top: 10px;
+    }
+    .copyright a img {
+        width: 85px;
     }
 }
