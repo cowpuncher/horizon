@@ -95,9 +95,23 @@ const sliderProductBanner = new Swiper('.mainBannerSlider', {
     effect: 'cube',
 });
 
+// ANCHOR (Sliders card popup)
+const cardPopupSlider = new Swiper('.cardPopupSlider', {
+    loop: true,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    pagination: {
+        el: '.cardPopupSlider .swiper-pagination',
+        clickable: true,
+    },
+});
+
+
 // ANCHOR --- Clicks events
 // ANCHOR (City)
-let city =document.querySelector('.citySelect'),
+let city = document.querySelector('.citySelect'),
     modal = document.querySelector('.changeCity ');
 city.addEventListener('click', function() {
     modal.classList.toggle('active');
@@ -239,14 +253,13 @@ if (popup) {
         btnCollection =  document.querySelectorAll(btn);
         for(popupBtn of btnCollection) {
             popupBtn.addEventListener('click', e => {
-                
                 e.preventDefault();
                 for(var i = 0; i < popup.length; i++) {
                     popup[i].id === modal ? popup[i].classList.add('active') : ''; 
                 }
-                if (e.target.nextElementSibling) {
-                    if (e.target.nextElementSibling.classList.contains('popup')) {
-                        e.target.nextElementSibling.classList.add('active');
+                if (e.currentTarget.nextElementSibling) {
+                    if (e.currentTarget.nextElementSibling.classList.contains('popup')) {
+                        e.currentTarget.nextElementSibling.classList.add('active');
                     }
                 }
             })
@@ -255,7 +268,7 @@ if (popup) {
     activePopup('.popupBtnOffer', 'popupPersonalOffer');
     activePopup('.popupBtnOrder', 'popupOrder');
     activePopup('.popupBtnMap', 'popupMap');
-
+    activePopup('.cardPopup .card', 'popup');
 }
 
 

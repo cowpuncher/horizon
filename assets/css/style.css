@@ -90,6 +90,10 @@ h3 {
     font-size: 30px;
 }
 
+h4 {
+    font-size: 22px;
+}
+
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus textarea:-webkit-autofill,
@@ -508,6 +512,29 @@ select:-webkit-autofill:focus {
             transform: rotate(-45deg) scale(1.4);
 }
 
+/* ANCHOR ---- (files)  */
+
+.file {
+   margin-top: 20px;
+}
+
+.file .img {
+    margin-right: 10px;
+}
+
+.file a {
+    color: var(--color-3);
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.file span {
+    color: var(--color-4);
+    font-size: 12px;
+    font-weight: 400;
+}
+
 /* ANCHOR ---- (popups)  */
 
 .popup {
@@ -528,6 +555,8 @@ select:-webkit-autofill:focus {
     z-index: 999;
     width: 100%;
     height: 100%;
+    -webkit-backdrop-filter: blur(24px);
+            backdrop-filter: blur(24px);
 }
 
 .popupWindow {
@@ -712,6 +741,130 @@ input[type="checkbox"] {
     color: var(--color-3);
 }
 
+/* ANCHOR ---- (card with popup)  */
+
+.cardsWrapper {
+    margin: 0 -10px 65px;
+}
+
+.cardPopup {
+    margin: 0 10px 20px;
+    width: 32%;
+}
+
+.cardPopup .card {
+    background: var(--color-5);
+}
+
+.cardTop .img {
+    height: 343px;
+}
+
+.cardTop .title {
+    bottom: 25px;
+    color: var(--color-6);
+    z-index: 1;
+    left: 20px;    
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.cardMore {
+    font-size: 15px;
+    padding: 14px 20px 24px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    text-transform: uppercase;
+    font-weight: 700;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+       -moz-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+
+.cardMore img {
+    margin-left: 20px;
+}
+
+.portfolioMore {
+    font-size: 22px;
+    height: 100%;
+    text-align: center;
+    line-height: 34px;
+    background: var(--color-5);
+}
+
+.portfolioMore img {
+    -webkit-filter: invert(13%) sepia(60%) saturate(5345%) hue-rotate(185deg) brightness(110%) contrast(113%);
+            filter: invert(13%) sepia(60%) saturate(5345%) hue-rotate(185deg) brightness(110%) contrast(113%);
+    width: 35px;
+    margin-top: 20px;
+}
+
+.cardPopupSlider {
+    margin-bottom: 20px;
+}
+
+.cardPopupSlider .swiper-button-prev,
+.cardPopupSlider .swiper-button-next {
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid #FFFFFF;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+    -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+    top: 50%;
+    bottom: auto;
+    position: absolute;
+    -webkit-transform: translate(0, -50%);
+       -moz-transform: translate(0, -50%);
+        -ms-transform: translate(0, -50%);
+         -o-transform: translate(0, -50%);
+            transform: translate(0, -50%);        
+}
+
+.cardPopupSlider .swiper-button-prev img,
+.cardPopupSlider .swiper-button-next img {
+    -webkit-filter: invert(13%) sepia(60%) saturate(5%) hue-rotate(64deg) brightness(153%) contrast(113%);
+    filter: invert(13%) sepia(60%) saturate(5%) hue-rotate(64deg) brightness(153%) contrast(113%);    
+}
+
+.cardPopupSlider .swiper-button-prev {
+    left: 20px;
+}
+
+.cardPopupSlider .swiper-button-next {
+    right: 20px;
+}
+
+.cardPopupSlider .swiper-pagination {
+    bottom: 20px;
+}
+
+.cardPopupSlider .swiper-pagination-bullet {
+    background: transparent;
+    border: 1px solid #FFFFFF;
+    width: 10px;
+    height: 10px;
+    opacity: 1;
+}
+
+.cardPopupSlider .swiper-pagination-bullet-active {
+    background: var(--color-6);
+}
+
+.cardPopup p {
+    font-weight: 500;
+    font-size: 13px;
+    margin-bottom: 20px;
+    line-height: 20px;
+}
+
 
 /* ANCHOR ---- (roulette)  */
 
@@ -829,51 +982,15 @@ input[type="checkbox"] {
     position: fixed;
     z-index: 999;
     left: 0;
-<<<<<<< HEAD
-    background: var(--color-6);HEADbackgroundHEADbackgroundHEADbackgroundHEADbackgroundHEADbackgroundHEADbackgroundHEADbackgroundHEADbackgroundHEADbackgroundHEADbackgroundHEADbackgroundHEADbackgroundHEADbackgroundHEADbackgroundHEADbackgroundHEADbackgroundHEADbackgroundHEADbackgroundHEADbackgroundHEADbackgroundHEADbackgroundHEADbackgroundHEADbackgroundHEADbackgroundHEADbackgroundHEADbackgroundHEADbackgroundHEADbackgroundHEADbackground
-    -webkit-transition: all .1s linear;-webkit-transition-webkit-transition-webkit-transition-webkit-transition-webkit-transition-webkit-transition-webkit-transition-webkit-transition-webkit-transition-webkit-transition-webkit-transition-webkit-transition-webkit-transition-webkit-transition-webkit-transition-webkit-transition-webkit-transition-webkit-transition-webkit-transition-webkit-transition-webkit-transition-webkit-transition-webkit-transition-webkit-transition-webkit-transition-webkit-transition-webkit-transition-webkit-transition
-    -o-transition: all .1s linear;-o-transition-o-transition-o-transition-o-transition-o-transition-o-transition-o-transition-o-transition-o-transition-o-transition-o-transition-o-transition-o-transition-o-transition-o-transition-o-transition-o-transition-o-transition-o-transition-o-transition-o-transition-o-transition-o-transition-o-transition-o-transition-o-transition-o-transition
-    -moz-transition: all .1s linear;-moz-transition-moz-transition-moz-transition-moz-transition-moz-transition-moz-transition-moz-transition-moz-transition-moz-transition-moz-transition-moz-transition-moz-transition-moz-transition-moz-transition-moz-transition-moz-transition-moz-transition-moz-transition-moz-transition-moz-transition-moz-transition-moz-transition-moz-transition-moz-transition-moz-transition-moz-transition
-    -webkit-transition: all .1s linear;-webkit-transition-webkit-transition-webkit-transition-webkit-transition-webkit-transition-webkit-transition-webkit-transition-webkit-transition-webkit-transition-webkit-transition-webkit-transition-webkit-transition-webkit-transition-webkit-transition-webkit-transition-webkit-transition-webkit-transition-webkit-transition-webkit-transition-webkit-transition-webkit-transition-webkit-transition-webkit-transition-webkit-transition-webkit-transition
-    -o-transition: all .1s linear;-o-transition-o-transition-o-transition-o-transition-o-transition-o-transition-o-transition-o-transition-o-transition-o-transition-o-transition-o-transition-o-transition-o-transition-o-transition-o-transition-o-transition-o-transition-o-transition-o-transition-o-transition-o-transition-o-transition-o-transition
-    -moz-transition: all .1s linear;-moz-transition-moz-transition-moz-transition-moz-transition-moz-transition-moz-transition-moz-transition-moz-transition-moz-transition-moz-transition-moz-transition-moz-transition-moz-transition-moz-transition-moz-transition-moz-transition-moz-transition-moz-transition-moz-transition-moz-transition-moz-transition-moz-transition-moz-transition
-    -webkit-transition: all .1s linear;-webkit-transition-webkit-transition-webkit-transition-webkit-transition-webkit-transition-webkit-transition-webkit-transition-webkit-transition-webkit-transition-webkit-transition-webkit-transition-webkit-transition-webkit-transition-webkit-transition-webkit-transition-webkit-transition-webkit-transition-webkit-transition-webkit-transition-webkit-transition-webkit-transition-webkit-transition
-    -o-transition: all .1s linear;-o-transition-o-transition-o-transition-o-transition-o-transition-o-transition-o-transition-o-transition-o-transition-o-transition-o-transition-o-transition-o-transition-o-transition-o-transition-o-transition-o-transition-o-transition-o-transition-o-transition-o-transition
-    -moz-transition: all .1s linear;-moz-transition-moz-transition-moz-transition-moz-transition-moz-transition-moz-transition-moz-transition-moz-transition-moz-transition-moz-transition-moz-transition-moz-transition-moz-transition-moz-transition-moz-transition-moz-transition-moz-transition-moz-transition-moz-transition-moz-transition
-    -webkit-transition: all .1s linear;-webkit-transition-webkit-transition-webkit-transition-webkit-transition-webkit-transition-webkit-transition-webkit-transition-webkit-transition-webkit-transition-webkit-transition-webkit-transition-webkit-transition-webkit-transition-webkit-transition-webkit-transition-webkit-transition-webkit-transition-webkit-transition-webkit-transition
-    -o-transition: all .1s linear;-o-transition-o-transition-o-transition-o-transition-o-transition-o-transition-o-transition-o-transition-o-transition-o-transition-o-transition-o-transition-o-transition-o-transition-o-transition-o-transition-o-transition-o-transition
-    -moz-transition: all .1s linear;-moz-transition-moz-transition-moz-transition-moz-transition-moz-transition-moz-transition-moz-transition-moz-transition-moz-transition-moz-transition-moz-transition-moz-transition-moz-transition-moz-transition-moz-transition-moz-transition-moz-transition
-    -webkit-transition: all .1s linear;-webkit-transition-webkit-transition-webkit-transition-webkit-transition-webkit-transition-webkit-transition-webkit-transition-webkit-transition-webkit-transition-webkit-transition-webkit-transition-webkit-transition-webkit-transition-webkit-transition-webkit-transition-webkit-transition
-    -o-transition: all .1s linear;-o-transition-o-transition-o-transition-o-transition-o-transition-o-transition-o-transition-o-transition-o-transition-o-transition-o-transition-o-transition-o-transition-o-transition-o-transition
-    -moz-transition: all .1s linear;-moz-transition-moz-transition-moz-transition-moz-transition-moz-transition-moz-transition-moz-transition-moz-transition-moz-transition-moz-transition-moz-transition-moz-transition-moz-transition-moz-transition
-    -webkit-transition: all .1s linear;-webkit-transition-webkit-transition-webkit-transition-webkit-transition-webkit-transition-webkit-transition-webkit-transition-webkit-transition-webkit-transition-webkit-transition-webkit-transition-webkit-transition-webkit-transition
-    -o-transition: all .1s linear;-o-transition-o-transition-o-transition-o-transition-o-transition-o-transition-o-transition-o-transition-o-transition-o-transition-o-transition-o-transition
-    -moz-transition: all .1s linear;-moz-transition-moz-transition-moz-transition-moz-transition-moz-transition-moz-transition-moz-transition-moz-transition-moz-transition-moz-transition-moz-transition
-    -webkit-transition: all .1s linear;-webkit-transition-webkit-transition-webkit-transition-webkit-transition-webkit-transition-webkit-transition-webkit-transition-webkit-transition-webkit-transition-webkit-transition
-    -o-transition: all .1s linear;-o-transition-o-transition-o-transition-o-transition-o-transition-o-transition-o-transition-o-transition-o-transition
-    -moz-transition: all .1s linear;-moz-transition-moz-transition-moz-transition-moz-transition-moz-transition-moz-transition-moz-transition-moz-transition
-    -webkit-transition: all .1s linear;-webkit-transition-webkit-transition-webkit-transition-webkit-transition-webkit-transition-webkit-transition-webkit-transition
-    -o-transition: all .1s linear;-o-transition-o-transition-o-transition-o-transition-o-transition-o-transition
-    -moz-transition: all .1s linear;-moz-transition-moz-transition-moz-transition-moz-transition-moz-transition
-    -webkit-transition: all .1s linear;-webkit-transition-webkit-transition-webkit-transition-webkit-transition
-    -o-transition: all .1s linear;-o-transition-o-transition-o-transition
-    -moz-transition: all .1s linear;-moz-transition-moz-transition
-    -webkit-transition: all .1s linear;-webkit-transition
+    -webkit-box-shadow: 20px 24px 44px rgba(0, 0, 0, 0.13);
+       -moz-box-shadow: 20px 24px 44px rgba(0, 0, 0, 0.13);
+            box-shadow: 20px 24px 44px rgba(0, 0, 0, 0.13);
+    background: var(--color-6);
+    -webkit-transition: all .1s linear;
     -o-transition: all .1s linear;
     -moz-transition: all .1s linear;
-    -webkit-transition: all .1s linear;
-    transition: all .1s linear;
-=======
->>>>>>> 4a1ad80b7d52942983e0d4f074f8c619bcd43ea4
-    -webkit-box-shadow: 20px 24px 44px rgba(0, 0, 0, 0.13);4a1ad80b7d52942983e0d4f074f8c619bcd43ea4-webkit-box-shadow4a1ad80b7d52942983e0d4f074f8c619bcd43ea4-webkit-box-shadow4a1ad80b7d52942983e0d4f074f8c619bcd43ea4-webkit-box-shadow4a1ad80b7d52942983e0d4f074f8c619bcd43ea4-webkit-box-shadow4a1ad80b7d52942983e0d4f074f8c619bcd43ea4-webkit-box-shadow4a1ad80b7d52942983e0d4f074f8c619bcd43ea4-webkit-box-shadow4a1ad80b7d52942983e0d4f074f8c619bcd43ea4-webkit-box-shadow4a1ad80b7d52942983e0d4f074f8c619bcd43ea4-webkit-box-shadow4a1ad80b7d52942983e0d4f074f8c619bcd43ea4-webkit-box-shadow4a1ad80b7d52942983e0d4f074f8c619bcd43ea4-webkit-box-shadow4a1ad80b7d52942983e0d4f074f8c619bcd43ea4-webkit-box-shadow4a1ad80b7d52942983e0d4f074f8c619bcd43ea4-webkit-box-shadow4a1ad80b7d52942983e0d4f074f8c619bcd43ea4-webkit-box-shadow4a1ad80b7d52942983e0d4f074f8c619bcd43ea4-webkit-box-shadow4a1ad80b7d52942983e0d4f074f8c619bcd43ea4-webkit-box-shadow4a1ad80b7d52942983e0d4f074f8c619bcd43ea4-webkit-box-shadow4a1ad80b7d52942983e0d4f074f8c619bcd43ea4-webkit-box-shadow4a1ad80b7d52942983e0d4f074f8c619bcd43ea4-webkit-box-shadow4a1ad80b7d52942983e0d4f074f8c619bcd43ea4-webkit-box-shadow4a1ad80b7d52942983e0d4f074f8c619bcd43ea4-webkit-box-shadow4a1ad80b7d52942983e0d4f074f8c619bcd43ea4-webkit-box-shadow4a1ad80b7d52942983e0d4f074f8c619bcd43ea4-webkit-box-shadow4a1ad80b7d52942983e0d4f074f8c619bcd43ea4-webkit-box-shadow4a1ad80b7d52942983e0d4f074f8c619bcd43ea4-webkit-box-shadow4a1ad80b7d52942983e0d4f074f8c619bcd43ea4-webkit-box-shadow4a1ad80b7d52942983e0d4f074f8c619bcd43ea4-webkit-box-shadow4a1ad80b7d52942983e0d4f074f8c619bcd43ea4-webkit-box-shadow4a1ad80b7d52942983e0d4f074f8c619bcd43ea4-webkit-box-shadow4a1ad80b7d52942983e0d4f074f8c619bcd43ea4-webkit-box-shadow
-    -moz-box-shadow: 20px 24px 44px rgba(0, 0, 0, 0.13);-moz-box-shadow-moz-box-shadow-moz-box-shadow-moz-box-shadow-moz-box-shadow-moz-box-shadow-moz-box-shadow-moz-box-shadow-moz-box-shadow-moz-box-shadow-moz-box-shadow-moz-box-shadow-moz-box-shadow-moz-box-shadow-moz-box-shadow-moz-box-shadow-moz-box-shadow-moz-box-shadow-moz-box-shadow-moz-box-shadow-moz-box-shadow-moz-box-shadow-moz-box-shadow-moz-box-shadow-moz-box-shadow-moz-box-shadow-moz-box-shadow-moz-box-shadow
-         -webkit-box-shadow: 20px 24px 44px rgba(0, 0, 0, 0.13);-webkit-box-shadow-webkit-box-shadow-webkit-box-shadow-webkit-box-shadow-webkit-box-shadow-webkit-box-shadow-webkit-box-shadow-webkit-box-shadow-webkit-box-shadow-webkit-box-shadow-webkit-box-shadow-webkit-box-shadow-webkit-box-shadow-webkit-box-shadow-webkit-box-shadow-webkit-box-shadow-webkit-box-shadow-webkit-box-shadow-webkit-box-shadow-webkit-box-shadow-webkit-box-shadow-webkit-box-shadow-webkit-box-shadow-webkit-box-shadow-webkit-box-shadow-webkit-box-shadow-webkit-box-shadow
-            -moz-box-shadow: 20px 24px 44px rgba(0, 0, 0, 0.13);-moz-box-shadow-moz-box-shadow-moz-box-shadow-moz-box-shadow-moz-box-shadow-moz-box-shadow-moz-box-shadow-moz-box-shadow-moz-box-shadow-moz-box-shadow-moz-box-shadow-moz-box-shadow-moz-box-shadow-moz-box-shadow-moz-box-shadow-moz-box-shadow-moz-box-shadow-moz-box-shadow-moz-box-shadow-moz-box-shadow-moz-box-shadow-moz-box-shadow-moz-box-shadow-moz-box-shadow-moz-box-shadow-moz-box-shadow
-              -webkit-box-shadow: 20px 24px 44px rgba(0, 0, 0, 0.13);-webkit-box-shadow-webkit-box-shadow-webkit-box-shadow-webkit-box-shadow-webkit-box-shadow-webkit-box-shadow-webkit-box-shadow-webkit-box-shadow-webkit-box-shadow-webkit-box-shadow-webkit-box-shadow-webkit-box-shadow-webkit-box-shadow-webkit-box-shadow-webkit-box-shadow-webkit-box-shadow-webkit-box-shadow-webkit-box-shadow-webkit-box-shadow-webkit-box-shadow-webkit-box-shadow-webkit-box-shadow-webkit-box-shadow-webkit-box-shadow-webkit-box-shadow
-                    -moz-box-shadow: 20px 24px 44px rgba(0, 0, 0, 0.13);-moz-box-shadow-moz-box-shadow-moz-box-shadow-moz-box-shadow-moz-box-shadow-moz-box-shadow-moz-box-shadow-moz-box-shadow-moz-box-shadow-moz-box-shadow-moz-box-shadow-moz-box-shadow-moz-box-shadow-moz-box-shadow-moz-box-shadow-moz-box-shadow-moz-box-shadow-moz-box-shadow-moz-box-shadow-moz-box-shadow-moz-box-shadow-moz-box-shadow-moz-box-shadow-moz-box-shadow
-                   -webkit-box-shadow: 20px 24px 44px rgba(0, 0, 0, 0.13);-webkit-box-shadow-webkit-box-shadow-webkit-box-shadow-webkit-box-shadow-webkit-box-shadow-webkit-box-shadow-webkit-box-shadow-webkit-box-shadow-webkit-box-shadow-webkit-box-shadow-webkit-box-shadow-webkit-box-shadow-webkit-box-shadow-webkit-box-shadow-webkit-box-shadow-webkit-box-shadow-webkit-box-shadow-webkit-box-shadow-webkit-box-shadow-webkit-box-shadow-webkit-box-shadow-webkit-box-shadow-webkit-box-shadow
--moz-box-shadow        box-shadow: 20px 24px 44px rgba(0, 0, 0, 0.13);-moz-box-shadowbox-shadow-moz-box-shadowbox-shadow-moz-box-shadowbox-shadow-moz-box-shadowbox-shadow-moz-box-shadowbox-shadow-moz-box-shadowbox-shadow-moz-box-shadowbox-shadow-moz-box-shadowbox-shadow-moz-box-shadowbox-shadow-moz-box-shadowbox-shadow-moz-box-shadowbox-shadow-moz-box-shadowbox-shadow-moz-box-shadowbox-shadow-moz-box-shadowbox-shadow-moz-box-shadowbox-shadow-moz-box-shadowbox-shadow-moz-box-shadowbox-shadow-moz-box-shadowbox-shadow-moz-box-shadowbox-shadow-moz-box-shadowbox-shadow-moz-box-shadowbox-shadow-moz-box-shadowbox-shadowbox-shadowbox-shadow
-  }
+    transition: all .1s linear;   
+}
 
 .topPanel::before {
     content: '';
@@ -1720,7 +1837,7 @@ a.navProductMore {
        object-fit: cover;
 }
 
-.swiper-pagination-bullet {
+.sectionSlider .swiper-pagination-bullet {
     width: var(--swiper-pagination-bullet-width,var(--swiper-pagination-bullet-size,10px));
     height: var(--swiper-pagination-bullet-height,var(--swiper-pagination-bullet-size,10px));
 }
@@ -1850,7 +1967,7 @@ a.navProductMore {
     z-index: 1;
 }
 
-.swiper-pagination-bullet-active {
+.sectionSlider .swiper-pagination-bullet-active {
     width: 50px;
     -webkit-transition: all .5s ease;
     -o-transition: all .5s ease;
@@ -1866,7 +1983,7 @@ a.navProductMore {
     position: relative;
 }
 
-.swiper-pagination-bullet-active:after {
+.sectionSlider .swiper-pagination-bullet-active:after {
     content: '';
     display: block;
     width: 100%;
@@ -2969,4 +3086,15 @@ a.navProductMore {
 
 .projectGroupItem .more img {
     margin-left: 20px;
+}
+
+/* ANCHOR -- (porfolio)  */
+
+.portfolio {
+    padding: 20px 0;
+}
+
+.portfolio h2 {
+    max-width: 1170px;
+    margin: 0 auto 40px;
 }
