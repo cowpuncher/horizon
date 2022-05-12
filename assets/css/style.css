@@ -741,6 +741,79 @@ input[type="checkbox"] {
     color: var(--color-3);
 }
 
+/* ANCHOR ---- (addFile)  */
+
+.addFile {
+    position: relative;
+}
+
+.addFile .title {
+    border: 1px dashed #C8D8E4;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 20px;
+    text-align: center;
+    color: #1788E0;
+    padding: 25px 0;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.addFile .title span {
+    display: block;
+    font-size: 10px;
+    margin-top: 10px;
+    color: rgba(0, 0, 0, 0.4);
+}
+
+#addImages {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 102px;
+    background: transparent;
+    opacity: 0;
+    cursor: pointer;
+}
+
+#uploadImagesList .item {
+    width: 125px;
+    position: relative;
+    margin-bottom: 18px;
+}
+
+#uploadImagesList .img-wrap img {
+    width: 100%;
+}
+
+span.delete-link {
+    background: var(--color-2);
+    -webkit-border-radius: 50%;
+       -moz-border-radius: 50%;
+            border-radius: 50%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+       -moz-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+       -moz-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+}
+
 /* ANCHOR ---- (card with popup)  */
 
 .cardsWrapper {
@@ -3097,4 +3170,182 @@ a.navProductMore {
 .portfolio h2 {
     max-width: 1170px;
     margin: 0 auto 40px;
+}
+
+/* ANCHOR -- (services)  */
+
+/* FIXME -- (Отступы на старницах сверху УСЛУГИ, КОНТАКТЫ)  */
+.contactsSection,
+.servicesSection,
+.vacancySection {
+    padding-top: 23px;
+}
+
+.servicesSection .innerTitle {
+    margin-bottom: 40px;
+}
+
+.servicesSection .title {
+    margin-bottom: 40px;
+}
+
+.servicesSection .cardsWrapper {
+    margin-bottom: 50px;
+}
+
+/* ANCHOR -- (contacts)  */
+
+.contactsList {
+    padding: 20px 0 80px;
+}
+
+.contactsItem:not(:last-child) {
+    margin-bottom: 50px;
+}
+
+.contactsItem .map {
+    margin-right: 50px;
+}
+
+.contactsItemContent .title {
+    margin-bottom: 25px;
+}
+
+.contactsLink {
+    position: relative;
+    display: block;
+    padding-left: 45px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.contactsLink:not(:last-child) {
+    margin-bottom: 25px;
+}
+
+.contactsLink .img {
+    position: absolute;
+    left: 0;
+    top: -4px;
+}
+
+
+/* ANCHOR -- (vacancy)  */
+
+.vacancy {
+    padding: 40px 0 0;
+}
+
+.vacancy .title {
+    margin-bottom: 45px;    
+}
+
+.vacancyItem {
+    padding: 40px 140px 40px 40px;
+    background: var(--color-5);
+    width: 100%;
+    max-width: 775px;
+    font-weight: 500;
+}
+
+.vacancyItem:not(:last-child) {
+    margin-right: 600px;
+}
+
+.vacancyItem .title {
+    margin-bottom: 15px;
+}
+
+.vacancyItem .salary {
+    font-size: 17px;
+    margin-bottom: 16px;
+}
+
+.vacancyItem .desc {
+    font-size: 13px;
+    line-height: 20px;
+    margin-bottom: 20px;
+}
+
+.vacancyItem .desc p {
+    margin-bottom: 20px;
+}
+
+.vacancyItem ul {
+    list-style: disc;
+    padding-left: 15px;
+}
+
+.vacancyItem .popupWindow .salary {
+    margin-bottom: 25px;
+}
+
+.vacancyItem .popupWindow {
+    font-weight: 500;
+    font-size: 13px;
+}
+
+.vacancyItem .popupBody h4 {
+    margin-bottom: 25px;
+}
+
+.vacancyItem .popupBody p {
+    margin-bottom: 16px;
+}
+
+.vacancyItem .popupBody ul {
+    list-style: none;
+    padding-left: 0;
+    line-height: 20px;
+    margin-bottom: 17px;
+}
+
+.vacancyItem .popupBody li {
+    position: relative;
+    padding-left: 18px;
+}
+
+.vacancyItem .popupBody li:not(:last-child) {
+    margin-bottom: 16px;
+}
+
+.vacancyItem .popupBody li::before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    -webkit-border-radius: 50%;
+       -moz-border-radius: 50%;
+            border-radius: 50%;
+    background: var(--color-5);
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 6px;
+}
+
+.vacancyItem .popupForm {
+    max-width: 460px;
+}
+
+.vacancyItem .popupForm .title {
+    font-weight: 400;
+    font-size: 18px;
+    margin-bottom: 24px;
+}
+
+.vacancyItem .popupForm input {
+    margin-top: 10px;
+}
+
+.vacancyItem .popupForm label {
+    margin-bottom: 18px;
+    display: block;
+}
+
+.vacancyItem .popupForm {
+    
+}
+
+.vacancyItem .popupForm {
+    
 }

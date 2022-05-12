@@ -39,7 +39,7 @@
 /*ANCHOR max-width: 1440 */
 
 @media screen and (max-width: 1440px) {
-    .header {
+    .mainWrapper {
         overflow-x: hidden;
     }
     .topPanel {
@@ -727,9 +727,6 @@
     .dropmenu .arrow,
     .mobileElement {
         display: block;
-    }
-    .header {
-        overflow: unset;
     }
     .navFooter {
         border-top: 1px solid var(--color-5);

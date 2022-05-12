@@ -253,11 +253,12 @@ if (popup) {
         btnCollection =  document.querySelectorAll(btn);
         for(popupBtn of btnCollection) {
             popupBtn.addEventListener('click', e => {
-                e.preventDefault();
                 for(var i = 0; i < popup.length; i++) {
+                    e.preventDefault();
                     popup[i].id === modal ? popup[i].classList.add('active') : ''; 
                 }
                 if (e.currentTarget.nextElementSibling) {
+                    e.preventDefault();
                     if (e.currentTarget.nextElementSibling.classList.contains('popup')) {
                         e.currentTarget.nextElementSibling.classList.add('active');
                     }
@@ -269,6 +270,7 @@ if (popup) {
     activePopup('.popupBtnOrder', 'popupOrder');
     activePopup('.popupBtnMap', 'popupMap');
     activePopup('.cardPopup .card', 'popup');
+    activePopup('.btnPopup', 'popup');
 }
 
 
