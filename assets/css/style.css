@@ -3233,7 +3233,7 @@ a.navProductMore {
 /* ANCHOR -- (vacancy)  */
 
 .vacancy {
-    padding: 40px 0 0;
+    padding: 40px 0 60px;
 }
 
 .vacancy .title {
@@ -3249,7 +3249,7 @@ a.navProductMore {
 }
 
 .vacancyItem:not(:last-child) {
-    margin-right: 600px;
+    margin-right: 60px;
 }
 
 .vacancyItem .title {
