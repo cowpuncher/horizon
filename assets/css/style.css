@@ -329,6 +329,7 @@ select:-webkit-autofill:focus {
 /* ANCHOR ---- (buttons)  */
 
 .btn {
+    font-family: var(--ff-m);
     cursor: pointer;
     background: transparent;
     border: 0;
@@ -580,6 +581,12 @@ select:-webkit-autofill:focus {
         -ms-transform: translate(-50%, -50%);
          -o-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
+}
+
+.popupWindow .author {
+    font-size: 17px;
+    display: block;
+    margin: 5px 0 13px; 
 }
 
 /*SCROLLBAR*/
@@ -3172,31 +3179,33 @@ a.navProductMore {
     margin: 0 auto 40px;
 }
 
+/* ANCHOR -- \\INNER PAGE// */
 /* ANCHOR -- (services)  */
 
-/* FIXME -- (Отступы на старницах сверху УСЛУГИ, КОНТАКТЫ)  */
-.contactsSection,
-.servicesSection,
-.vacancySection {
-    padding-top: 23px;
+.innerSection {
+    padding: 23px 0 60px;
 }
 
-.servicesSection .innerTitle {
+.innerDesc {
+    max-width: 975px;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 24px;
     margin-bottom: 40px;
 }
 
-.servicesSection .title {
+.innerSection .title {
     margin-bottom: 40px;
 }
 
-.servicesSection .cardsWrapper {
+.innerSection .cardsWrapper {
     margin-bottom: 50px;
 }
 
 /* ANCHOR -- (contacts)  */
 
 .contactsList {
-    padding: 20px 0 80px;
+    padding: 20px 0 20px;
 }
 
 .contactsItem:not(:last-child) {
@@ -3229,12 +3238,7 @@ a.navProductMore {
     top: -4px;
 }
 
-
 /* ANCHOR -- (vacancy)  */
-
-.vacancy {
-    padding: 40px 0 60px;
-}
 
 .vacancy .title {
     margin-bottom: 45px;    
@@ -3342,10 +3346,238 @@ a.navProductMore {
     display: block;
 }
 
-.vacancyItem .popupForm {
-    
+/* ANCHOR -- (reviews)  */
+
+.innerSection .innerTitle {
+    margin-bottom: 20px;
 }
 
-.vacancyItem .popupForm {
-    
+.reviewItem {
+    border: 1px solid var(--color-7);
+    padding: 40px;
+    font-weight: 500;
+    font-size: 15px;
+    max-width: 1340px;
+}
+
+.reviewItem:not(:last-child) {
+    margin-bottom: 40px;
+}
+
+.reviewItem .date {
+    color: var(--color-4);
+    margin-bottom: 5px;
+    display: inline-block;
+}
+
+.reviewItem .text {
+    font-size: 20px;
+    line-height: 28px;
+    margin: 27px 0;
+}
+
+.reviewItem .images {
+    margin: 0 -10px 28px;
+}
+
+.reviewItem .img {
+    margin: 0 10px;
+}
+
+.reviewItem .btn {
+    padding: 0;
+    border: 0;
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--color-3);
+}
+
+/* ANCHOR -- (faq)  */
+
+.faqs {
+    max-width: 995px;
+}
+
+.faq {
+    cursor: pointer;
+    position: relative;
+    border: 1px solid var(--color-7);
+    padding: 0 40px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+       -moz-box-orient: vertical;
+       -moz-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+}
+
+.faq:not(:last-of-type) {
+    margin-bottom: 20px;
+}
+
+.faq h4 {
+    height: 110px;
+    max-width: 650px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+       -moz-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+
+.faqText {
+    visibility: hidden;
+    opacity: 0;
+    height: 0;
+    font-size: 17px;
+    font-weight: 500;
+    -webkit-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    transition: all .3s ease;
+}
+
+.faqText>*:not(:last-child) {
+    margin-bottom: 30px;
+}
+
+.faq.active .faqText {
+    visibility: visible;
+    opacity: 1;
+    margin-bottom: 40px;
+    -webkit-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    transition: all .3s ease;
+}
+
+.faq .icon {
+    position: absolute;
+    right: 40px;
+    top: 30px;
+    background: var(--color-2);
+    width: 48px;
+    height: 48px;
+    -webkit-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    transition: all .3s ease;
+    -webkit-border-radius: 50%;
+       -moz-border-radius: 50%;
+            border-radius: 50%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+       -moz-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+       -moz-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+}
+
+.faq.active .icon {
+    background: var(--color-7);
+    -webkit-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    transition: all .3s ease;
+    -webkit-transform: rotate(45deg);
+       -moz-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+         -o-transform: rotate(45deg);
+            transform: rotate(45deg);
+} 
+
+.faq.active .icon img {
+    -webkit-filter: invert(13%) sepia(53%) saturate(555%) hue-rotate(161deg) brightness(47%) contrast(113%);
+            filter: invert(13%) sepia(53%) saturate(555%) hue-rotate(161deg) brightness(47%) contrast(113%);
+}
+
+/* ANCHOR -- (faq)  */
+
+.teamItem {
+    font-weight: 500;
+    width: 48%;
+    margin-bottom: 40px;
+}
+
+.teamItemImg {
+    margin-right: 30px;
+    width: 250px;
+    height: 250px;
+    -webkit-border-radius: 50%;
+       -moz-border-radius: 50%;
+            border-radius: 50%;
+    overflow: hidden;
+}
+
+.teamItem .position {
+    color: var(--color-4);
+    margin: 15px 0 25px;
+    display: block;
+}
+
+.teamItemAbout .contactsLink {
+    font-size: 15px;
+    padding-left: 32px;
+}
+
+.teamItemAbout .contactsLink:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.teamItemAbout .contactsLink .img {
+    width: 25px;
+}
+
+.teamItemAbout .contactsLink .img img {
+    width: 100%;
+}
+
+/* ANCHOR -- (library)  */
+
+.libraryList {
+    margin: 0 -10px;
+}
+
+.libraryItem {
+    font-weight: 500;
+    border: 1px solid var(--color-7);
+    padding: 20px;
+    width: 32%;
+    margin: 0 10px 20px;
+}
+
+.libraryItem .name {
+    font-size: 17px;
+    margin-bottom: 20px;
+}
+
+.libraryItem span {
+    font-size: 15px;
+    color: var(--color-3);
+    margin-bottom: 5px;
+}
+
+.libraryItem .download {
+    font-size: 13px;
+    color: var(--color-4);
 }

@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Map -->
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=67def038-3dc4-4d95-b920-c6097d297d2e&lang=ru_RU" type="text/javascript">
+    </script>
+    
+    <!-- 
+        Library style 
+    -->
+    <!-- Swiper style -->
+    <link  rel="stylesheet"  href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+
+    <!-- Main style -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <!--
+        Media queries
+    -->
+    <link rel="stylesheet" href="./assets/css/media.css">
+    <title>Главная страница Горизонт</title>
+</head>
+<body>
+    <div class="mainWrapper">
+        <header class="header">
+            <div class="topPanel">
+                <div class="container">   
+                    <div class="wrapper dFlex aic jcsb">
+                        <a href="/" class="logo">
+                            <img src="./assets/img/icons/logo.svg" alt="logo">
+                        </a>
+                        <nav class="navigation">
+                            <ul class="menu dFlex">
+                                <li class="dropmenu">
+                                    <a href="#">
+                                        Проекты
+                                    </a>
+                                    <div class="subMenu">
+                                        <div class="container">
+                                            <div class="subMenuWrapper">
+                                                <a href="#">Рассчитать стоимость</a>
+                                                <p class="desc">
+                                                    Воспользуйтесь нашим калькулятором или попросите о точной смете нас
+                                                </p>
+                                                <a href="#" class="btn btnLight">
+                                                    Получить расчет с учетом бюджета
+                                                </a>
+                                                <a href="#">Построенные дома</a>
+                                                <p class="desc">
+                                                    Завершенные полностью и частично
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="arrow">
+                                        <img src="./assets/img/icons/dropmenu.svg" alt="dropmenu">
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Строительство домов
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Покупка готового дома
+                                    </a>
+                                </li>
+                                <li class="dropmenu">
+                                    <a href="#">
+                                        Услуги
+                                    </a>
+                                    <div class="subMenu">
+                                        <div class="container">
+                                            <div class="subMenuWrapper">
+                                                <a href="#">Проектирование и дизайн</a>
+                                                <a href="#">Строительные и отделочные работы</a>
+                                                <a href="#">Благоустройство дома и участка</a>
+                                                <a href="#">Аренда транспорта и услуги спецтехники</a>
+                                                <a href="#">Промышленное и гражданское строительство</a>
+                                                <a href="#">Технический надзор за строительством</a>
+                                                <a href="#">Энергосбережение</a>
+                                                <a href="#">Бесшовные пластиковые погреба TINGARD</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="arrow">
+                                        <img src="./assets/img/icons/dropmenu.svg" alt="dropmenu">
+                                    </div>
+                                </li>
+                                <li class="dropmenu">
+                                    <a href="#">
+                                        О компании
+                                    </a>
+                                    <div class="subMenu">
+                                        <div class="container">
+                                            <div class="subMenuWrapper">
+                                                <a href="#">Наши работы</a>
+                                                <a href="#">Акции</a>
+                                                <a href="#">Отзывы клиентов</a>
+                                                <a href="#">Новости</a>
+                                                <a href="#">Вопросы и ответы</a>
+                                                <a href="#">Наша команда</a>
+                                                <a href="#">Вакансии</a>
+                                                <a href="#">Библиотека строителя</a>
+                                                <a href="#">Техрегламент</a>
+                                                <a href="#">Конакты</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="arrow">
+                                        <img src="./assets/img/icons/dropmenu.svg" alt="dropmenu">
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="navFooter mobileElement">
+                                <span class="title">
+                                    Мы в соцсетях
+                                </span>
+                                <div class="navigationSocial dFlex aic">
+                                    <a href="#">
+                                        <div class="icon-vk"></div>
+                                    </a>
+                                    <a href="#">
+                                        <div class="icon-tlg"></div>
+                                    </a>
+                                    <a href="#">
+                                        <div class="icon-youtube"></div>
+                                    </a>
+                                    <a href="#">
+                                        <div class="icon-fb"></div>
+                                    </a>
+                                </div>
+                            </div>
+                        </nav>
+                        <div class="topAbout pos-r dFlex aifs fdc">
+                            <div  id="city" class="citySelect">
+                                <img src="./assets/img/icons/gerb-izhevsk-sm.svg" alt="gerb-izhevsk">
+                                Ижевск
+                            </div>
+                            <div class="changeCity pos-a">
+                                <div class="changeCityBody">
+                                    <p>
+                                        Планируете строительство <br>
+                                        в <span>Ижевске</span>?
+                                    </p>
+                                    <div class="cityButtons dFlex aic jcsb">
+                                        <a href="#" class="cityBtn btn btnLight">Да</a>
+                                        <a href="#" class="cityBtn link">Нет, планирую в Перми</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="tel:89112221133" class="phone">
+                                (3412) 64-31-51
+                            </a>
+                            <span class="dateWork">
+                                c 10 до 20
+                            </span>
+                        </div>
+                        <button class="btn btnLight">
+                            Перезвоните мне
+                        </button>
+                        <button class="burger mobileElement">
+                            <span></span><span></span><span></span>
+                        </button>
+                    </div>             
+                </div>
+            </div>
+        </header>
+        <main class="innerPage">
+            <section class="innerSection">
+                <div class="container">
+                    <h1 class="innerTitle">
+                        Отзывы
+                    </h1>
+                    <div class="innerDesc">
+                        Главное что мы любим в своей работе - делать людей счастливыми! В этом разделе собраны некоторые отзывы тех, кто уже стал обладателем нового загородного дома или заказал нашу услугу.
+                    </div>
+                    <ul class="reviews">                        
+                        <li class="reviewItem">
+                            <span class="date">
+                                16.02.2021
+                            </span>
+                            <div class="author">
+                                Ганиев Тимур - строительство дома в мкрн. Яркий
+                            </div>
+                            <p class="text">
+                                История строительства дома-мечты! Хочется поблагодарить каждого сотрудника, специалиста, рабочего, строителя, который поучаствовал в строительстве дома нашей мечты! К мечте мы шли очень долго. Нас всё время кто-нибудь или что-нибудь тормозило. На этот раз мы решили дойти до воплощения и в этом нам помогла строительная компания "Горизонт"!
+                            </p>
+                            <div class="images dFlex aic">
+                                <div class="img">
+                                    <img src="./assets/img/review1.jpg" alt="">
+                                </div>
+                                <div class="img">
+                                    <img src="./assets/img/review2.jpg" alt="">
+                                </div>
+                                <div class="img">
+                                    <img src="./assets/img/review3.jpg" alt="">
+                                </div>
+                                <div class="img">
+                                    <img src="./assets/img/review1.jpg" alt="">
+                                </div>
+                                <div class="img">
+                                    <img src="./assets/img/review3.jpg" alt="">
+                                </div>
+                            </div>
+                            <button class="btn btnPopup">
+                                Весь текст
+                            </button>                            
+                            <div class="popup">            
+                                <button class="popupClose">
+                                    <img src="./assets/img/icons/popup-close.svg" alt="">
+                                </button>
+                                <div class="popupOverlay"></div>
+                                <div class="popupWindow">
+                                    <span class="date">
+                                        16.02.2021
+                                    </span>
+                                    <span class="author">
+                                        Ганиев Тимур
+                                    </span>
+                                    <h3 class="title">
+                                        Заливка фундамента и возведение несущих каменных стен дома
+                                    </h3>
+                                    <div class="popupBody">
+                                        <div class="cardPopupSlider swiper">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide cardPopupSlide">
+                                                    <img src="./assets/img/cardslide.jpg" alt="cardslide">
+                                                </div>
+                                                <div class="swiper-slide cardPopupSlide">
+                                                    <img src="./assets/img/cardslide.jpg" alt="cardslide">
+                                                </div>
+                                                <div class="swiper-slide cardPopupSlide">
+                                                    <img src="./assets/img/cardslide.jpg" alt="cardslide">
+                                                </div>
+                                                <div class="swiper-slide cardPopupSlide">
+                                                    <img src="./assets/img/cardslide.jpg" alt="cardslide">
+                                                </div>
+                                                <div class="swiper-slide cardPopupSlide">
+                                                    <img src="./assets/img/cardslide.jpg" alt="cardslide">
+                                                </div>
+                                                <div class="swiper-slide cardPopupSlide">
+                                                    <img src="./assets/img/cardslide.jpg" alt="cardslide">
+                                                </div>
+                                            </div>
+                                            <div class="swiper-pagination"></div>
+                                            <div class="swiper-button-prev">
+                                                <img src="./assets/img/icons/arrow-slider-prev.svg" alt="prev">
+                                            </div>
+                                            <div class="swiper-button-next">
+                                                <img src="./assets/img/icons/arrow-slider-next.svg" alt="next">
+                                            </div>
+                                        </div>
+                                        <p>
+                                            Пермский край, п. Протасы. Дом мы сдали ещё в октябре 2021 года.
+                                        </p>
+                                        <p>
+                                            Общая площадь дома 150 кв.м. На первом этаже расположен гараж на 1 машину, техническое помещение, кухня-гостиная, санузел, терраса. На втором этаже 3 спальни, ванная комната, санузел с душем и небольшая сауна, а также терраса.
+                                        </p>
+                                        <p>
+                                            Фундамент — по типу УШП. Несущие стены — газоблок 400мм + облицовочный кирпич. Межэтажное перекрытие — железобетонные плиты перекрытия. Земельный участок был в собственности у заказчика. Часть отделочных работ заказчик выполнял самостоятельно.Срок строительства составил 6 месяцев.
+                                        </p>
+                                        <p>
+                                            Стоимость строительства коробки дома со всеми коммуникациями составила 3 436 334 руб. В том числе была задействована программа Сельская ипотека под 2,7%.Просим Вас обратить внимание - цена актуальна на апрель 2021 года!
+                                        </p>
+                                        <p>
+                                            Построим Вам такой же дом за 6-7 месяцев по самой выгодной цене!
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>                     
+                        <li class="reviewItem">
+                            <span class="date">
+                                16.02.2021
+                            </span>
+                            <div class="author">
+                                Ганиев Тимур - строительство дома в мкрн. Яркий
+                            </div>
+                            <p class="text">
+                                История строительства дома-мечты! Хочется поблагодарить каждого сотрудника, специалиста, рабочего, строителя, который поучаствовал в строительстве дома нашей мечты! К мечте мы шли очень долго. Нас всё время кто-нибудь или что-нибудь тормозило. На этот раз мы решили дойти до воплощения и в этом нам помогла строительная компания "Горизонт"!
+                            </p>
+                            <button class="btn btnPopup">
+                                Весь текст
+                            </button>                            
+                            <div class="popup">            
+                                <button class="popupClose">
+                                    <img src="./assets/img/icons/popup-close.svg" alt="">
+                                </button>
+                                <div class="popupOverlay"></div>
+                                <div class="popupWindow">
+                                    <span class="date">
+                                        16.02.2021
+                                    </span>
+                                    <span class="author">
+                                        Ганиев Тимур
+                                    </span>
+                                    <h3 class="title">
+                                        Заливка фундамента и возведение несущих каменных стен дома
+                                    </h3>
+                                    <div class="popupBody">
+                                        <div class="cardPopupSlider swiper">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide cardPopupSlide">
+                                                    <img src="./assets/img/cardslide.jpg" alt="cardslide">
+                                                </div>
+                                                <div class="swiper-slide cardPopupSlide">
+                                                    <img src="./assets/img/cardslide.jpg" alt="cardslide">
+                                                </div>
+                                                <div class="swiper-slide cardPopupSlide">
+                                                    <img src="./assets/img/cardslide.jpg" alt="cardslide">
+                                                </div>
+                                                <div class="swiper-slide cardPopupSlide">
+                                                    <img src="./assets/img/cardslide.jpg" alt="cardslide">
+                                                </div>
+                                                <div class="swiper-slide cardPopupSlide">
+                                                    <img src="./assets/img/cardslide.jpg" alt="cardslide">
+                                                </div>
+                                                <div class="swiper-slide cardPopupSlide">
+                                                    <img src="./assets/img/cardslide.jpg" alt="cardslide">
+                                                </div>
+                                            </div>
+                                            <div class="swiper-pagination"></div>
+                                            <div class="swiper-button-prev">
+                                                <img src="./assets/img/icons/arrow-slider-prev.svg" alt="prev">
+                                            </div>
+                                            <div class="swiper-button-next">
+                                                <img src="./assets/img/icons/arrow-slider-next.svg" alt="next">
+                                            </div>
+                                        </div>
+                                        <p>
+                                            Пермский край, п. Протасы. Дом мы сдали ещё в октябре 2021 года.
+                                        </p>
+                                        <p>
+                                            Общая площадь дома 150 кв.м. На первом этаже расположен гараж на 1 машину, техническое помещение, кухня-гостиная, санузел, терраса. На втором этаже 3 спальни, ванная комната, санузел с душем и небольшая сауна, а также терраса.
+                                        </p>
+                                        <p>
+                                            Фундамент — по типу УШП. Несущие стены — газоблок 400мм + облицовочный кирпич. Межэтажное перекрытие — железобетонные плиты перекрытия. Земельный участок был в собственности у заказчика. Часть отделочных работ заказчик выполнял самостоятельно.Срок строительства составил 6 месяцев.
+                                        </p>
+                                        <p>
+                                            Стоимость строительства коробки дома со всеми коммуникациями составила 3 436 334 руб. В том числе была задействована программа Сельская ипотека под 2,7%.Просим Вас обратить внимание - цена актуальна на апрель 2021 года!
+                                        </p>
+                                        <p>
+                                            Построим Вам такой же дом за 6-7 месяцев по самой выгодной цене!
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>                   
+                        <li class="reviewItem">
+                            <span class="date">
+                                16.02.2021
+                            </span>
+                            <div class="author">
+                                Ганиев Тимур - строительство дома в мкрн. Яркий
+                            </div>
+                            <p class="text">
+                                История строительства дома-мечты! Хочется поблагодарить каждого сотрудника, специалиста, рабочего, строителя, который поучаствовал в строительстве дома нашей мечты! К мечте мы шли очень долго. Нас всё время кто-нибудь или что-нибудь тормозило. На этот раз мы решили дойти до воплощения и в этом нам помогла строительная компания "Горизонт"!
+                            </p>
+                            <button class="btn btnPopup">
+                                Весь текст
+                            </button>                            
+                            <div class="popup">            
+                                <button class="popupClose">
+                                    <img src="./assets/img/icons/popup-close.svg" alt="">
+                                </button>
+                                <div class="popupOverlay"></div>
+                                <div class="popupWindow">
+                                    <span class="date">
+                                        16.02.2021
+                                    </span>
+                                    <span class="author">
+                                        Ганиев Тимур
+                                    </span>
+                                    <h3 class="title">
+                                        Заливка фундамента и возведение несущих каменных стен дома
+                                    </h3>
+                                    <div class="popupBody">
+                                        <div class="cardPopupSlider swiper">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide cardPopupSlide">
+                                                    <img src="./assets/img/cardslide.jpg" alt="cardslide">
+                                                </div>
+                                                <div class="swiper-slide cardPopupSlide">
+                                                    <img src="./assets/img/cardslide.jpg" alt="cardslide">
+                                                </div>
+                                                <div class="swiper-slide cardPopupSlide">
+                                                    <img src="./assets/img/cardslide.jpg" alt="cardslide">
+                                                </div>
+                                                <div class="swiper-slide cardPopupSlide">
+                                                    <img src="./assets/img/cardslide.jpg" alt="cardslide">
+                                                </div>
+                                                <div class="swiper-slide cardPopupSlide">
+                                                    <img src="./assets/img/cardslide.jpg" alt="cardslide">
+                                                </div>
+                                                <div class="swiper-slide cardPopupSlide">
+                                                    <img src="./assets/img/cardslide.jpg" alt="cardslide">
+                                                </div>
+                                            </div>
+                                            <div class="swiper-pagination"></div>
+                                            <div class="swiper-button-prev">
+                                                <img src="./assets/img/icons/arrow-slider-prev.svg" alt="prev">
+                                            </div>
+                                            <div class="swiper-button-next">
+                                                <img src="./assets/img/icons/arrow-slider-next.svg" alt="next">
+                                            </div>
+                                        </div>
+                                        <p>
+                                            Пермский край, п. Протасы. Дом мы сдали ещё в октябре 2021 года.
+                                        </p>
+                                        <p>
+                                            Общая площадь дома 150 кв.м. На первом этаже расположен гараж на 1 машину, техническое помещение, кухня-гостиная, санузел, терраса. На втором этаже 3 спальни, ванная комната, санузел с душем и небольшая сауна, а также терраса.
+                                        </p>
+                                        <p>
+                                            Фундамент — по типу УШП. Несущие стены — газоблок 400мм + облицовочный кирпич. Межэтажное перекрытие — железобетонные плиты перекрытия. Земельный участок был в собственности у заказчика. Часть отделочных работ заказчик выполнял самостоятельно.Срок строительства составил 6 месяцев.
+                                        </p>
+                                        <p>
+                                            Стоимость строительства коробки дома со всеми коммуникациями составила 3 436 334 руб. В том числе была задействована программа Сельская ипотека под 2,7%.Просим Вас обратить внимание - цена актуальна на апрель 2021 года!
+                                        </p>
+                                        <p>
+                                            Построим Вам такой же дом за 6-7 месяцев по самой выгодной цене!
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="sectionOffer bgSection">
+                <div class="container"> 
+                    <h2 class="title sectionOfferTitle">
+                        Постройте дом <br>
+                        по индивидуальному проекту
+                   </h2>
+                    <div class="offer dFlex">
+                        <div class="offerTitle">                            
+                            <div class="offerPerson  dFlex aic">
+                                <div class="img rhomb">
+                                    <img src="./assets/img/bossp.png" alt="boss">
+                                </div>
+                                <div class="offerPosition dFlex fdc">
+                                    <span class="name">
+                                        Антон Микишев
+                                    </span>
+                                    <span class="position">
+                                        Генеральный директор
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="offerDescription">
+                            <p class="desc">
+                                Мы — команда специалистов со строительным и архитектурным образованием. Мы не просто рисуем красивые картинки, мы создаем ожидаемо качественные дома
+                            </p>
+                            <a href="#" class="btn bgGreen">
+                                Получить расчет с учетом бюджета
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="footerSection">
+            <div class="container">
+                <div class="footer dFlex pos-r">
+                    <div class="footerSidebar">
+                        <a href="/" class="logo">
+                            <img src="./assets/img/icons/logo-footer.svg" alt="">
+                        </a>
+                        <div class="footerSidebarSoc">
+                            <a href="#">
+                                <img src="./assets/img/icons/ins-grey.svg" alt="">
+                            </a>
+                            <a href="#">
+                                <img src="./assets/img/icons/vk-grey.svg" alt="">
+                            </a>
+                            <a href="#">
+                                <img src="./assets/img/icons/fb-grey.svg" alt="">
+                            </a>
+                            <a href="#">
+                                <img src="./assets/img/icons/tlg-grey.svg" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="footerNav">
+                        <div class="footerMenuTop">
+                            <ul  class="dFlex aic">
+                                <li>
+                                    <a href="#">
+                                        Строительство домов
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Покупка готового дома
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Индивидуальное проектирование
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>                        
+                        <div class="footerContacts dFlex">
+                            <div class="contact dFlex fdc">
+                                <h4 class="city">
+                                    Ижевск
+                                </h4>
+                                <a href="tel:89112223344" class="phone">(3412) 64-31-51</a>
+                                <a href="#" class="links">Заказать звонок</a>
+                                <address class="address">ул. Ворошилова, 32</address>
+                            </div>
+                            <div class="contact dFlex fdc">
+                                <h4 class="city">
+                                    Пермь
+                                </h4>
+                                <a href="tel:89112223344" class="phone">(342) 270-0-260</a>
+                                <a href="#" class="links">Заказать звонок</a>
+                                <address class="address">ул. Чкалова, 9Е</address>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="copyright dFlex aic pos-a">
+                        Сделано
+                        <div class="copyrightWrap dFlex aic">
+                            <a href="#">
+                                <img src="./assets/img/procenter.png" alt="">
+                            </a>
+                            <img class="and" src="./assets/img/and.png" alt="">
+                            <a href="#">
+                                <img src="./assets/img/kallio.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- 
+            Library Script 
+        -->
+        <script  src="https://code.jquery.com/jquery-3.6.0.min.js"  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="  crossorigin="anonymous"></script>
+        <!-- Добавление файла  -->
+        <script src="./assets/lib/fileapi/FileAPI.min.js"></script>
+        <script src="./assets/lib/fileapi/FileAPI.exif.js"></script>
+        <script src="./assets/lib/fileapi/jquery.fileapi.min.js"></script>
+        <!-- Fancybox Script -->
+        <script src="./assets/lib/lightbox/fslightbox.js"></script>
+        <!-- Swiper Script -->
+        <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
+        <!-- Main Script -->
+        <script src="./assets/js/fileapi.js"></script>
+        <script src="./assets/js/script.js"></script>
+    </div>
+</body>
+</html>

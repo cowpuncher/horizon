@@ -273,39 +273,63 @@ if (popup) {
     activePopup('.btnPopup', 'popup');
 }
 
+// Faq
 
+let faq = document.querySelectorAll('.faq');
+
+if (faq) {
+    for(var i = 0; i < faq.length; i++) {
+        faq[i].addEventListener('click', e => {
+            let elm = e.currentTarget;
+            let elmClass = e.currentTarget.classList;
+            if (elmClass.contains('active')) {
+                elmClass.remove('active');                
+                elm.getElementsByClassName('faqText')[0].removeAttribute('style', 'height: ' + elm.getElementsByClassName('faqText')[0].scrollHeight + 'px;');
+            } else {
+                for(var i = 0; i < faq.length; i++) {
+                    faq[i].classList.remove('active');
+                    faq[i].getElementsByClassName('faqText')[0].removeAttribute('style', 'height: ' + elm.getElementsByClassName('faqText')[0].scrollHeight + 'px;');
+                }
+                elmClass.add('active');
+                elm.getElementsByClassName('faqText')[0].setAttribute('style', 'height: ' + elm.getElementsByClassName('faqText')[0].scrollHeight + 'px;');
+                
+            }            
+        })
+
+    }
+}
 
 // // Roullete
 
-const rouletteSlider = document.querySelector('.rouletteSlider');
-const rouletteBtn = document.getElementById('rouletteBtn');
-let rouletteSliderItem = document.querySelectorAll('.rouletteSliderItem');
+// const rouletteSlider = document.querySelector('.rouletteSlider');
+// const rouletteBtn = document.getElementById('rouletteBtn');
+// let rouletteSliderItem = document.querySelectorAll('.rouletteSliderItem');
 
-if (rouletteBtn) {
-    for(let i = 0; i < rouletteSliderItem.length; i++) {
-        let roulleteHeight = rouletteSliderItem[i].offsetHeight * rouletteSliderItem.length;
+// if (rouletteBtn) {
+//     for(let i = 0; i < rouletteSliderItem.length; i++) {
+//         let roulleteHeight = rouletteSliderItem[i].offsetHeight * rouletteSliderItem.length;
     
         
-        rouletteSliderItem[2].classList.add('rouletteSliderItem-show');
+//         rouletteSliderItem[2].classList.add('rouletteSliderItem-show');
     
-        rouletteSlider.setAttribute('style', 'height:' + roulleteHeight + 'px;');
+//         rouletteSlider.setAttribute('style', 'height:' + roulleteHeight + 'px;');
     
-        rouletteSlider.append(rouletteSliderItem[i].cloneNode(true));
-        let itemHeight = rouletteSliderItem[i].offsetHeight;
+//         rouletteSlider.append(rouletteSliderItem[i].cloneNode(true));
+//         let itemHeight = rouletteSliderItem[i].offsetHeight;
     
     
-        rouletteSlider.setAttribute('style', 'height: ' + itemHeight * rouletteSliderItem.length + 'px;');
+//         rouletteSlider.setAttribute('style', 'height: ' + itemHeight * rouletteSliderItem.length + 'px;');
         
-    }
+//     }
     
-    var random = Math.floor(Math.random() * 9) + 1; // От 0 до 8
+//     var random = Math.floor(Math.random() * 9) + 1; // От 0 до 8
     
-    rouletteBtn.addEventListener('click', e => {    
-        rouletteSliderItem = document.querySelectorAll('.rouletteSliderItem');
-        for(let i = 0; i < rouletteSliderItem.length; i++) {
-            let itemHeight = rouletteSliderItem[i].offsetHeight;
-            rouletteSliderItem[i].setAttribute('style', 'transform: translate(0 , -' + (itemHeight * random) + 'px)');
-        }
-    });
-}
+//     rouletteBtn.addEventListener('click', e => {    
+//         rouletteSliderItem = document.querySelectorAll('.rouletteSliderItem');
+//         for(let i = 0; i < rouletteSliderItem.length; i++) {
+//             let itemHeight = rouletteSliderItem[i].offsetHeight;
+//             rouletteSliderItem[i].setAttribute('style', 'transform: translate(0 , -' + (itemHeight * random) + 'px)');
+//         }
+//     });
+// }
 
