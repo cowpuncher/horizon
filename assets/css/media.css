@@ -39,6 +39,10 @@
 /*ANCHOR max-width: 1440 */
 
 @media screen and (max-width: 1440px) {
+    .innerPage {
+        padding-top: 185px;
+    }   
+    
     .mainWrapper {
         overflow-x: hidden;
     }
@@ -115,6 +119,9 @@
 }
 /*ANCHOR max-width: 1200 */
 @media screen and (max-width: 1200px) {
+    .innerPage {
+        padding-top: 160px;
+    }
     h1 {
         font-size: 40px;
     }
@@ -507,6 +514,22 @@
         max-width: 500px;
         margin: 0 auto 95px;
     }
+    .teamItemImg {
+        width: 150px;
+        height: 150px;
+    }
+    .teamItemImg img {
+        width: 100%;
+    }
+}
+
+/*ANCHOR max-width: 1024 */
+@media screen and (max-width: 1024px) {
+    .libraryItem {
+        width: -webkit-calc(-webkit-calc(100% / 2) - -webkit-calc(0.63rem * 2));
+        width: -moz-calc(-moz-calc(100% / 2) - -moz-calc(0.63rem * 2));
+        width: calc(calc(100% / 2) - calc(0.63rem * 2));
+    }
 }
 
 /*ANCHOR max-width: 993 */
@@ -657,9 +680,31 @@
         margin-left: 0;
         margin-top: 0;
     }
+    
+    .navigation li:not(:first-child) {
+        margin-left: 20px;
+    }
+
+    .topAbout {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+           -moz-box-orient: vertical;
+           -moz-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: start;
+        -webkit-align-items: flex-start;
+           -moz-box-align: start;
+            -ms-flex-align: start;
+                align-items: flex-start;
+    }
 }
-/*ANCHOR max-width: 768 */
-@media screen and (max-width: 768px) {
+/*ANCHOR max-width: 767 */
+@media screen and (max-width: 767px) {
+    .innerPage {
+        padding-top: 0;
+    }
     .mainWrapper {
         overflow-x: hidden;
     }
@@ -1302,4 +1347,28 @@
     .copyright a img {
         width: 85px;
     }
+}
+
+/*ANCHOR max-width: 568 */
+@media screen and (max-width: 568px) {
+    h1 {
+        font-size: 30px;
+        font-weight: 400;
+    }
+    .libraryItem {
+        width: 100%;
+    }
+    .innerDesc,
+    .libraryItem  {
+        font-weight: 400;
+        font-size: 15px;
+    }
+    .innerSection .title {
+        font-size: 20px;
+        font-weight: 400;
+    }
+    .offerDescription .btn {
+        padding: 13px 30px;
+    }
+
 }

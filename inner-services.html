@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Map -->
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=67def038-3dc4-4d95-b920-c6097d297d2e&lang=ru_RU" type="text/javascript">
+    </script>
+    
+    <!-- 
+        Library style 
+    -->
+    <!-- Swiper style -->
+    <link  rel="stylesheet"  href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+
+    <!-- Main style -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <!--
+        Media queries
+    -->
+    <link rel="stylesheet" href="./assets/css/media.css">
+    <title>Главная страница Горизонт</title>
+</head>
+<body>
+    <div class="mainWrapper">
+        <header class="header">
+            <div class="topPanel">
+                <div class="container">   
+                    <div class="wrapper dFlex aic jcsb">
+                        <a href="/" class="logo">
+                            <img src="./assets/img/icons/logo.svg" alt="logo">
+                        </a>
+                        <nav class="navigation">
+                            <ul class="menu dFlex">
+                                <li class="dropmenu">
+                                    <a href="#">
+                                        Проекты
+                                    </a>
+                                    <div class="subMenu">
+                                        <div class="container">
+                                            <div class="subMenuWrapper">
+                                                <a href="#">Рассчитать стоимость</a>
+                                                <p class="desc">
+                                                    Воспользуйтесь нашим калькулятором или попросите о точной смете нас
+                                                </p>
+                                                <a href="#" class="btn btnLight">
+                                                    Получить расчет с учетом бюджета
+                                                </a>
+                                                <a href="#">Построенные дома</a>
+                                                <p class="desc">
+                                                    Завершенные полностью и частично
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="arrow">
+                                        <img src="./assets/img/icons/dropmenu.svg" alt="dropmenu">
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Строительство домов
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Покупка готового дома
+                                    </a>
+                                </li>
+                                <li class="dropmenu">
+                                    <a href="#">
+                                        Услуги
+                                    </a>
+                                    <div class="subMenu">
+                                        <div class="container">
+                                            <div class="subMenuWrapper">
+                                                <a href="#">Проектирование и дизайн</a>
+                                                <a href="#">Строительные и отделочные работы</a>
+                                                <a href="#">Благоустройство дома и участка</a>
+                                                <a href="#">Аренда транспорта и услуги спецтехники</a>
+                                                <a href="#">Промышленное и гражданское строительство</a>
+                                                <a href="#">Технический надзор за строительством</a>
+                                                <a href="#">Энергосбережение</a>
+                                                <a href="#">Бесшовные пластиковые погреба TINGARD</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="arrow">
+                                        <img src="./assets/img/icons/dropmenu.svg" alt="dropmenu">
+                                    </div>
+                                </li>
+                                <li class="dropmenu">
+                                    <a href="#">
+                                        О компании
+                                    </a>
+                                    <div class="subMenu">
+                                        <div class="container">
+                                            <div class="subMenuWrapper">
+                                                <a href="#">Наши работы</a>
+                                                <a href="#">Акции</a>
+                                                <a href="#">Отзывы клиентов</a>
+                                                <a href="#">Новости</a>
+                                                <a href="#">Вопросы и ответы</a>
+                                                <a href="#">Наша команда</a>
+                                                <a href="#">Вакансии</a>
+                                                <a href="#">Библиотека строителя</a>
+                                                <a href="#">Техрегламент</a>
+                                                <a href="#">Конакты</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="arrow">
+                                        <img src="./assets/img/icons/dropmenu.svg" alt="dropmenu">
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="navFooter mobileElement">
+                                <span class="title">
+                                    Мы в соцсетях
+                                </span>
+                                <div class="navigationSocial dFlex aic">
+                                    <a href="#">
+                                        <div class="icon-vk"></div>
+                                    </a>
+                                    <a href="#">
+                                        <div class="icon-tlg"></div>
+                                    </a>
+                                    <a href="#">
+                                        <div class="icon-youtube"></div>
+                                    </a>
+                                    <a href="#">
+                                        <div class="icon-fb"></div>
+                                    </a>
+                                </div>
+                            </div>
+                        </nav>
+                        <div class="topAbout pos-r dFlex aifs fdc">
+                            <div  id="city" class="citySelect">
+                                <img src="./assets/img/icons/gerb-izhevsk-sm.svg" alt="gerb-izhevsk">
+                                Ижевск
+                            </div>
+                            <div class="changeCity pos-a">
+                                <div class="changeCityBody">
+                                    <p>
+                                        Планируете строительство <br>
+                                        в <span>Ижевске</span>?
+                                    </p>
+                                    <div class="cityButtons dFlex aic jcsb">
+                                        <a href="#" class="cityBtn btn btnLight">Да</a>
+                                        <a href="#" class="cityBtn link">Нет, планирую в Перми</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="tel:89112221133" class="phone">
+                                (3412) 64-31-51
+                            </a>
+                            <span class="dateWork">
+                                c 10 до 20
+                            </span>
+                        </div>
+                        <button class="btn btnLight">
+                            Перезвоните мне
+                        </button>
+                        <button class="burger mobileElement">
+                            <span></span><span></span><span></span>
+                        </button>
+                    </div>             
+                </div>
+            </div>
+        </header>
+        <main class="innerPage">
+            <section class="innerSection">
+                <div class="container">
+                    <div class="breadcrumbs">
+                        <a href="#">
+                            Проектирование и дизайн
+                        </a>
+                        <a href="#">
+                            Дизайн проект
+                        </a>
+                    </div>
+                    <h2 class="innerTitle">
+                        Дизайн-проект дома или квартиры от строительной компании «Горизонт» 
+                    </h2>
+                    <div class="innerDesc">
+                        Дизайн - проект представляет из себя комплект документов, нужных для проведения ремонтных и отделочных работ. В нем прописаны все детали будущего интерьера помещений, а так же точный список необходимых строительных материалов, указывающий место их приобретения. Благодаря заранее разработанному дизайн проекту можно рассчитать стоимость предстоящего ремонта, чтобы четко понимать с какими расходами придется иметь дело.                    
+                    </div>
+                    <div class="innerContent">
+                        <img src="./assets/img/inner1.jpg" alt="inner">
+                        <h3>
+                            Стоимость проекта
+                        </h3>
+                        <p>
+                            Стоимость дизайн проекта "Косметическая отделка" - 300р./м2, включает:
+                            Легкий ремонт, без демонтажа и монтажа перегородок и электрики. Отделка стен, пола и потолков, различными материалами в выбранном стилистическом решении. Без чертежей.
+                        </p>
+                        <p>
+                            Состав услуги:
+                        </p>
+                        <ul>
+                            <li>                                
+                                замеры
+                            </li>
+                            <li>
+                                консультация
+                            </li>
+                            <li>
+                                составление плана с замерами
+                            </li>
+                            <li>
+                                план с размещением мебели
+                            </li>
+                            <li>
+                                коллаж или визуализация с пояснениями
+                            </li>
+                        </ul>
+                        <p>
+                            Стоимость дизайн проекта "Косметическая отделка ПЛЮС" - 500р./м2, включает:
+                            Полноценная отделка вашего помещения. Например квартира в "новостройке", где необходимо провести новую электрику, изменить расположение комнат.
+                            Необходима визуализация, планы отделки и монтажа. Прилагается смета для отделки (количество отделочных материалов)
+                            Используются типовые решения для интерьеров.
+                        </p>
+                        <img src="./assets/img/inner2.jpg" alt="inner">
+                        <h3>
+                            Типовой дизайн
+                        </h3>
+                        <p>
+                            Состав услуги:
+                        </p>
+                        <ul>
+                            <li>                  
+                                замеры
+                            </li>
+                            <li>
+                                консультация
+                            </li>
+                            <li>
+                                составление плана с замерами
+                            </li>
+                            <li>
+                                визуализация комнат с пояснениями
+                            </li>
+                            <li>
+                                планы с чертежами электрики, мебели, потолков, полов, демонтаж и монтаж перегородок
+                            </li>
+                            <li>
+                                смета объема работ (количество отделочных материалов на каждую комнату)
+                            </li>
+                        </ul>
+                        <h3>
+                            Эксклюзивный дизайн 800 р./м2, включает:
+                        </h3>
+                        <p>
+                            Отделка помещения с воплощением самых смелых решений в интерьере. Такая работа требует большого опыта, сложной подборки стилистических решений и разработки чертежей.
+                        </p>
+                        <p>
+                            Состав услуги:
+                        </p>
+                        <ul>
+                            <li>                  
+                                замеры
+                            </li>
+                            <li>
+                                консультация
+                            </li>
+                            <li>
+                                составление плана с замерами
+                            </li>
+                            <li>
+                                визуализация комнат с пояснениями
+                            </li>
+                            <li>
+                                планы с чертежами электрики, мебели, потолков, полов, демонтаж и монтаж перегородок
+                            </li>
+                            <li>
+                                смета объема работ (количество отделочных материалов на каждую комнату)
+                            </li>
+                        </ul>
+                        <img src="./assets/img/inner3.jpg" alt="inner">
+                        <h3>
+                            Состав дизайн  проекта "Эксклюзив":
+                        </h3>
+                        <ol>
+                            <li>
+                                - Обмерный план, является начальной точкой для всех работ. В нем содержится выполненный в уменьшенном масштабе и в строгом соответствии с реальными размерами,  план помещения до  ремонта.
+                            </li>
+                            <li>
+                                - План перепланировки, данный план может включать в себя как полную, так и частичную замену несущих перегородок, а так же пробивание проемов в несущих перегородках и в несущих стенах.
+                                План с расстановкой мебели и сантехоборудования.
+                                Распланировка мебели, бытовой техники и сантехоборудования, максимально функционально использующая пространство в помещении.
+                            </li>
+                            <li>
+                                - План полов, здесь указаны напольные покрытия тех или иных зон помещения. А в случае необходимости приводится их схематическая укладка.  Если клиент хочет заказать теплый пол, то в дизайн-проекте должен также присутствовать соответствующий план теплых полов.
+                            </li>
+                            <li>
+                                - План потолков, в этом плане расписаны потолочные конструкции, а так же типы отделочных материалов, необходимые для их установки.
+                            </li>
+                            <li>
+                                - Схема расположения розеток, грамотность разработки дизайн - проекта напрямую зависит и от максимально функционально составленной схемы расположения розеток. Данная схема должна быть составлена так, чтобы у заказчика не возникала потребность использования тройников и удлинителей.
+                            </li>
+                            <li>
+                                - Схема расположения осветительных приборов, для разработки эффективной схемы размещения осветительных приборов важно четко продумать и скомбинировать некоторые ключевые моменты. Это декоративная часть, которая предназначена создавать нужную атмосферу в той или иной зоне помещения. А так же практическая, учитывающая особенности помещения  в рамках рационального использования электроэнергии.
+                            </li>
+                            <li>
+                                -  Развертка стен, такой чертеж отображает развернутые в одну линию стены  всех комнат, на которых представлены не только новые конструкции и элементы декора, а так же тип отделочных материалов.
+                                При необходимости делается детальный чертеж, учитывающий разрезы, схемы, детали и отдельные элементы конструктивно-сложных участков потолка, стен, полов.
+                            </li>
+                            <li>
+                                -  Картинки в 3D  способны наглядно передать заказчику изображение его нового интерьера, предоставляя возможность увидеть помещение со всех сторон в том виде, в каком оно предстанет по окончании всех работ по объекту.
+                            </li>
+                            <li>
+                                -  Ведомость отделочных материалов, в этой части дизайн - проекта содержится полный список использованных отделочных материалов, их количества и местах их приобретения.
+                            </li>
+                        </ol>
+                        <h3>
+                            Галерея
+                        </h3>
+                        <div class="innerGallery dFlex fww">
+                            <a data-fslightbox="gallery" class="img scale" href="./assets/img/in-gal1.jpg">
+                                <img src="./assets/img/in-gal1.jpg" alt="phase-1">
+                            </a>
+                            <a data-fslightbox="gallery" class="img scale" href="./assets/img/in-gal2.jpg">
+                                <img src="./assets/img/in-gal2.jpg" alt="phase-1">
+                            </a>
+                            <a data-fslightbox="gallery" class="img scale" href="./assets/img/in-gal3.png">
+                                <img src="./assets/img/in-gal3.png" alt="phase-1">
+                            </a>
+                            <a data-fslightbox="gallery" class="img scale" href="./assets/img/in-gal4.jpg">
+                                <img src="./assets/img/in-gal4.jpg" alt="phase-1">
+                            </a>
+                            <a data-fslightbox="gallery" class="img scale" href="./assets/img/in-gal5.jpg">
+                                <img src="./assets/img/in-gal5.jpg" alt="phase-1">
+                            </a>
+                            <a data-fslightbox="gallery" class="img scale" href="./assets/img/in-gal6.jpg">
+                                <img src="./assets/img/in-gal6.jpg" alt="phase-1">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="sectionOffer bgSection">
+                <div class="container"> 
+                    <h2 class="title sectionOfferTitle">
+                        Постройте дом <br>
+                        по индивидуальному проекту
+                   </h2>
+                    <div class="offer dFlex">
+                        <div class="offerTitle">                            
+                            <div class="offerPerson  dFlex aic">
+                                <div class="img rhomb">
+                                    <img src="./assets/img/bossp.png" alt="boss">
+                                </div>
+                                <div class="offerPosition dFlex fdc">
+                                    <span class="name">
+                                        Антон Микишев
+                                    </span>
+                                    <span class="position">
+                                        Генеральный директор
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="offerDescription">
+                            <p class="desc">
+                                Мы — команда специалистов со строительным и архитектурным образованием. Мы не просто рисуем красивые картинки, мы создаем ожидаемо качественные дома
+                            </p>
+                            <a href="#" class="btn bgGreen">
+                                Получить расчет с учетом бюджета
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="footerSection">
+            <div class="container">
+                <div class="footer dFlex pos-r">
+                    <div class="footerSidebar">
+                        <a href="/" class="logo">
+                            <img src="./assets/img/icons/logo-footer.svg" alt="">
+                        </a>
+                        <div class="footerSidebarSoc">
+                            <a href="#">
+                                <img src="./assets/img/icons/ins-grey.svg" alt="">
+                            </a>
+                            <a href="#">
+                                <img src="./assets/img/icons/vk-grey.svg" alt="">
+                            </a>
+                            <a href="#">
+                                <img src="./assets/img/icons/fb-grey.svg" alt="">
+                            </a>
+                            <a href="#">
+                                <img src="./assets/img/icons/tlg-grey.svg" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="footerNav">
+                        <div class="footerMenuTop">
+                            <ul  class="dFlex aic">
+                                <li>
+                                    <a href="#">
+                                        Строительство домов
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Покупка готового дома
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Индивидуальное проектирование
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>                        
+                        <div class="footerContacts dFlex">
+                            <div class="contact dFlex fdc">
+                                <h4 class="city">
+                                    Ижевск
+                                </h4>
+                                <a href="tel:89112223344" class="phone">(3412) 64-31-51</a>
+                                <a href="#" class="links">Заказать звонок</a>
+                                <address class="address">ул. Ворошилова, 32</address>
+                            </div>
+                            <div class="contact dFlex fdc">
+                                <h4 class="city">
+                                    Пермь
+                                </h4>
+                                <a href="tel:89112223344" class="phone">(342) 270-0-260</a>
+                                <a href="#" class="links">Заказать звонок</a>
+                                <address class="address">ул. Чкалова, 9Е</address>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="copyright dFlex aic pos-a">
+                        Сделано
+                        <div class="copyrightWrap dFlex aic">
+                            <a href="#">
+                                <img src="./assets/img/procenter.png" alt="">
+                            </a>
+                            <img class="and" src="./assets/img/and.png" alt="">
+                            <a href="#">
+                                <img src="./assets/img/kallio.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- 
+            Library Script 
+        -->
+        <script  src="https://code.jquery.com/jquery-3.6.0.min.js"  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="  crossorigin="anonymous"></script>
+        <!-- Добавление файла  -->
+        <script src="./assets/lib/fileapi/FileAPI.min.js"></script>
+        <script src="./assets/lib/fileapi/FileAPI.exif.js"></script>
+        <script src="./assets/lib/fileapi/jquery.fileapi.min.js"></script>
+        <!-- Fancybox Script -->
+        <script src="./assets/lib/lightbox/fslightbox.js"></script>
+        <!-- Swiper Script -->
+        <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
+        <!-- Main Script -->
+        <script src="./assets/js/fileapi.js"></script>
+        <script src="./assets/js/script.js"></script>
+    </div>
+</body>
+</html>
