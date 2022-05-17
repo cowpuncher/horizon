@@ -116,6 +116,9 @@
     .footerMenuTop li:not(:last-of-type) {
         margin-right: 15px;
     }
+    .contactsItemContent {
+        width: 100%;
+    }
 }
 /*ANCHOR max-width: 1200 */
 @media screen and (max-width: 1200px) {
@@ -297,6 +300,7 @@
     .sectionOfferTitle {
         max-width: 100%;
         margin-bottom: 35px;
+        padding-top: 50px;
     }
     .offerDescription {
         padding-top: 0;
@@ -522,6 +526,12 @@
     .teamItemImg img {
         width: 100%;
     }
+    .vacancyItem {
+        padding: 40px;
+    }
+    .vacancyItem:not(:last-child) {
+        margin-right: 20px;
+    }
 }
 
 /*ANCHOR max-width: 1024 */
@@ -531,10 +541,6 @@
         width: -moz-calc(-moz-calc(100% / 2) - -moz-calc(0.63rem * 2));
         width: calc(calc(100% / 2) - calc(0.63rem * 2));
     }
-}
-
-/*ANCHOR max-width: 993 */
-@media screen and (max-width: 993px) {
     .sectionSlider {
         padding: 0 15px;
     }
@@ -708,7 +714,37 @@
     .teamItemImg {
         margin-right: 10px;
     }
+    .vacancyList {
+        -webkit-box-align: start;
+        -webkit-align-items: flex-start;
+           -moz-box-align: start;
+            -ms-flex-align: start;
+                align-items: flex-start;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+           -moz-box-orient: vertical;
+           -moz-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
     }
+    .contactsItem .place {
+        margin-right: 40px;
+    }
+    .contactsItemContent .title {
+        font-size: 22px;
+    }
+    .cardPopup {
+        width: 46%;
+    }
+    .cardTop .title,
+    .contactsLink {
+        font-size: 17px;
+    }
+    .cardMore {
+        font-size: 14px;
+    }
+}
 /*ANCHOR max-width: 767 */
 @media screen and (max-width: 767px) {
     .innerPage {
@@ -976,6 +1012,10 @@
     .promotionBigCount span {
         font-size: 45px;
     }
+    h1.sectionTitle {
+        font-size: 30px;
+        text-align: left;
+    }
     .mainOffer h1,
     .offerBannerTitle h1,
     .sliderItemContent h1 {
@@ -985,7 +1025,6 @@
     .footerContacts h4,
     .socialSection h3,
     .promotionCard h3,
-    h1.sectionTitle,
     .reviewSlider .title,
     .sliderReview .sliderItemContent h3,
     .phaseItem h3,
@@ -1383,8 +1422,12 @@
         height: 100px;
         margin-bottom: 12px;
     }
+    .contactsItemContent .title,
     .teamItem .name  {
         font-size: 17px;
+    }
+    .contactsLink {
+        font-size: 15px;
     }
 }
 
@@ -1393,7 +1436,50 @@
     h1 {
         font-size: 30px;
         font-weight: 400;
+    }  
+    .innerSection .title {
+        font-size: 20px;
+        font-weight: 400;
     }
+    .vacancyItem {
+        padding: 20px;
+    } 
+    .cardTop .title,
+    .vacancyItem .title, 
+    .faq h4  {
+        font-size: 17px;
+    }
+    .vacancyItem .desc {
+        font-size: 15px;
+        font-weight: 400;
+    }
+    .vacancyItem .btn {
+        font-size: 14px;
+    }
+    .vacancyItem .salary {
+        font-size: 13px;
+    }
+    .faq h4 {
+        height: 100%;
+        min-height: 30px;
+        width: 75%;
+    }
+    .faq {
+        padding: 10px 15px;
+    }
+    .faq .icon {
+        top: 5px;
+        width: 40px;
+        height: 40px;
+        right: 10px;
+    }
+    .faq.active .faqText {
+        margin-top: 25px;
+    }
+    .vacancy .title {
+        margin-bottom: 15px;
+    }
+    .vacancyItem .btn,
     .libraryItem {
         width: 100%;
     }
@@ -1401,10 +1487,6 @@
     .libraryItem  {
         font-weight: 400;
         font-size: 15px;
-    }
-    .innerSection .title {
-        font-size: 20px;
-        font-weight: 400;
     }
     .offerDescription .btn {
         padding: 13px 30px;
@@ -1418,10 +1500,34 @@
             -ms-flex-direction: column;
                 flex-direction: column;
     }
+    .cardPopup,
     .teamItem {
         width: 100%;
     }
     .teamItem:not(:nth-child(2n)) {
         margin-right: 0;
+    }
+    .contactsItem {
+        border: 1px solid var(--color-7);
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: reverse;
+        -webkit-flex-direction: column-reverse;
+           -moz-box-orient: vertical;
+           -moz-box-direction: reverse;
+            -ms-flex-direction: column-reverse;
+                flex-direction: column-reverse;
+    }
+    .contactsItemContent {
+        padding: 20px;
+    }
+    .contactsItem .place {
+        margin: 0;
+        border: 0;
+    }
+    .contactsList {
+        padding: 0;
+    }
+    .innerSection .cardsWrapper {
+        margin-bottom: 30px;
     }
 }
