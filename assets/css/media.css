@@ -128,6 +128,10 @@
     h1 {
         font-size: 40px;
     }
+    .portfolio {
+        padding: 0;
+    }   
+    
     .topAbout {
         margin-right: 20px;
         font-size: 13px;
@@ -229,6 +233,7 @@
         top: 30px;
         left: 20px;
     }
+    h2,
     .promotionBigCount,
     .sectionMap .title,
     .sliderItemContent h1 {
@@ -738,11 +743,20 @@
         width: 46%;
     }
     .cardTop .title,
-    .contactsLink {
+    .contactsLink,
+    .reviewItem .text {
         font-size: 17px;
     }
     .cardMore {
         font-size: 14px;
+    }
+    .reviewItem .images {
+         -webkit-flex-wrap: wrap;
+             -ms-flex-wrap: wrap;
+                 flex-wrap: wrap;
+    }
+    .reviewItem .img {
+        width: 25%;
     }
 }
 /*ANCHOR max-width: 767 */
@@ -1014,8 +1028,11 @@
     }
     h1.sectionTitle {
         font-size: 30px;
-        text-align: left;
     }
+    
+    /* h1.sectionTitle  {
+        text-align: left;
+    } */
     .mainOffer h1,
     .offerBannerTitle h1,
     .sliderItemContent h1 {
@@ -1446,9 +1463,11 @@
     } 
     .cardTop .title,
     .vacancyItem .title, 
-    .faq h4  {
+    .faq h4,
+    .portfolio h2  {
         font-size: 17px;
     }
+    .reviewItem .text,
     .vacancyItem .desc {
         font-size: 15px;
         font-weight: 400;
@@ -1517,6 +1536,7 @@
             -ms-flex-direction: column-reverse;
                 flex-direction: column-reverse;
     }
+    .reviewItem,
     .contactsItemContent {
         padding: 20px;
     }
@@ -1529,5 +1549,15 @@
     }
     .innerSection .cardsWrapper {
         margin-bottom: 30px;
+    }
+    .reviewItem .img {
+        width: 43%;
+    }
+    .portfolioMore {
+        height: 160px;
+    }
+    .portfolioMore h4 {
+        font-size: 17px;
+        line-height: 24px;
     }
 }

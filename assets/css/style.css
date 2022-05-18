@@ -3479,11 +3479,16 @@ a.navProductMore {
 }
 
 .reviewItem .images {
-    margin: 0 -10px 28px;
+    margin: 0 -10px;
+}
+
+.reviewItem .images img {
+    width: 100%;
 }
 
 .reviewItem .img {
-    margin: 0 10px;
+    margin: 0 10px 20px;
+    max-width: 220px;
 }
 
 .reviewItem .btn {
