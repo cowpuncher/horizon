@@ -1446,6 +1446,20 @@
     .contactsLink {
         font-size: 15px;
     }
+    .choiceForm span {
+        font-size: 13px;
+        padding: 7px 5px;
+    }
+    .choiceForm .group {
+        -webkit-flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+           -moz-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+    }
 }
 
 /*ANCHOR max-width: 568 */
@@ -1559,5 +1573,8 @@
     .portfolioMore h4 {
         font-size: 17px;
         line-height: 24px;
+    }
+    .choiceForm .group:not(:last-child) {
+        margin-right: 0;
     }
 }

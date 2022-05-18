@@ -3183,13 +3183,17 @@ a.navProductMore {
 /* ANCHOR -- (choice form)  */
 
 .choiceForm {
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 }
 
 .choiceForm input[type="checkbox"] {
     opacity: 0;
     position: absolute;
     z-index: -1;
+}
+
+.choiceForm .group {
+    margin-bottom: 12px;
 }
 
 .choiceForm .group:not(:last-child) {
