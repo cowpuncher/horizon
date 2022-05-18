@@ -701,6 +701,14 @@ select:-webkit-autofill:focus {
             transform: translate(-50%, -50%);
 }
 
+.popupMap .popupWindow {
+    height: auto;
+}
+
+.popupMap .popupWindow img {
+    width: 100%;
+}
+
 .popupWindow .author {
     font-size: 17px;
     display: block;
@@ -3090,6 +3098,10 @@ a.navProductMore {
     margin: 30px 0;
 }
 
+.exampleItemAbout .place {
+    margin-bottom: 20px;
+}
+
 .exampleItemAbout .place:not(:last-child) {
     margin-right: 40px;
 }
@@ -3235,6 +3247,10 @@ a.navProductMore {
     border: 1px solid var(--color-7);
 }
 
+.projectAbout .title {
+    margin-bottom: 10px;
+}
+
 .projectAbout .popupBtnMap {
     font-weight: 500;
     font-size: 17px;
@@ -3244,7 +3260,6 @@ a.navProductMore {
     border: 0;
     color: var(--color-3);
     text-align: left;
-    margin-top: 10px;
     cursor: pointer;
 }
 
@@ -3266,7 +3281,7 @@ a.navProductMore {
 }
 
 .projectGroupItem .exampleItemAbout {
-    margin: 41px 0 23px;
+    margin: 41px 0 0;
 }
 
 .projectGroupItem .more {

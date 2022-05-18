@@ -119,6 +119,9 @@
     .contactsItemContent {
         width: 100%;
     }
+    .projectGroupItem {
+        width: 33%;
+    }
 }
 /*ANCHOR max-width: 1200 */
 @media screen and (max-width: 1200px) {
@@ -757,6 +760,31 @@
     }
     .reviewItem .img {
         width: 25%;
+    }
+    .projectGroupItem .exampleItemAbout {
+        -webkit-box-ordinal-group: 2;
+        -webkit-order: 1;
+           -moz-box-ordinal-group: 2;
+            -ms-flex-order: 1;
+                order: 1;
+        margin: 0;
+    }
+    .projectGroupItem .more {
+        -webkit-box-ordinal-group: 3;
+        -webkit-order: 2;
+           -moz-box-ordinal-group: 3;
+            -ms-flex-order: 2;
+                order: 2;
+    }
+    .projectAbout .popupBtnMap {
+        margin-bottom: 10px;
+        font-size: 13px;
+    }
+    .projectAbout .title {
+        font-size: 22px;
+    }
+    .projectAbout .wrapper {
+        padding: 25px;
     }
 }
 /*ANCHOR max-width: 767 */
