@@ -123,6 +123,9 @@
     .projectGroupItem {
         width: 33%;
     }
+    .aboutPrice {
+        margin-left: 0;
+    }
 }
 /*ANCHOR max-width: 1200 */
 @media screen and (max-width: 1200px) {
@@ -544,6 +547,50 @@
     .vacancyItem:not(:last-child) {
         margin-right: 20px;
     }
+    .gallery li {
+        width: var(--width-3);
+    }
+    .equipmentItem {
+        width: 33%;
+        padding: 25px 25px 25px 50px;
+
+    }
+    .equipmentItem::before {
+        left: 10px;
+        top: 23px;
+    }
+    .aboutPrice .dFlex.fdc.aifs {
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+           -moz-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        margin-bottom: 10px;
+    }
+    .aboutPrice {
+        text-align: center;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+           -moz-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+           -moz-box-orient: vertical;
+           -moz-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+    }
+    .aboutHeader .btn {
+        margin-left: 0;
+    }
+    .aboutProduct {
+        padding: 130px 30px 60px;
+    }
+    .planSection {
+        padding: 65px 0 0 0;
+    }
 }
 
 /*ANCHOR max-width: 1024 */
@@ -791,6 +838,9 @@
         padding: 25px;
         position: relative;
     }
+    .aboutProduct h1 {
+        font-size: 30px;
+    }
 }
 /*ANCHOR max-width: 767 */
 @media screen and (max-width: 767px) {
@@ -808,6 +858,8 @@
     .swiper-pagination-bullet-active {
         width: 30px!important;
     }
+    h2.footage,
+    .aboutHeader .description,
     .socialCard,
     .mainBannerLabel,
     .topPanel .btnLight,
@@ -820,6 +872,9 @@
     .navigation::after,
     .phase:last-of-type {
         display: none;
+    }
+    .aboutPrice {
+        margin: 0 auto;
     }
     .socialCard.mobileElement {
         display: -webkit-box;
@@ -1540,6 +1595,64 @@
         width: var(--swiper-pagination-bullet-width,var(--swiper-pagination-bullet-size,10px))!important;
         background: #fff;
     }
+    .aboutBody .wrapper {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: reverse;
+        -webkit-flex-direction: column-reverse;
+           -moz-box-orient: vertical;
+           -moz-box-direction: reverse;
+            -ms-flex-direction: column-reverse;
+                flex-direction: column-reverse;
+        -webkit-box-align: start;
+        -webkit-align-items: flex-start;
+           -moz-box-align: start;
+            -ms-flex-align: start;
+                align-items: flex-start;
+    }
+    .aboutParams {
+        padding: 0 0 40px 0;
+        width: 100%;
+    }
+    .aboutBody a[data-fslightbox="gallery"] {
+        max-width: 100%;
+        width: 100%;
+    }
+    .planSection .phase:last-of-type {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: flex;
+        border: 0;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+           -moz-box-orient: vertical;
+           -moz-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+    }
+    .planSection  .phaseItem {
+        max-width: 445px;
+        margin: 0 auto 10px;
+        border: 1px solid var(--color-7)!important;
+    }
+    .equipmentItem {
+        width: 50%;
+    }
+    .aboutBodyDesc {
+        padding: 32px 0 0 0;
+        margin-top: 50px;
+    }
+    .navProduct a {
+        width: 150px;
+    }
+    a.navProductMore {
+        height: 73px;
+    }
+    .navProduct a .img {
+        height: 85px;
+    }
 }
 
 /*ANCHOR max-width: 568 */
@@ -1551,6 +1664,18 @@
     .innerSection .title {
         font-size: 20px;
         font-weight: 400;
+    }
+    .equipmentItem {
+        width: 100%;
+        border: 0;
+        border-bottom: 1px solid var(--color-7);
+    }
+    .gallery li {
+        width: var(--width-2);
+    }
+    
+    .navProduct {
+        overflow: auto;
     }
     .vacancyItem {
         padding: 20px;

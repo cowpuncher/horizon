@@ -37,6 +37,9 @@
     --width-3: -webkit-calc(-webkit-calc(100% / 3) - -webkit-calc(0.63rem * 2));
     --width-3: -moz-calc(-moz-calc(100% / 3) - -moz-calc(0.63rem * 2));
     --width-3: calc(calc(100% / 3) - calc(0.63rem * 2));
+    --width-4: -webkit-calc(-webkit-calc(100% / 4) - -webkit-calc(0.63rem * 2));
+    --width-4: -moz-calc(-moz-calc(100% / 4) - -moz-calc(0.63rem * 2));
+    --width-4: calc(calc(100% / 4) - calc(0.63rem * 2));
 
 
 
@@ -2871,6 +2874,7 @@ a.navProductMore {
 
 .aboutParamsItem span {
     display: block;
+    width: 50%;
 }
 
 .aboutParamsItem .label {
@@ -3138,12 +3142,16 @@ a.navProductMore {
 /* ANCHOR -- (houseForSaleSlider)  */
 .houseForSaleSliderItem {
     display: none;
+    height: 100%;
 }
 
 .houseForSaleSliderItem.active {
     display: block;
 }
 
+.houseForSaleSlider {
+    height: 820px;
+}
 
 /* ANCHOR -- (plan)  */
 
@@ -3189,6 +3197,7 @@ a.navProductMore {
 
 .gallery li {
     margin: 0 10px 20px;
+    width: var(--width-4);
 }
 
 /* ANCHOR -- \\PROJECTS PAGE// */

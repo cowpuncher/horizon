@@ -88,6 +88,7 @@ const sliderReview = new Swiper('.sliderReview', {
 const sliderProductBanner = new Swiper('.mainBannerSlider', {
     loop: true,
     direction: 'vertical',
+    allowTouchMove: false,
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
@@ -341,32 +342,32 @@ const sizeWindow = (screen) => {
 let checkSize = false;
 
 // ANCHOR --- Slider mobile project
-
-const addSliderMobile = () => {
-    for(var i = 0; i < projectGroup.length; i++) {
-        let divForSlider = document.createElement('div');
-        projectGroup[i].prepend(divForSlider);
-        divForSlider.className = 'sliderProject';
-        divForSlider.innerHTML  = '<div class="swiper-wrapper"></div><div class="swiper-pagination"></div>';
-        for(var q = 0; q < 2; q++) {
-            let elmSlide = projectGroup[i].getElementsByClassName('projectGroupItem')[q].cloneNode(true);
-            elmSlide.classList.add('swiper-slide');
-            divForSlider.children[0].prepend(elmSlide);
-        }                        
-    }   
-    activeSlider();
-} 
-
-const activeSlider = () => {
-    const projectSlider = new Swiper('.sliderProject', {
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-        },
-    });
-}
-
 window.addEventListener('load', () => {
+    
+    const addSliderMobile = () => {
+        for(var i = 0; i < projectGroup.length; i++) {
+            let divForSlider = document.createElement('div');
+            projectGroup[i].prepend(divForSlider);
+            divForSlider.className = 'sliderProject';
+            divForSlider.innerHTML  = '<div class="swiper-wrapper"></div><div class="swiper-pagination"></div>';
+            for(var q = 0; q < 2; q++) {
+                let elmSlide = projectGroup[i].getElementsByClassName('projectGroupItem')[q].cloneNode(true);
+                elmSlide.classList.add('swiper-slide');
+                divForSlider.children[0].prepend(elmSlide);
+            }                        
+        }   
+        activeSlider();
+    } 
+
+    const activeSlider = () => {
+        const projectSlider = new Swiper('.sliderProject', {
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+        });
+    }
+
     if(sizeWindow(document.body.clientWidth) < 768 && checkSize === false) { 
         checkSize = true;
         addSliderMobile();     
