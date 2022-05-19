@@ -1672,8 +1672,7 @@
     }
     .gallery li {
         width: var(--width-2);
-    }
-    
+    }    
     .navProduct {
         overflow: auto;
     }
