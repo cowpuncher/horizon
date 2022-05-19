@@ -3243,8 +3243,13 @@ a.navProductMore {
        object-fit: cover;
 }
 
+.sliderProject {
+    display: none;
+}
+
 .projectAbout {
     border: 1px solid var(--color-7);
+    width: 100%;
 }
 
 .projectAbout .title {
@@ -3280,11 +3285,11 @@ a.navProductMore {
             flex-direction: column;
 }
 
-.projectGroupItem .exampleItemAbout {
+.projectAbout .exampleItemAbout {
     margin: 41px 0 0;
 }
 
-.projectGroupItem .more {
+.projectAbout .more {
     margin-top: auto;
     text-transform: uppercase;
     font-weight: 700;
@@ -3304,7 +3309,7 @@ a.navProductMore {
     
 }
 
-.projectGroupItem .more img {
+.projectAbout .more img {
     margin-left: 20px;
 }
 
