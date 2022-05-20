@@ -3063,17 +3063,24 @@ a.navProductMore {
 }
 
 .exampleList {
-    width: 100%;
+    margin: 0 -10px;
 }
 
 .exampleItem {
-    width: 32.5%;
+    width: -webkit-calc(-webkit-calc(100% / 3) - -webkit-calc(0.63rem * 2));
+    width: -moz-calc(-moz-calc(100% / 3) - -moz-calc(0.63rem * 2));
+    width: calc(calc(100% / 3) - calc(0.63rem * 2));
     position: relative;
     margin-bottom: 20px;
+    margin: 0 10px 20px;
 }
 
-.exampleItem:not(:nth-child(3n+3)) {
+/* .exampleItem:not(:nth-child(3n+3)) {
     margin-right: 20px;
+} */
+
+.exampleItem .img {
+    height: 100%;
 }
 
 .exampleItem .desc {
@@ -3089,7 +3096,8 @@ a.navProductMore {
 }
 
 .exampleItemDocs {
-    margin: 0 0 20px;
+    padding: 24px;
+    margin: 0 10px 20px;
     background: var(--color-5);
     -webkit-box-flex: 1;
     -webkit-flex-grow: 1;
