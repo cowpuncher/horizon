@@ -860,6 +860,12 @@
     .setItem .btn {
         font-size: 11px;
     }
+    .innerContent img {
+        max-width: 350px;
+    }
+    .innerGallery a {
+        width: 30%;
+    }
 }
 /*ANCHOR max-width: 767 */
 @media screen and (max-width: 767px) {
@@ -1713,6 +1719,16 @@
             -ms-flex-direction: column;
                 flex-direction: column;
     }
+    
+    .innerContent img {
+        max-width: 100%;
+        margin: 20px 0;
+        float: none;
+    }
+    
+    .innerGallery a {
+        width: 45%;
+    }
 }
 
 /*ANCHOR max-width: 568 */
@@ -1851,5 +1867,19 @@
     }
     .choiceForm .group:not(:last-child) {
         margin-right: 0;
+    }
+    
+    .innerGallery a {
+        width: 100%;
+    }
+    .breadcrumbs {
+        font-weight: 400;
+        font-size: 13px;
+    }
+    .innerSection .innerTitle {
+        font-size: 24px;
+    }
+    .innerContent h3 {
+        font-size: 20px;
     }
 }

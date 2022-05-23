@@ -373,6 +373,11 @@ select:-webkit-autofill:focus {
 
 .innerContent img {
     float: right;
+    margin: 20px;
+}
+
+.innerContent .innerGallery img {
+    margin: 0;
 }
 
 .innerContent p,
@@ -424,6 +429,7 @@ select:-webkit-autofill:focus {
 }
 
 .innerGallery a {
+    position: relative;
     margin: 0 10px 20px;
     width: 23%;
     background: var(--color-5);
@@ -1736,6 +1742,7 @@ a.navProductMore {
     width: 100%;
 }
 
+.innerGallery a.scale:before,
 .phaseItem .img::before {
     content: '';
     opacity: 0;
@@ -1748,6 +1755,7 @@ a.navProductMore {
     position: absolute;
 }
 
+.innerGallery a.scale:after,
 .phaseItem .img::after {
     content: url(../img/icons/search.svg);
     position: absolute;
@@ -1762,6 +1770,8 @@ a.navProductMore {
     z-index: 1;
 }
 
+.innerGallery a.scale:hover:before,
+.innerGallery a.scale:hover:after,
 .phaseItem .img:hover::before,
 .phaseItem .img:hover::after {
     opacity: 1;
