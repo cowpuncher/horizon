@@ -39,10 +39,12 @@
 /*ANCHOR max-width: 1440 */
 
 @media screen and (max-width: 1440px) {
-    .innerPage {
+    /* .innerPage {
         padding-top: 185px;
-    }   
-    
+    }    */
+    .breadcrumbs {
+        margin-top: 210px;
+    }
     .mainWrapper {
         overflow-x: hidden;
     }
@@ -129,9 +131,9 @@
 }
 /*ANCHOR max-width: 1200 */
 @media screen and (max-width: 1200px) {
-    .innerPage {
+    /* .innerPage {
         padding-top: 160px;
-    }
+    } */
     h1 {
         font-size: 40px;
     }
@@ -871,6 +873,9 @@
 @media screen and (max-width: 767px) {
     .innerPage {
         padding-top: 0;
+    }
+    .breadcrumbs {
+        margin-top: 20px;
     }
     .mainWrapper {
         overflow-x: hidden;

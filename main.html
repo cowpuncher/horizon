@@ -13,7 +13,7 @@
         Library style 
     -->
     <!-- Swiper style -->
-    <link  rel="stylesheet"  href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <link  rel="stylesheet"  href="./assets/lib/swiper/swiper-bundle.min.css" />
 
     <!-- Main style -->
     <link rel="stylesheet" href="./assets/css/style.css">
@@ -21,6 +21,18 @@
         Media queries
     -->
     <link rel="stylesheet" href="./assets/css/media.css">
+
+    <!-- 
+        Library Script 
+    -->
+    <script  src="./assets/lib/jquery-3.6.0.min.js"></script>
+    <!-- Fancybox Script -->
+    <script src="./assets/lib/lightbox/fslightbox.js"></script>
+    <!-- Swiper Script -->
+    <script src="./assets/lib/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Main Script -->
+    <script src="./assets/js/script.js"></script>
     <title>Главная страница Горизонт</title>
 </head>
 <body>
@@ -169,7 +181,9 @@
                     </div>             
                 </div>
             </div>
-            <div class="mainBanner">
+        </header>
+        <main>
+            <section class="mainBanner">
                 <img src="./assets/img/main.jpg" alt="banner">
                 <div class="mainOfferContainer">
                     <div class="container">
@@ -206,9 +220,7 @@
                         110 м²
                     </span>
                 </div>
-            </div>
-        </header>
-        <main>
+            </section>
             <section class="sectionPhase">
                 <ul class="phase dFlex ais">
                     <li class="phaseItem">
@@ -541,6 +553,46 @@
                         Верстка буллетов внутри файла data.json
                     -->
                     <div class="map" id="map" style="width: 100%; height: 850px"></div>
+
+                    <script>
+                        document.addEventListener('DOMContentLoaded', function() {
+                            if(document.getElementById('map')) {
+                                ymaps.ready(init);
+
+                                function init () {
+                                    var myMap = new ymaps.Map('map', {
+                                            center: [55.76, 37.64],
+                                            zoom: 10
+                                        }, {
+                                            searchControlProvider: 'yandex#search'
+                                        }),
+                                        objectManager = new ymaps.ObjectManager({
+                                            // Чтобы метки начали кластеризоваться, выставляем опцию.
+                                            clusterize: true,
+                                            // ObjectManager принимает те же опции, что и кластеризатор.
+                                            gridSize: 32,
+                                            clusterDisableClickZoom: true,
+                                            iconColor: '#000'
+                                        });
+                                
+                                    // Чтобы задать опции одиночным объектам и кластерам,
+                                    // обратимся к дочерним коллекциям ObjectManager.
+                                    objectManager.objects.options.set('preset', 'islands#blueHomeCircleIcon');
+                                    objectManager.clusters.options.set('preset', 'islands#invertedBlueClusterIcons');
+                                    myMap.geoObjects.add(objectManager);
+                                
+                                    $.ajax({
+                                        url: "./assets/js/data.json"
+                                    }).done(function(data) {
+                                        objectManager.add(data);
+                                    });
+                                
+                                }
+                            }
+
+                        }, false);
+                    </script>
+
                     <h1 class="title bgTitle">
                         <span class="span">
                             Строим загородные дома <br> в 
@@ -887,7 +939,7 @@
                                 </div>
                             </a>                        
                             <a href="#" class="materialsItem scale pos-r">
-                                <img src="./assets/img/mat6.jpg" alt="">
+                                <img src="./assets/img/mat5.jpg" alt="">
                                 <div class="materialsAbout pos-a">
                                     <span class="flag">
                                         Знание
@@ -1259,17 +1311,7 @@
             </div>
         </div>
 
-        <!-- 
-            Library Script 
-        -->
-        <script  src="https://code.jquery.com/jquery-3.6.0.min.js"  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="  crossorigin="anonymous"></script>
-        <!-- Fancybox Script -->
-        <script src="./assets/lib/lightbox/fslightbox.js"></script>
-        <!-- Swiper Script -->
-        <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-
-        <!-- Main Script -->
-        <script src="./assets/js/script.js"></script>
+        
     </div>
 </body>
 </html>
